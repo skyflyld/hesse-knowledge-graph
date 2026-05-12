@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑塞文学知识图谱</title>
+<style>
+  :root {
+    --gold: #b8860b; --gold-light: #d4a745; --gold-bg: #fdf8f0;
+    --blue: #4682b4; --blue-light: #6baed6; --blue-bg: #f0f5fa;
+    --dark: #2c2416; --text: #4a3f2f; --muted: #8a7f6f;
+    --white: #fff; --border: #e8e0d4; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --font-serif: 'Georgia', 'Noto Serif SC', serif;
+    --font-sans: -apple-system, 'PingFang SC', sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: var(--font-sans); color: var(--text); background: #faf7f2; }
+  
+  /* Header */
+  header { 
+    background: linear-gradient(135deg, var(--dark), #3d2e15);
+    color: var(--white); padding: 16px 28px; display: flex; align-items: center;
+    justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: normal; letter-spacing: 1px; }
+  header .sub { font-size: 0.78rem; color: var(--gold-light); opacity: 0.85; }
+  
+  /* Layer filters */
+  .filters { display: flex; gap: 6px; flex-wrap: wrap; padding: 12px 28px; background: var(--white); border-bottom: 1px solid var(--border); }
+  .filters button {
+    padding: 5px 14px; border: 1px solid var(--border); border-radius: 14px;
+    background: var(--white); color: var(--muted); cursor: pointer;
+    font-size: 0.8rem; transition: all 0.2s;
+  }
+  .filters button.active { background: var(--gold); color: var(--white); border-color: var(--gold); }
+  .filters button:hover:not(.active) { border-color: var(--gold); color: var(--gold); }
+  
+  /* Layout */
+  .main { display: flex; height: calc(100vh - 128px); }
+  #graph { flex: 1; background: radial-gradient(ellipse at center, #fdf8f0 0%, #f5efe0 100%); cursor: grab; }
+  #graph:active { cursor: grabbing; }
+  #graph svg { width: 100%; height: 100%; }
+  
+  /* Detail panel */
+  #panel { width: 400px; background: var(--white); border-left: 1px solid var(--border); overflow-y: auto;
+    padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+  #panel.empty { display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.9rem; }
+  #panel .close { align-self: flex-end; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--muted); }
+  #panel h2 { font-family: var(--font-serif); font-size: 1.15rem; color: var(--dark); border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  #panel h3 { font-size: 0.85rem; color: var(--muted); margin-top: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  #panel .de { font-size: 0.85rem; color: var(--blue); background: var(--blue-bg); padding: 10px; border-radius: 6px; margin: 6px 0; line-height: 1.5; font-style: italic; }
+  #panel .tag { display: inline-block; background: var(--gold-bg); color: var(--gold); padding: 3px 10px; border-radius: 8px; font-size: 0.75rem; margin: 2px; }
+  #panel .link { color: var(--blue); cursor: pointer; font-size: 0.85rem; }
+  #panel .link:hover { text-decoration: underline; }
+  #panel p { font-size: 0.85rem; line-height: 1.6; color: var(--text); }
+  
+  /* Debate box */
+  #panel .debate-box { border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 8px 0; }
+  #panel .debate-box .pro { border-left: 3px solid #c0392b; padding-left: 10px; margin: 6px 0; font-size: 0.82rem; }
+  #panel .debate-box .con { border-left: 3px solid var(--blue); padding-left: 10px; margin: 6px 0; font-size: 0.82rem; }
+
+  /* Node styles for SVG */
+  .node-motif circle { fill: var(--gold); stroke: var(--dark); stroke-width: 2; }
+  .node-work circle { fill: var(--blue); stroke: var(--dark); stroke-width: 1.5; }
+  .node-debate circle { fill: #c0392b; stroke: var(--dark); stroke-width: 1.5; }
+  text.node-label { font-size: 11px; font-family: var(--font-sans); fill: var(--dark); pointer-events: none; }
+  
+  .link { stroke: #d4c8b0; stroke-opacity: 0.6; }
+  .link.motif-work { stroke: var(--gold); stroke-opacity: 0.4; stroke-dasharray: 4,3; }
+  
+  /* Timeline bar */
+  #timeline-bar { background: var(--white); border-top: 1px solid var(--border); padding: 10px 28px; display: flex; align-items: center; gap: 12px; overflow-x: auto; }
+  #timeline-bar h3 { font-size: 0.75rem; color: var(--muted); margin-right: 8px; white-space: nowrap; }
+  #timeline-bar .tl-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--blue); cursor: pointer; flex-shrink: 0; position: relative; }
+  #timeline-bar .tl-dot.active { background: var(--gold); width: 20px; height: 20px; }
+  #timeline-bar .tl-label { font-size: 0.7rem; color: var(--muted); margin-left: 4px; white-space: nowrap; }
+  
+  /* Legend */
+  .legend { position: absolute; bottom: 16px; left: 16px; background: rgba(255,255,255,0.9); padding: 10px 14px; border-radius: 8px; font-size: 0.75rem; box-shadow: var(--shadow); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .legend .dot.m { background: var(--gold); } .legend .dot.w { background: var(--blue); } .legend .dot.d { background: #c0392b; }
+
+  @media (max-width: 768px) {
+    .main { flex-direction: column; }
+    #graph { height: 50vh; }
+    #panel { width: 100%; height: 50vh; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Hermann Hesse · 文学知识图谱</h1>
+    <div class="sub">十一部小说德语原文全量通读 · 七层节点体系 · Transzendieren</div>
+  </div>
+</header>
+
+<div class="filters" id="filters">
+  <button class="active" data-layer="all">全部</button>
+  <button data-layer="motif">Ⓣ 主题母题</button>
+  <button data-layer="work">Ⓦ 作品</button>
+  <button data-layer="debate">Ⓓ 辩论</button>
+  <button data-layer="character">Ⓒ 人物原型</button>
+  <button data-layer="structure">Ⓢ 结构模式</button>
+</div>
+
+<div class="main">
+  <div id="graph" style="position:relative">
+    <div class="legend">
+      <span><span class="dot m"></span> 主题母题</span>
+      <span><span class="dot w"></span> 作品</span>
+      <span><span class="dot d"></span> 辩论</span>
+    </div>
+  </div>
+  <div id="panel" class="empty">点击节点查看详情</div>
+</div>
+
+<div id="timeline-bar">
+  <h3>作品时间线</h3>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+// ===== DATA =====
+const motifs = [
+  {id:"t01",name:"朋友对子",de:"Freund-Dyade",desc:"从Demian/Sinclair到Knecht/Designori——精神引导与镜像关系的演变",quote:"\"Govinda, bist du der Wächter meines Schlafes gewesen\"",works:["Demian","Narziß und Goldmund","Siddhartha","Das Glasperlenspiel"]},
+  {id:"t02",name:"河流/阈限",de:"Fluss/Schwelle",desc:"河流作为生命之流与死亡之门——渡河→倾听→Om→冰湖溺亡",quote:"\"der Fluß hat zu dir gesprochen\" — Siddhartha; 冰湖之死 — Glasperlenspiel",works:["Siddhartha","Narziß und Goldmund","Das Glasperlenspiel"]},
+  {id:"t03",name:"微笑",de:"Lächeln",desc:"圆满者的微笑——从Gotama到Siddhartha到音乐大师，同一种超越的笑容",quote:"\"dies Lächeln Siddharthas war genau dasselbe... Lächeln Gotamas\"",works:["Siddhartha","Steppenwolf","Das Glasperlenspiel"]},
+  {id:"t04",name:"死鸟/歌声",de:"Vogel/Gesang",desc:"艺术之死的隐喻——梦中死鸟→雕塑(凝固的歌)→玻璃珠游戏\"音乐之死\"",quote:"\"der kleine Vogel war tot und lag steif am Boden\" — Siddhartha",works:["Siddhartha","Narziß und Goldmund","Das Glasperlenspiel"]},
+  {id:"t05",name:"超越/台阶",de:"Transzendieren/Stufen",desc:"黑塞的人之完满定义——永远不扎根于任一身份，从一个阶段走向下一个",quote:"\"Des Lebens Ruf an uns wird niemals enden... nimm Abschied und gesunde!\"",works:["Siddhartha","Steppenwolf","Das Glasperlenspiel"]},
+  {id:"t06",name:"母亲原型",de:"Mutter-Archetyp",desc:"Urmutter——Eva夫人→Goldmund的原始母亲→Hermine→'永远的母亲'",quote:"\"die Urmutter, die alles gebiert und alles verschlingt\" — Narziß und Goldmund",works:["Demian","Narziß und Goldmund","Steppenwolf"]},
+  {id:"t07",name:"Maya/幻象",de:"Maya/Täuschung",desc:"一切皆幻——Siddhartha轮回观→魔法剧院多重自我→印度生平",quote:"\"Alles war Maya, alles war Trug\" — Indischer Lebenslauf",works:["Siddhartha","Steppenwolf","Das Glasperlenspiel"]},
+  {id:"t08",name:"孤独/个体化",de:"Einsamkeit/Individuation",desc:"贯穿全部作品——从Camenzind山间小屋到Knecht的独行",quote:"个体化是黑塞全部作品的基本驱动力",works:["Peter Camenzind","Demian","Siddhartha","Steppenwolf"]},
+  {id:"t09",name:"艺术与救赎",de:"Kunst/Erlösung",desc:"音乐→雕塑→游戏——艺术从自我表达到精神救赎的升华",quote:"\"die Unsterblichen... Mozart\" — Steppenwolf",works:["Gertrud","Narziß und Goldmund","Steppenwolf","Das Glasperlenspiel"]},
+  {id:"t10",name:"自然vs文明",de:"Natur/Zivilisation",desc:"Camenzind山间→Goldmund森林流浪→Knecht冰湖——自然作为精神的对极与归属",quote:"从山间小屋到冰湖——自然是黑塞的恒常归处",works:["Peter Camenzind","Narziß und Goldmund","Das Glasperlenspiel"]}
+];
+
+const works = [
+  {id:"w01",name:"Peter Camenzind",year:1904,lines:"—",key:"Jugendstil风格，自然崇拜"},
+  {id:"w02",name:"Unterm Rad",year:1906,lines:"—",key:"教育批判，自传性"},
+  {id:"w03",name:"Gertrud",year:1910,lines:"—",key:"音乐与爱，三角关系"},
+  {id:"w04",name:"Roßhalde",year:1914,lines:"6116",key:"婚姻破裂，艺术家困境"},
+  {id:"w05",name:"Demian",year:1919,lines:"5608",key:"该隐符号，Gnosis，自我觉醒"},
+  {id:"w06",name:"Klingsors letzter Sommer",year:1920,lines:"5884",key:"表现主义，色彩爆炸"},
+  {id:"w07",name:"Siddhartha",year:1922,lines:"4365",key:"印度，河流，Om，停止寻找"},
+  {id:"w08",name:"Narziß und Goldmund",year:1930,lines:"3316",key:"精神vs感官，母亲原型"},
+  {id:"w09",name:"Die Morgenlandfahrt",year:1932,lines:"505",key:"联盟秘密，东西方对话"},
+  {id:"w10",name:"Steppenwolf",year:1927,lines:"7445",key:"市民vs狼，魔法剧院"},
+  {id:"w11",name:"Das Glasperlenspiel",year:1943,lines:"4941",key:"精神王国危机，Transzendieren"}
+];
+
+const debates = [
+  {id:"d01",name:"浪漫主义 vs 现代主义",pro:"黑塞是浪漫主义继承人",con:"黑塞是现代主义突破者",motif:"t01"},
+  {id:"d02",name:"东方挪用 vs 融合",pro:"黑塞的东方是西方投射",con:"黑塞实现了真正的文化融合",motif:"t07"},
+  {id:"d03",name:"荒原狼自杀: 逃避 vs 超越",pro:"自杀冲动是逃避",con:"自杀意志是超越的阴性形式",motif:"t05"},
+  {id:"d04",name:"对立统一: 辩证 vs 诗意调和",pro:"两极统一是辩证综合",con:"两极统一是诗意调和（非哲学）",motif:"t08"},
+  {id:"d05",name:"Knecht溺亡: 和解 vs 失败",pro:"死亡是精神与自然最高融合",con:"死亡是Kastalien实验的失败",motif:"t02"},
+  {id:"d06",name:"一战反战: 勇气 vs 不作为",pro:"反战宣言是良心",con:"反战言论缺乏组织行动",motif:"t08"},
+  {id:"d07",name:"诺贝尔奖: 文学 vs 政治",pro:"1946年诺奖是文学独创性承认",con:"诺奖是二战后德国政治补偿",motif:"t08"}
+];
+
+const characters = [
+  {id:"c01",name:"寻找者",de:"Suchender",instances:"Siddhartha, Sinclair, Goldmund, Knecht, Harry Haller"},
+  {id:"c02",name:"精神导师",de:"Geistiger Führer",instances:"Demian, Narziss, Gotama, Musikmeister, Vasudeva"},
+  {id:"c03",name:"母亲形象",de:"Mutter-Gestalt",instances:"Eva夫人, Urmutter, Kamala, Hermine"},
+  {id:"c04",name:"俗世引导者",de:"Weltführer",instances:"Kamala, Kamaswami, Pistorius, Designori"},
+  {id:"c05",name:"朋友-影子",de:"Freund-Schatten",instances:"Govinda, Tegularius, Plinio Designori"},
+  {id:"c06",name:"市民/常人",de:"Bürger",instances:"荒原狼的市民世界, Kamaswami"},
+  {id:"c07",name:"艺术家",de:"Künstler",instances:"Goldmund, Kuhn, Veraguth, Klingsor"},
+  {id:"c08",name:"叛逆少年",de:"Aufbegehrender Jüngling",instances:"Sinclair, 少年Siddhartha, Hans Giebenrath"}
+];
+
+const structures = [
+  {id:"s01",name:"Bildungsroman弧线",de:"Bildungsroman",desc:"离家→游历/试炼→回归/超越"},
+  {id:"s02",name:"两极振荡",de:"Pendelschlag",desc:"精神↔感官、孤独↔群体、东方↔西方"},
+  {id:"s03",name:"三段式",de:"Dreischritt",desc:"Unschuld→Erfahrung→Erleuchtung"},
+  {id:"s04",name:"框架叙事",de:"Rahmenerzählung",desc:"出版者前言/导言论文/框架结构"},
+  {id:"s05",name:"并列论证",de:"Parataxe als Argument",desc:"重复修辞+短句群=哲学韵律"},
+  {id:"s06",name:"阈限时刻",de:"Schwellenmoment",desc:"渡河、梦境、死亡场景、觉醒"}
+];
+
+// Work-motif edges
+const workMotifEdges = [
+  ["w05","t01"],["w08","t01"],["w07","t01"],["w11","t01"],
+  ["w07","t02"],["w08","t02"],["w11","t02"],
+  ["w07","t03"],["w10","t03"],["w11","t03"],
+  ["w07","t04"],["w08","t04"],["w11","t04"],
+  ["w07","t05"],["w10","t05"],["w11","t05"],
+  ["w05","t06"],["w08","t06"],["w10","t06"],
+  ["w07","t07"],["w10","t07"],["w11","t07"],
+  ["w01","t08"],["w05","t08"],["w07","t08"],["w10","t08"],
+  ["w03","t09"],["w08","t09"],["w10","t09"],["w11","t09"],
+  ["w01","t10"],["w08","t10"],["w11","t10"]
+];
+
+// ===== GRAPH =====
+const container = document.getElementById('graph');
+const panel = document.getElementById('panel');
+const W = container.clientWidth, H = container.clientHeight;
+
+let allNodes = [], allLinks = [];
+// Add motif nodes
+motifs.forEach(m => allNodes.push({id:m.id,type:"motif",data:m}));
+// Add work nodes
+works.forEach(w => allNodes.push({id:w.id,type:"work",data:w}));
+// Add debate nodes
+debates.forEach(d => allNodes.push({id:d.id,type:"debate",data:d}));
+// Add edges: motif↔work
+workMotifEdges.forEach(([wid,mid]) => allLinks.push({source:mid,target:wid,type:"motif-work"}));
+// Add edges: debate↔motif
+debates.forEach(d => allLinks.push({source:d.id,target:d.motif,type:"debate-motif"}));
+
+const color = d3.scaleOrdinal().domain(["motif","work","debate"]).range(["var(--gold)","var(--blue)","#c0392b"]);
+const radius = d => d.type==="motif"?14:d.type==="work"?10:8;
+
+function showDetail(node) {
+  const d = node.data;
+  if(node.type==="motif") {
+    const wnames = d.works.join(", ");
+    panel.className = "";
+    panel.innerHTML = `
+      <button class="close" onclick="closePanel()">✕</button>
+      <h2>Ⓣ ${d.name}</h2>
+      <div><span class="tag">${d.de}</span></div>
+      <p>${d.desc}</p>
+      <div class="de">${d.quote}</div>
+      <h3>关联作品</h3>
+      <p>${wnames}</p>
+      <h3关联辩论</h3>
+      <div id="related-debates"></div>
+    `;
+    // Find related debates
+    const rel = debates.filter(db=>db.motif===d.id);
+    const rd = document.getElementById('related-debates');
+    rel.forEach(db=>{
+      rd.innerHTML += `<div class="debate-box">
+        <strong>${db.name}</strong>
+        <div class="pro">正方: ${db.pro}</div>
+        <div class="con">反方: ${db.con}</div>
+      </div>`;
+    });
+  } else if(node.type==="work") {
+    panel.className = "";
+    const relMotifs = motifs.filter(m=>m.works.includes(d.name));
+    panel.innerHTML = `
+      <button class="close" onclick="closePanel()">✕</button>
+      <h2>Ⓦ ${d.name}</h2>
+      <div><span class="tag">${d.year}</span> <span class="tag">${d.lines} 行</span></div>
+      <p>${d.key}</p>
+      <h3>关联母题</h3>
+      ${relMotifs.map(m=>`<span class="tag">${m.name}</span>`).join(' ')}
+    `;
+  } else if(node.type==="debate") {
+    panel.className = "";
+    panel.innerHTML = `
+      <button class="close" onclick="closePanel()">✕</button>
+      <h2>Ⓓ ${d.name}</h2>
+      <div class="debate-box">
+        <div class="pro"><strong>正方</strong><br>${d.pro}</div>
+        <div class="con"><strong>反方</strong><br>${d.con}</div>
+      </div>
+    `;
+  }
+}
+
+function closePanel() {
+  panel.className = "empty";
+  panel.innerHTML = "点击节点查看详情";
+}
+
+function showWorkDetail(work) {
+  const node = allNodes.find(n=>n.id===work.id);
+  if(node) showDetail(node);
+}
+
+// ===== D3 FORCE GRAPH =====
+const svg = d3.select("#graph").append("svg").attr("viewBox",[0,0,W,H]);
+const g = svg.append("g");
+
+const simulation = d3.forceSimulation(allNodes)
+  .force("link", d3.forceLink(allLinks).id(d=>d.id).distance(d=>d.type==="motif-work"?120:80))
+  .force("charge", d3.forceManyBody().strength(-300))
+  .force("center", d3.forceCenter(W/2, H/2))
+  .force("collision", d3.forceCollide().radius(30));
+
+const link = g.append("g").selectAll("line")
+  .data(allLinks).join("line")
+  .attr("class",d=>`link ${d.type}`)
+  .attr("stroke-width",d=>d.type==="debate-motif"?1.5:1);
+
+const node = g.append("g").selectAll("g")
+  .data(allNodes).join("g")
+  .attr("class",d=>`node-${d.type}`)
+  .call(d3.drag()
+    .on("start",(e,d)=>{if(!e.active)simulation.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
+    .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;})
+    .on("end",(e,d)=>{if(!e.active)simulation.alphaTarget(0);d.fx=null;d.fy=null;}))
+  .on("click",(e,d)=>showDetail(d));
+
+node.append("circle").attr("r",d=>radius(d));
+node.append("text")
+  .text(d=>d.data.name.length>8?d.data.name.slice(0,8)+"…":d.data.name)
+  .attr("class","node-label").attr("dy",d=>-radius(d)-4).attr("text-anchor","middle");
+
+simulation.on("tick",()=>{
+  link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+      .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  node.attr("transform",d=>`translate(${d.x},${d.y})`);
+});
+
+// ===== LAYER FILTER =====
+document.querySelectorAll('#filters button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const layer = btn.dataset.layer;
+    node.transition().duration(300)
+      .attr("opacity",d=>layer==="all" || d.type===layer?1:0.15);
+    link.transition().duration(300)
+      .attr("opacity",d=>layer==="all"?1:0.1);
+  });
+});
+
+// ===== TIMELINE =====
+const tlBar = document.getElementById('timeline-bar');
+works.forEach(w=>{
+  const dot = document.createElement('div');
+  dot.className = 'tl-dot';
+  dot.title = `${w.name} (${w.year})`;
+  dot.addEventListener('click',()=>showWorkDetail(w));
+  const label = document.createElement('span');
+  label.className = 'tl-label';
+  label.textContent = `${w.year} ${w.name}`;
+  tlBar.appendChild(dot);
+  tlBar.appendChild(label);
+});
+
+// ===== RESIZE =====
+window.addEventListener('resize',()=>{
+  const nw = container.clientWidth, nh = container.clientHeight;
+  svg.attr("viewBox",[0,0,nw,nh]);
+  simulation.force("center",d3.forceCenter(nw/2,nh/2)).restart();
+});
+
+// ===== Keyboard shortcut =====
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel();});
+</script>
+</body>
+</html>
