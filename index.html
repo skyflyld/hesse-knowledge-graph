@@ -458,11 +458,26 @@ const structures = [
 ];
 
 const grammars = [
-  {id:"g01",name:"Verbzweit-Stellung",desc:"Satzklammer在《悉达多》中——动词位置延迟概念闭合"},
-  {id:"g02",name:"Parataxe-Häufung",desc:"并列结构主导——从句独立性高于主从关系"},
-  {id:"g03",name:"Nominalstil",desc:"名词化密集——抽象概念具象化"},
-  {id:"g04",name:"Partizipialkonstruktion",desc:"分词短语扩展——多层级嵌套"},
-  {id:"g05",name:"Modalpartikel",desc:"语气词频率——不确定性与开放性"}
+  {id:"g01",name:"Satzklammer/认知悬置",de:"Kognitive Suspension",
+    desc:"框型结构不是句法约束，而是注意力管理——动词末置=概念闭合延迟=读者被强制'等待'哲学结论。三维度核心之一。",
+    works:["w07","w10","w05","w11"],
+    evidence:["Langacker认知语法: 语法结构=概念化方式","黑塞高嵌入深度Satzklammer创造'认知悬置'状态","与哲学反思的'悬而未决'结构同构"]},
+  {id:"g02",name:"复合词/概念整合",de:"Konzeptuelle Integration",
+    desc:"黑塞不描述概念，他在词汇层面创造概念。Glasperlenspiel = 玻璃珠(美学/易碎)+游戏(规则/精神)=精神追求的美学化。三维度核心之二。",
+    works:["w11","w07","w05","w10"],
+    evidence:["Fauconnier & Turner概念整合理论: 复合词=输入空间→合成空间","Glasperlenspiel作为终极案例: 两个概念域压入单一词汇","非Duden词库收录复合词占比=创新度指标"]},
+  {id:"g03",name:"并列结构/哲学韵律",de:"Philosophische Rhythmik",
+    desc:"并列=概念间平等流动; 主从=层级逻辑。黑塞的Parataxe偏好=列即平等的句法韵律，匹配二元辩证。三维度核心之三。",
+    works:["w10","w07","w05","w11"],
+    evidence:["Parataxe/Hypotaxe比例作为量化指标","并列结构=二律背反/对立统一的句法化身","对比: 托马斯·曼的Hypotaxe偏好=论证链条的层级逻辑"]},
+  {id:"g04",name:"分词短语/嵌套扩展",de:"Partizipialkonstruktion",
+    desc:"多层级分词嵌套——将多层信息压缩进单一语法结构，与Satzklammer协同制造认知负载。",
+    works:["w11","w10"],
+    evidence:["晚期作品(Glasperlenspiel)的嵌套深度显著高于早期","分词扩展使叙事视角在句内切换"]},
+  {id:"g05",name:"语气词/开放性",de:"Modalpartikel",
+    desc:"doch, wohl, ja, eben——高频语气词创造不确定性与开放性，拒绝封闭断言，与东方式'不可说'精神同构。",
+    works:["w07","w10"],
+    evidence:["Siddhartha中语气词频率与悟道场景高度相关","黑塞比曼使用更多'软化'语气词"]}
 ];
 
 const cultures = [
@@ -510,14 +525,27 @@ const layers = [
 	  ['t08','c01','寻找者'], ['t08','s01','个体化'],
 	  ['t09','c06','艺术家'], ['t09','g03','抽象化'],
 	  ['t10','k05','乡土'], ['t10','s02','张力'],
-	  ['g01','w07','句法证据'], ['g02','w07','句法证据'], ['g03','w11','句法证据'],
+	  ['g01','w07','认知悬置·悉达多'], ['g01','w10','认知悬置·荒原狼'], ['g01','w11','认知悬置·玻璃珠'],
+	  ['g02','w11','概念整合·玻璃珠'], ['g02','w07','概念整合·Om'], ['g02','w10','概念整合·荒原狼'],
+	  ['g03','w10','哲学韵律·魔术剧院'], ['g03','w07','哲学韵律·渡河'], ['g03','w11','哲学韵律·生平'],
+	  ['g04','w11','嵌套扩展晚期'], ['g04','w10','嵌套扩展'],
+	  ['g05','w07','语气开放·悉达多'], ['g05','w10','语气开放·荒原狼'],
+	  ['g01','t02','悬置=阈限'], ['g01','s04','框型=框架'], ['g01','k08','叔本华意志暂停'],
+	  ['g02','t09','概念创造=艺术救赎'], ['g02','s05','词汇=并列'], ['g02','k06','概念创造=价值重估'],
+	  ['g03','t08','并列=多重自我'], ['g03','s05','并列论证'], ['g03','t05','并列=台阶'], ['g03','k02','阴阳二元'],
+	  ['g04','s06','嵌套=阈限'],
+	  ['g05','k01','不可说之悟'],
 	  ['k02','w11','文化源流'], ['k03','w01','文化源流'], ['k04','w05','文化源流'],
 	  ['k06','w05','超人/该隐'], ['k06','w10','末人批判'], ['k06','w11','权力意志回应'], ['k06','w08','酒神日神'],
 	  ['k07','w05','阴影/Abraxas'], ['k07','w10','积极想象'], ['k07','w08','个体化原型'], ['k07','t06','母亲原型'],
 	  ['k08','w07','意志消融'], ['k08','w10','表象剧场'], ['k08','w01','早期悲观'],
 	  ['k09','w10','地下室'], ['k09','w08','分裂自我'], ['k09','t08','个体化'],
 	  ['c08','w10','市民世界'], ['c08','s02','两极一端']
-	].forEach(([s,t,label]) => edge(s,t,label.includes('文化') || label.includes('来源') || label.includes('Maya') ? 'source' : (label.includes('句法') || label.includes('结构') || label.includes('阈限') || label.includes('成长') || label.includes('越界') || label.includes('张力') ? 'form' : 'evidence'), label, .9));
+	].forEach(([s,t,label]) => {
+  const kw = label; const isSrc = kw.includes('源流')||kw.includes('来源')||kw.includes('Maya')||kw.includes('叔本华')||kw.includes('阴阳')||kw.includes('不可说');
+  const isForm = kw.includes('句法')||kw.includes('结构')||kw.includes('阈限')||kw.includes('成长')||kw.includes('越界')||kw.includes('张力')||kw.includes('嵌套')||kw.includes('悬置')||kw.includes('韵律')||kw.includes('整合')||kw.includes('并列');
+  edge(s,t,isSrc?'source':isForm?'form':'evidence',label,.9);
+});
 
 // ═══════════════════════════════════════════
 // SIDEBAR FILTER UI
