@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" style="background:#11100f;font-family:sans-serif">
+<text x="450.0" y="25" text-anchor="middle" fill="#e8a838" font-size="18" letter-spacing="2">黑塞知识图谱 · 净化版</text>
+<text x="450.0" y="42" text-anchor="middle" fill="#555" font-size="11">54节点(宽节点隐藏) · 61边 · 10层</text>
+<rect x="750" y="45" width="130" height="352" rx="6" fill="rgba(17,16,15,0.9)" stroke="#333" stroke-width="1"/>
+<text x="760" y="59" fill="#e8a838" font-size="11" font-weight="bold">节点层</text>
+<circle cx="766" cy="74" r="5" fill="#e8a838"/>
+<text x="776" y="78" fill="#999" font-size="10">W作品</text>
+<circle cx="766" cy="92" r="5" fill="#4a9eff"/>
+<text x="776" y="96" fill="#999" font-size="10">T母题</text>
+<circle cx="766" cy="110" r="5" fill="#e06060"/>
+<text x="776" y="114" fill="#999" font-size="10">C人物</text>
+<circle cx="766" cy="128" r="5" fill="#9b59b6"/>
+<text x="776" y="132" fill="#999" font-size="10">S结构</text>
+<circle cx="766" cy="146" r="5" fill="#2ecc71"/>
+<text x="776" y="150" fill="#999" font-size="10">G语法</text>
+<circle cx="766" cy="164" r="5" fill="#95a5a6"/>
+<text x="776" y="168" fill="#999" font-size="10">B文化</text>
+<circle cx="766" cy="182" r="5" fill="#e67e22"/>
+<text x="776" y="186" fill="#999" font-size="10">D辩论</text>
+<line x1="760" y1="195" x2="870" y2="195" stroke="#333" stroke-width="1"/>
+<text x="760" y="203" fill="#888" font-size="10" font-weight="bold">边类型</text>
+<line x1="760" y1="217" x2="774" y2="217" stroke="#4a9eff" stroke-width="2"/>
+<text x="778" y="220" fill="#999" font-size="9">theme carrier</text>
+<line x1="760" y1="233" x2="774" y2="233" stroke="#9b59b6" stroke-width="2"/>
+<text x="778" y="236" fill="#999" font-size="9">struct instance</text>
+<line x1="760" y1="249" x2="774" y2="249" stroke="#95a5a6" stroke-width="2"/>
+<text x="778" y="252" fill="#999" font-size="9">influence</text>
+<line x1="760" y1="265" x2="774" y2="265" stroke="#2ecc71" stroke-width="2"/>
+<text x="778" y="268" fill="#999" font-size="9">grammar analysis</text>
+<line x1="760" y1="281" x2="774" y2="281" stroke="#e8a838" stroke-width="2"/>
+<text x="778" y="284" fill="#999" font-size="9">philosophical continuum</text>
+<line x1="760" y1="297" x2="774" y2="297" stroke="#e67e22" stroke-width="2"/>
+<text x="778" y="300" fill="#999" font-size="9">debate ref</text>
+<line x1="760" y1="313" x2="774" y2="313" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,3"/>
+<text x="778" y="316" fill="#999" font-size="9">hidden pending</text>
+<text x="760" y="333" fill="#555" font-size="9">已确认:47 建议:9 待验:5</text>
+<text x="15" y="640" fill="#444" font-size="9">12个宽节点隐藏（孤独/个体化/精神导师等） · 点击切换显示</text>
+</svg>

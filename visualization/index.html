@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑塞知识图谱 · 66节点 · 65边</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #11100f; color: #ccc; font-family: -apple-system, 'Noto Sans SC', sans-serif; overflow: hidden; }
+#graph { width: 100vw; height: 100vh; }
+.legend { position: absolute; top: 20px; right: 20px; background: rgba(17,16,15,0.85); padding: 14px 18px; border-radius: 8px; font-size: 12px; border: 1px solid #333; z-index: 10; }
+.legend-item { display: flex; align-items: center; margin: 3px 0; }
+.legend-color { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; flex-shrink: 0; }
+.info { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(17,16,15,0.92); padding: 14px 24px; border-radius: 8px; font-size: 13px; border: 1px solid #444; text-align: center; max-width: 520px; opacity: 0; transition: opacity 0.25s; pointer-events: none; z-index: 10; }
+.info.show { opacity: 1; }
+.info .title { color: #e8a838; font-weight: bold; font-size: 15px; }
+.info .detail { color: #999; margin-top: 4px; font-size: 12px; }
+.controls { position: absolute; top: 20px; left: 20px; z-index: 10; display: flex; flex-wrap: wrap; gap: 3px; max-width: 400px; }
+.controls button { background: #222; color: #999; border: 1px solid #444; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; transition: all 0.15s; }
+.controls button:hover { background: #333; color: #ccc; }
+.controls button.active { background: #e8a838; color: #111; border-color: #e8a838; font-weight: bold; }
+.link { fill: none; }
+.link.confirmed { stroke-opacity: 0.5; }
+.link.suggested { stroke-opacity: 0.25; stroke-dasharray: 5,4; }
+.link.pending { stroke-opacity: 0.2; stroke-dasharray: 3,3; }
+.node { cursor: pointer; transition: r 0.1s; }
+.node:hover { stroke: #fff !important; stroke-width: 2.5 !important; }
+.label { font-size: 9px; fill: #777; pointer-events: none; text-shadow: 0 0 4px #11100f, 0 0 4px #11100f; }
+.header { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); font-size: 13px; color: #555; letter-spacing: 2px; z-index: 10; }
+.footer { position: absolute; bottom: 10px; left: 20px; font-size: 10px; color: #444; z-index: 10; }
+</style>
+</head>
+<body>
+
+<div class="legend" id="legend"></div>
+<div class="controls" id="controls"></div>
+<div class="header">黑塞文学知识图谱 · 拖动节点 · 滚轮缩放</div>
+<button id="toggleBroad" style="position:absolute;top:20px;left:50%;transform:translateX(50px);background:#222;color:#999;border:1px solid #444;padding:5px 10px;border-radius:4px;cursor:pointer;font-size:11px;z-index:10">显示宽节点</button>
+<div class="info" id="info"></div>
+<div class="footer">hover节点查详情 · 筛选层</div>
+<div id="graph"></div>
+
+<script>
+// Layer config
+const layerColors = {
+  'W': '#e8a838', 'T': '#4a9eff', 'C': '#e06060',
+  'S': '#9b59b6', 'G': '#2ecc71', 'B': '#95a5a6', 'D': '#e67e22'
+};
+const layerLabels = { 'W': '作品', 'T': '母题', 'C': '人物', 'S': '结构', 'G': '语法', 'B': '文化', 'D': '辩论' };
+const edgeCols = {
+  'theme_carrier': '#4a9eff', 'struct_instance': '#9b59b6', 'influence': '#95a5a6',
+  'grammar_analysis': '#2ecc71', 'philosophical_continuum': '#e8a838',
+  'debate_ref': '#e67e22', 'hidden_pending': '#e74c3c'
+};
+
+let allNodes, allEdges;
+
+Promise.all([
+  fetch('nodes.json').then(r => r.json()),
+  fetch('edges.json').then(r => r.json())
+]).then(([nodes, edges]) => {
+  allNodes = nodes; allEdges = edges;
+  buildLegend();
+  buildControls();
+  renderGraph(nodes, edges);
+});
+
+function buildLegend() {
+  const el = document.getElementById('legend');
+  let html = '<div style="font-weight:bold;margin-bottom:6px;color:#e8a838">节点层</div>';
+  for (const [k,v] of Object.entries(layerLabels)) {
+    html += `<div class="legend-item"><div class="legend-color" style="background:${layerColors[k]}"></div>${v}</div>`;
+  }
+  html += '<div style="margin-top:10px;border-top:1px solid #333;padding-top:6px;font-weight:bold;color:#999">边类型</div>';
+  for (const [k,v] of Object.entries(edgeCols)) {
+    html += `<div class="legend-item" style="font-size:10px"><div class="legend-color" style="background:${v};width:8px;height:8px"></div>${k.replace(/_/g,' ')}</div>`;
+  }
+  el.innerHTML = html;
+}
+
+function buildControls() {
+  const el = document.getElementById('controls');
+  let html = '<button class="active" data-layer="">全部</button>';
+  for (const [k,v] of Object.entries(layerLabels)) {
+    html += `<button data-layer="${k}">${v}</button>`;
+  }
+  el.innerHTML = html;
+  el.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      el.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const l = btn.dataset.layer;
+      const fn = l ? allNodes.filter(n => n.layer === l) : allNodes;
+      const fids = new Set(fn.map(n => n.id));
+      const fe = allEdges.filter(e => fids.has(e.source) && fids.has(e.target));
+      renderGraph(fn, fe);
+    });
+  });
+}
+
+function countConnections(nodes, edges) {
+  const c = {};
+  edges.forEach(e => { c[e.source] = (c[e.source]||0)+1; c[e.target] = (c[e.target]||0)+1; });
+  return c;
+}
+
+function renderGraph(nodes, edges) {
+  d3.select('#graph svg').remove();
+  const conn = countConnections(nodes, edges);
+  const maxConn = Math.max(1, ...Object.values(conn));
+  const width = window.innerWidth, height = window.innerHeight;
+
+  const svg = d3.select('#graph').append('svg')
+    .attr('width', width).attr('height', height);
+
+  const zoom = d3.zoom().scaleExtent([0.3,6]).on('zoom', (ev) =>
+    svg.select('g.main').attr('transform', ev.transform)
+  );
+  svg.call(zoom);
+
+  const g = svg.append('g').attr('class', 'main');
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(edges).id(d => d.id).distance(d => d.status==='suggested'?180:120))
+    .force('charge', d3.forceManyBody().strength(-250))
+    .force('center', d3.forceCenter(width/2, height/2))
+    .force('collision', d3.forceCollide(d => Math.max(12, (conn[d.id]||0)+8)));
+
+  const link = g.append('g').selectAll('line')
+    .data(edges).join('line')
+    .attr('class', d => `link ${d.status}`)
+    .attr('stroke', d => edgeCols[d.type] || '#555')
+    .attr('stroke-opacity', d => d.status==='confirmed'?0.5:0.25)
+    .attr('stroke-width', d => d.status==='confirmed'?1.5:1);
+
+  const node = g.append('g').selectAll('circle')
+    .data(nodes).join('circle')
+    .attr('class', 'node')
+    .attr('r', d => Math.max(4, Math.sqrt((conn[d.id]||0)+1)*4.5))
+    .attr('fill', d => layerColors[d.layer] || '#555')
+    .attr('stroke', '#222').attr('stroke-width', 1.5)
+    .call(d3.drag()
+      .on('start', (ev,d) => { if(!ev.active) sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on('drag', (ev,d) => { d.fx=ev.x; d.fy=ev.y; })
+      .on('end', (ev,d) => { if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; })
+    );
+
+  const label = g.append('g').selectAll('text')
+    .data(nodes).join('text')
+    .attr('class', 'label')
+    .text(d => d.name.length>5 ? d.name.slice(0,5)+'…' : d.name)
+    .attr('dx', d => Math.sqrt((conn[d.id]||0)+1)*4.5+3)
+    .attr('dy', 3);
+
+  function showInfo(d) {
+    const el = document.getElementById('info');
+    el.innerHTML = `<div class="title">${d.name}${d.name_de?' <span style="color:#888;font-weight:normal">('+d.name_de+')</span>':''}</div>` +
+      `<div class="detail">${d.id} · ${layerLabels[d.layer]||d.layer}层 · ` +
+      (d.year?`${d.year} · `:'') +
+      `置信:${d.confidence} · 状态:${d.status}${d.evidence?' · 证据:'+d.evidence:''} · ${conn[d.id]||0}条连边</div>`;
+    el.classList.add('show');
+  }
+
+  node.on('mouseover', (ev,d) => showInfo(d));
+  node.on('mouseout', () => document.getElementById('info').classList.remove('show'));
+
+  sim.on('tick', () => {
+    link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
+        .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    node.attr('cx',d=>d.x).attr('cy',d=>d.y);
+    label.attr('x',d=>d.x).attr('y',d=>d.y);
+  });
+}
+
+// Scope toggle: show/hide broad nodes
+let showBroad = false;
+document.getElementById('toggleBroad').addEventListener('click', () => {
+  showBroad = !showBroad;
+  document.getElementById('toggleBroad').textContent = showBroad ? '隐藏宽节点(12)' : '显示宽节点(12)';
+  renderGraph(
+    showBroad ? allNodes : allNodes.filter(n => n.scope==='specific'),
+    showBroad ? allEdges : allEdges.filter(e => {
+      const sn = allNodes.find(n=>n.id===e.source);
+      const tn = allNodes.find(n=>n.id===e.target);
+      if (!sn || !tn) return false;
+      return sn.scope==='specific' && tn.scope==='specific';
+    })
+  );
+});
+</script>
+</body>
+</html>

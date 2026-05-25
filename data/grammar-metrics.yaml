@@ -1,0 +1,170 @@
+# =============================================================================
+# 黑塞知识图谱 — 语法指标数据
+# =============================================================================
+# 生成日期: 2026-05-15
+# 来源: reference/syntax-evolution-curve.md (v2 Satzklammer深度版)
+#
+# 方法: 取每部作品开篇30个叙语句子 (Glasperlenspiel全文, 因导言特殊)
+# 字段: 句长(词/句), Mittelfeld深度(词), 嵌入得分, 深层占比
+# =============================================================================
+
+# 句法签名类型:
+#   窄·浅: Mittelfeld<20, 嵌入<2
+#   窄·密: Mittelfeld<20, 嵌入>3
+#   中宽·深: Mittelfeld 20-30, 嵌入>4
+#   宽且深: Mittelfeld>25, 嵌入>4
+#   最宽·中深: Mittelfeld>30, 嵌入 3-4
+
+works:
+  - id: Ⓦ-01
+    name_zh: 彼得·卡门青
+    name_de: Peter Camenzind
+    year: 1904
+    sentence_length: 27.2
+    mittelfeld_depth: 24.3
+    mittelfeld_std: 13.0
+    embedding_score: 4.3
+    deep_mf_ratio: 0.71
+    deep_embedding_ratio: 0.43
+    signature: 中宽·深
+    v2_detected: 14/23
+    grammar_analyzed: true
+
+  - id: Ⓦ-02
+    name_zh: 在轮下
+    name_de: Unterm Rad
+    year: 1906
+    sentence_length: 21.8
+    mittelfeld_depth: 18.3
+    mittelfeld_std: 8.8
+    embedding_score: 1.7
+    deep_mf_ratio: 0.70
+    deep_embedding_ratio: 0.10
+    signature: 窄·浅
+    v2_detected: 10/23
+    grammar_analyzed: true
+
+  - id: Ⓦ-07
+    name_zh: 悉达多
+    name_de: Siddhartha
+    year: 1922
+    sentence_length: 23.0
+    mittelfeld_depth: 18.2
+    mittelfeld_std: 13.8
+    embedding_score: 3.5
+    deep_mf_ratio: 0.50
+    deep_embedding_ratio: 0.33
+    signature: 窄·密
+    v2_detected: 6/20
+    grammar_analyzed: true
+
+  - id: Ⓦ-10
+    name_zh: 荒原狼
+    name_de: Der Steppenwolf
+    year: 1927
+    sentence_length: 33.9
+    mittelfeld_depth: 31.6
+    mittelfeld_std: 28.2
+    embedding_score: 4.4
+    deep_mf_ratio: 0.78
+    deep_embedding_ratio: 0.33
+    signature: 宽且深
+    v2_detected: 9/17
+    grammar_analyzed: true
+
+  - id: Ⓦ-11
+    name_zh: 玻璃珠游戏
+    name_de: Das Glasperlenspiel
+    year: 1943
+    sentence_length: 38.0
+    mittelfeld_depth: 34.3
+    mittelfeld_std: 21.1
+    embedding_score: 3.9
+    deep_mf_ratio: 0.79
+    deep_embedding_ratio: 0.43
+    signature: 最宽·中深
+    v2_detected: 14/30
+    grammar_analyzed: true
+
+  # 仅句长数据，无Satzklammer分析
+  - id: Ⓦ-03
+    name_zh: 盖特露德
+    name_de: Gertrud
+    year: 1910
+    sentence_length: 29.9
+    mittelfeld_depth: null
+    embedding_score: null
+    grammar_analyzed: false
+
+  - id: Ⓦ-04
+    name_zh: 罗斯哈尔德
+    name_de: Roßhalde
+    year: 1914
+    sentence_length: 38.0
+    mittelfeld_depth: null
+    embedding_score: null
+    grammar_analyzed: false
+
+  - id: Ⓦ-05
+    name_zh: 德米安
+    name_de: Demian
+    year: 1919
+    sentence_length: 26.1
+    mittelfeld_depth: null
+    embedding_score: null
+    grammar_analyzed: false
+
+  - id: Ⓦ-06
+    name_zh: 克林索尔的最后夏天
+    name_de: Klingsors letzter Sommer
+    year: 1920
+    sentence_length: 26.6
+    mittelfeld_depth: null
+    embedding_score: null
+    grammar_analyzed: false
+
+  - id: Ⓦ-08
+    name_zh: 纳尔齐斯与歌尔德蒙
+    name_de: Narziß und Goldmund
+    year: 1930
+    sentence_length: 27.0
+    mittelfeld_depth: null
+    embedding_score: null
+    grammar_analyzed: false
+
+  - id: Ⓦ-09
+    name_zh: 东方之旅
+    name_de: Die Morgenlandfahrt
+    year: 1932
+    sentence_length: 39.2
+    mittelfeld_depth: null
+    embedding_score: null
+    grammar_analyzed: false
+
+# =============================================================================
+# 发现概要 (from reference/syntax-evolution-curve.md)
+# =============================================================================
+key_findings:
+  - claim: "Hesse的句法不是从简单走向复杂——31岁时的Camenzind嵌入=4.3(与Steppenwolf持平)"
+    severity: critical
+    evidence: "Peter Camenzind (1904) embedding=4.3 vs Steppenwolf (1927) embedding=4.4"
+  - claim: "Unterm Rad(嵌入=1.7)是主题驱动简化的极端案例，非能力边界"
+    severity: critical
+    evidence: "同一年份Camenzind已4.3; 差3倍"
+  - claim: "每部作品有自己的Satzklammer签名——句长/Mittelfeld/嵌入是三个正交轴"
+    severity: critical
+    evidence: "5个作品各具独特签名模式"
+  - claim: "时间不是Hesse句法的主变量——主题才是"
+    severity: critical
+    evidence: "1906和1943同在短模式组; 1914和1932同在长模式组"
+
+# 语法数据可支援的辩论
+debate_support:
+  - debate: Ⓓ-004
+    support: "Siddhartha Satzklammer(窄·密)→对立统一中的'诗意调和'——语法层面的闭合延迟对应美学层面的调和动作"
+    data: "Mittelfeld=18.2, embedding=3.5, signature=窄·密"
+    η²: 0.18
+
+  - debate: Ⓓ-003
+    support: "Steppenwolf 宽且深Mittelfeld→魔法剧院冲突的句法映射"
+    data: "Mittelfeld=31.6, embedding=4.4, deep_mf=78%"
