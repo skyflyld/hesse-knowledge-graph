@@ -588,12 +588,52 @@ nodes:
   layer: Ⓑ
   name_zh: Hesse-Handbuch (2025)
   name_de: Hermann Hesse-Handbuch. Leben – Werk – Wirkung
+  editors:
+    - Andrea Bartl (Uni Bamberg)
+    - Alexander Honold (Uni Basel)
+  publisher: J.B. Metzler (Springer)
   year: 2025
+  pages: xx + 481
+  chapters: 67
+  parts: 14
   status: published
   confidence: 高
   evidence_type: handbook (Metzler)
   scope: specific
-  description: 'Andrea Bartl & Alexander Honold (Hg.), J.B. Metzler 2025, 501 S., 67 Kap., 14 Teile. Kernprogramm: "Hesse anders lesen" — Queer, Körperkultur, intermedial. Bewusst keine Periodisierung. Kein Sprach-/Stilkapitel.'
+  description: '首个 Metzler 系列黑塞手册，标志 Hesse 研究进入经典作家行列。编撰纲领: "Hesse anders lesen" — 纳入 Queer Studies、身体文化、跨媒介视角。明确不采用分期框架(14部分按作品/主题/接受组织)。无语言/文体/语法专章。含 Tobias Oswald "Die Hesse-Rezeption in den USA"、Hofmann 东方宗教章、马剑中国接受章。'
+  debates:
+    - Ⓓ-008 (无分期 = 建制级反方)
+    - Ⓓ-010 (直接支持新辩论卡)
+    - Ⓓ-001 ("anders lesen" 纲领改变问题语境)
+    - 论文#7 (无语法专章 = 空白定位确认)
+  edges_pending:
+    - target: Ⓓ-008, type: debate_evidence, subtype: antithesis
+    - target: Ⓓ-010, type: debate_evidence, subtype: thesis_plus
+    - target: 论文#7, type: gap_marker
+
+- id: Ⓑ-16
+  layer: Ⓑ
+  name_zh: 黑塞的全球影响 (2024)
+  name_en: Hermann Hesse's Global Impact: Past, Present, Future
+  editors:
+    - Ingo Cornils
+    - Neale Cunningham
+  publisher: Boydell & Brewer
+  year: 2024
+  chapters: 24
+  status: published
+  confidence: 高
+  evidence_type: edited volume
+  scope: specific
+  description: '24章国际学者撰稿，覆盖全球接受全景。第8章 Chunhua Zhan "Hermann Hesse's Impact on Mainland China" — 可替代 ChatGPT 全景图。Cornils 本人 Spiritual Capital 总结章节正式出版。与 Handbuch 形成 2024-2025 德国 Hesse 研究出版双峰。'
+  debates:
+    - Ⓓ-011 (Ch.8 Zhan = ChatGPT 替代源)
+    - Ⓓ-009 (Spiritual Capital 可正式引用)
+    - Ⓑ-12 (1960s 反文化接受对比)
+  edges_pending:
+    - target: Ⓓ-011, type: alternative_source, note: "替代 ChatGPT 全景"
+    - target: Ⓓ-009, type: debate_evidence, subtype: thesis_plus
+    - target: Ⓑ-12, type: topical_link
 - id: Ⓓ-001
   layer: Ⓓ
   name_zh: 浪漫主义还是现代主义
@@ -615,10 +655,16 @@ nodes:
   layer: Ⓓ
   name_zh: 荒原狼自杀主题
   status: 有争议
-  resolution: null
+  resolution: "在矛盾中生存"
+  resolution_brief: '"在矛盾中生存"本身就是答案。2026-06 标记: Mathäs 后人文主义 3/3 天敌 — 主体性预设需重新锚定(全文获取后评估)。'
   confidence: 中
   debate_refs: []
   scope: specific
+  pending_threat:
+    source: Mathäs, "From Anti-humanism to Post-humanism: Hesse's Steppenwolf", Konturen
+    severity: 3/3 (天敌级)
+    issue: 后人文主义取消笛卡尔式主体预设 — "谁在矛盾中生存"需重新表述
+    action: 获取全文 → 评估是否改写前提假设段
 - id: Ⓓ-004
   layer: Ⓓ
   name_zh: 对立统一——辩证综合还是诗意调和
@@ -657,31 +703,42 @@ nodes:
   name_zh: 陈壮鹰·亚洲思想分期说
   name_de: Chens Periodisierungsthese
   status: 有争议
-  resolution: null
+  resolution: 对抗型定位
+  resolution_brief: '分期说为中方学术路径, 德方建制(Handbuch 2025 + Cornils 2024)不采用分期 — 两条路径的张力为黑塞研究核心元问题。原约束型框架→对抗型定位 (2026-06-01 升级)。'
   confidence: 中
   debate_refs: []
   scope: specific
+  key_evidence:
+    - Hesse-Handbuch (2025): 14部分按作品/主题/接受组织, 明确不按时间分期
+    - Cornils (2024): 24章按地理/区域组织, 不采用分期
+    - 两条德国学术建制路径同时拒绝分期说
 - id: Ⓓ-009
   layer: Ⓓ
   name_zh: Spiritual Capital争议
   status: 有争议
-  resolution: null
-  confidence: 低
+  resolution: 可正式引用
+  resolution_brief: 'Cornils (2024) Spiritual Capital 总结章节正式出版 → 从推测升级为可引用学术框架。'
+  confidence: 中
   debate_refs: []
   scope: specific
 - id: Ⓓ-010
   layer: Ⓓ
   name_zh: Handbuch无分期 vs Chen分期说
   status: 有争议
-  resolution: null
-  confidence: 低
+  resolution: 两条路径的张力为元问题
+  resolution_brief: '德方建制(Handbuch 2025 + Cornils 2024)不采用分期 vs 中方学术(Chen 1997)四阶段分期 — 这一张力本身是黑塞研究的一个核心元问题。'
+  confidence: 高
   debate_refs: []
   scope: specific
 - id: Ⓓ-011
   layer: Ⓓ
   name_zh: 中国接受 vs 全球接受
   status: 有争议
-  resolution: null
-  confidence: 低
+  resolution: 子图非主轴
+  resolution_brief: '中国接受作为子图组织。ChatGPT 替代源已找到: Cornils (2024) Ch.8 Chunhua Zhan + 姜乙讲座实证。'
+  confidence: 高
   debate_refs: []
   scope: specific
+  replacement_source:
+    - Cornils & Cunningham (2024) Ch.8 Zhan — 中国接受全景的学术替代源
+    - 姜乙 浙大讲座 (2025.11) — 翻译作为跨文化创造的新实证

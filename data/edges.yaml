@@ -1103,3 +1103,50 @@ edges:
   source_file: vault/inbox/荒原狼.md
   source_scope: broad
   target_scope: specific
+
+# === 2026-06-01 月度整合: 新增推荐边 ===
+
+- source: Ⓑ-15
+  target: Ⓓ-008
+  type: debate_evidence
+  subtype: antithesis_plus
+  description: Hesse-Handbuch (2025) 明确不采用分期框架 — 建制级反方证据
+  confidence: 高
+  status: confirmed
+  source_file: data/nodes.yaml
+  note: Handbuch 14部分按作品/主题/接受组织, 不按时间分期
+
+- source: Ⓑ-15
+  target: Ⓓ-010
+  type: debate_evidence
+  subtype: thesis_plus
+  description: Handbuch 首版确认无分期结构, 直接支持 Ⓓ-010 辩论卡
+  confidence: 高
+  status: confirmed
+  source_file: data/nodes.yaml
+
+- source: Ⓑ-15
+  target: 🄶-05
+  type: gap_marker
+  description: Handbuch 无语言/文体/语法专章 — 论文#7 认知语法空白定位确认
+  confidence: 高
+  status: confirmed
+  source_file: data/nodes.yaml
+  note: 首个 Metzler 系列黑塞手册无语法专章 = 认知语法研究的学术空白确认
+
+- source: Ⓑ-16
+  target: Ⓓ-011
+  type: alternative_source
+  description: Cornils (2024) Ch.8 Zhan 可替代 ChatGPT 作为中国接受全景来源
+  confidence: 高
+  status: confirmed
+  source_file: data/nodes.yaml
+
+- source: Ⓑ-16
+  target: Ⓓ-009
+  type: debate_evidence
+  subtype: thesis_plus
+  description: Cornils Spiritual Capital 总结章节正式出版 — 可引用替代推测
+  confidence: 高
+  status: confirmed
+  source_file: data/nodes.yaml
