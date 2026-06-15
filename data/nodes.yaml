@@ -600,7 +600,36 @@ nodes:
   confidence: 高
   evidence_type: handbook (Metzler)
   scope: specific
-  description: '首个 Metzler 系列黑塞手册，标志 Hesse 研究进入经典作家行列。编撰纲领: "Hesse anders lesen" — 纳入 Queer Studies、身体文化、跨媒介视角。明确不采用分期框架(14部分按作品/主题/接受组织)。无语言/文体/语法专章。含 Tobias Oswald "Die Hesse-Rezeption in den USA"、Hofmann 东方宗教章、马剑中国接受章。'
+  description: '首个 Metzler 系列黑塞手册，标志 Hesse 研究进入经典作家行列。编撰纲领: "Hesse anders lesen" — 纳入 Queer Studies、身体文化、跨媒介视角。明确不采用分期框架(14部分按作品/主题/接受组织)。无语言/文体/语法专章。'
+  table_of_contents:
+    - part: "I: Biographisches — Lebensorte"
+      chapters: ["Von Calw nach Tübingen (Schnierle-Lutz)", "Basel (Liebendörfer)", "Gaienhofen/Bern (Hamann)", "Montagnola (Bucher)"]
+    - part: "II: Biographisches — Umgebungen"
+      chapters: ["Liebesbeziehungen/Familie (Reetz)", "Freunde/Förderer/Vernetzung (Parr)"]
+    - part: "III: Das lyrische Werk"
+      chapters: ["Hesses Lyrik (Görner)"]
+    - part: "IV: Die Erzählungen"
+      chapters: ["Erwin (Honold)", "Hermann Lauscher (Esselborn-Krumbiegel)", "Eine Sonate (Burget)", "Kinderseele (Blawid)", "Klein und Wagner (Honold)", "Klingsors letzter Sommer (Kuschel)", "Kurgast (Honold)"]
+    - part: "V: Märchen, Legenden, Nachdichtungen, dramatische Versuche"
+      chapters: ["Märchen und Legenden (Kragl)", "Textaffine Bilder/malerische Texte (Moser)"]
+    - part: "VI: Romane"
+      chapters: ["Peter Camenzind (Breuer)", "Unterm Rad (Giuriato)", "Gertrud (Herwig)", "Roßhalde (Herwig)", "Knulp (Singh)", "Demian (Elsaghe)", "Siddhartha (Bauer)", "Steppenwolf (Honold)", "Narziß und Goldmund (Forrester)", "Morgenlandfahrt (Singh)", "Glasperlenspiel (Bartl)"]
+    - part: "VII: Essays (Betrachtungen)"
+      chapters: ["Hesse als Essayist (Blaschke)", "Hesse als Kritiker/Literaturvermittler (Spindler)", "Hesse als Leser (Solbach)"]
+    - part: "VIII: Briefwechsel"
+      chapters: ["Briefwerk Überblick (Michels)", "Briefwechsel mit Thomas Mann (Kuschel)", "Briefwechsel mit Stefan Zweig (Magen)", "Briefwechsel mit Söhnen Bruno/Heiner (Limberg)", "Briefwechsel mit Helene Voigt-Diederichs (Villinger)"]
+    - part: "IX: Bildende Kunst"
+      chapters: ["Auch als Maler ein Dichter (Michels)"]
+    - part: "X: Hesses Werk im künstlerischen Kontext"
+      chapters: ["Literarische Traditionen (Magen)", "Musik I: Bach/Mozart/Kirchenmusik (Rose)", "Musik II: Romantik/Lied/Musiktheater (Schnitzler)", "Tanz (Rothenburger)", "Theater (Witt)", "Architektur (Innerhofer)"]
+    - part: "XI: Interdiskursive und intermediale Bezüge"
+      chapters: ["Bildungswesen/Pädagogik (Voß)", "Rundfunk/Radio (Rose)", "Film/Kino/Unterhaltung (Haupt)", "Philosophie (Szabó)", "Christliche Religion/Kirche (Gellner)", "Fernöstliche Religionen/Spiritualität (Hofmann) 🔗Ⓓ-002", "Psychoanalyse (Schmidt-Hannisa) 🔗Ⓓ-003", "Körperkultur/Lebensreform (Birnstiel)"]
+    - part: "XII: Themen und Aspekte"
+      chapters: ["Alkohol (Bartl)", "Dichter (Meng Guofeng)", "Queering Hesse (Steiner)", "Kindheit/Adoleszenz (Gess)", "Interkulturalität/Post-Kolonialismus (Patrut)", "Krieg/Pazifismus (Honold) 🔗Ⓓ-006", "Mythos (Forrester)", "Natur/Kultur (Keller)", "Raum (Geist)", "Vater-/Mutter-Figuren (Voß)"]
+    - part: "XIII: Wirkung"
+      chapters: ["Wirkungs-/Publikationsgeschichte (Michels)", "Hesse-Rezeption USA (Oswald)", "Hesse-Rezeption China (Ma Jian) 🔗Ⓓ-011", "Künstlerische Fortwirkungen (Baum/Baumann)"]
+    - part: "XIV: Nachlassbestände"
+      chapters: ["DLA Marbach (Eschenbach)", "Schweizerisches Literaturarchiv (Probst)", "Hermann-Hesse-Editionsarchiv (Michels)"]
   debates:
     - Ⓓ-008 (无分期 = 建制级反方)
     - Ⓓ-010 (直接支持新辩论卡)
@@ -634,6 +663,31 @@ nodes:
     - target: Ⓓ-011, type: alternative_source, note: "替代 ChatGPT 全景"
     - target: Ⓓ-009, type: debate_evidence, subtype: thesis_plus
     - target: Ⓑ-12, type: topical_link
+- id: Ⓑ-17
+  layer: Ⓑ
+  name_zh: 詹春花 GGP-I Ching German Quarterly (2026)
+  name_en: Hermann Hesse's Das Glasperlenspiel and I Ching
+  author: Chunhua Zhan (詹春花)
+  journal: The German Quarterly
+  year: 2026
+  volume: 99
+  pages: 55-73
+  doi: 10.1111/gequ.70041
+  status: published
+  confidence: 高
+  evidence_type: journal_article (A&HCI)
+  scope: specific
+  description: 'German Quarterly (A&HCI 顶刊) 发表的独立论文。Hesse 重新聚焦 I Ching 的占卜功能（区别于中国传统伦理哲学解读和欧洲自然哲学神学解读）。核心贡献: I Ching 不是表面东方装饰，而是 GGP 叙事的形式结构性组件——"活的艺术力量"。作者同时是 Cornils(2024) Ch.8 中国接受章作者。'
+  debates:
+    - Ⓓ-001 (I Ching 非目的论结构 = 浪漫主义形式证明)
+    - Ⓓ-002 (建制级"文化共通"框架学术背书)
+    - Ⓓ-005 (Knecht 决策的 I Ching 维度)
+  edges_pending:
+    - target: Ⓓ-002, type: debate_evidence, subtype: thesis_plus, note: "A&HCI 顶刊级别背书"
+    - target: Ⓓ-001, type: debate_evidence, subtype: thesis_plus
+    - target: Ⓓ-005, type: debate_evidence, subtype: thesis_plus
+  pdf_status: 未获取 (Wiley 付费墙, Sci-Hub 未索引2026新刊)
+  abstract_status: 已获取 (CrossRef)
 - id: Ⓓ-001
   layer: Ⓓ
   name_zh: 浪漫主义还是现代主义

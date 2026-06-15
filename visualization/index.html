@@ -24,8 +24,9 @@ body { background: #11100f; color: #ccc; font-family: -apple-system, 'Noto Sans 
 .link.confirmed { stroke-opacity: 0.5; }
 .link.suggested { stroke-opacity: 0.25; stroke-dasharray: 5,4; }
 .link.pending { stroke-opacity: 0.2; stroke-dasharray: 3,3; }
-.node { cursor: pointer; transition: r 0.1s; }
+.node { cursor: pointer; }
 .node:hover { stroke: #fff !important; stroke-width: 2.5 !important; }
+.node-group { cursor: pointer; }
 .label { font-size: 9px; fill: #777; pointer-events: none; text-shadow: 0 0 4px #11100f, 0 0 4px #11100f; }
 .header { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); font-size: 13px; color: #555; letter-spacing: 2px; z-index: 10; }
 .footer { position: absolute; bottom: 10px; left: 20px; font-size: 10px; color: #444; z-index: 10; }
@@ -54,6 +55,44 @@ const edgeCols = {
   'debate_ref': '#e67e22', 'hidden_pending': '#e74c3c'
 };
 
+// Shape vocabulary — 形状语义映射（来自 fireworks-tech-graph 理念）
+const SHAPE_NAMES = { 'W': '□', 'T': '◇', 'C': '○', 'S': '⬡', 'G': '△', 'B': '▢', 'D': '⬠' };
+
+function nodeRadius(d, conn) {
+  return Math.max(4, Math.sqrt((conn[d.id]||0)+1)*4.5);
+}
+
+function nodeShapePath(d, r) {
+  // All paths are centered at (0,0), caller wraps in <g transform=translate(x,y)>
+  const layer = d.layer === 'Ⓦ' ? 'W' : d.layer;
+  const s = r * 0.85; // scale factor for visual balance
+  switch(layer) {
+    case 'W': // 作品 — 矩形
+      return `M${-s*1.3},${-s*0.9} h${s*2.6} v${s*1.8} h${-s*2.6}z`;
+    case 'C': // 人物 — 圆形（作为 path 生成，方便统一使用）
+      return d3.symbol().type(d3.symbolCircle).size(Math.PI * r * r)();
+    case 'T': // 母题 — 菱形
+      return `M0,${-s*1.3} L${s*1.3},0 L0,${s*1.3} L${-s*1.3},0 Z`;
+    case 'S': // 结构 — 六边形
+      return Array.from({length:7}, (_,i) => {
+        const a = Math.PI/3 * i - Math.PI/6;
+        return (i===0?'M':'L') + (s*1.1*Math.cos(a)).toFixed(1) + ',' + (s*1.1*Math.sin(a)).toFixed(1);
+      }).join('') + 'Z';
+    case 'G': // 语法 — 三角
+      return `M0,${-s*1.3} L${s*1.3},${s*0.8} L${-s*1.3},${s*0.8} Z`;
+    case 'B': // 文化 — 圆角矩形
+      const c = s * 0.3;
+      return `M${-s*1.1},${-s*0.8} a${c},${c} 0 0 1 ${c},${-c} h${(s*2.2-2*c)} a${c},${c} 0 0 1 ${c},${c} v${s*1.6} a${c},${c} 0 0 1 ${-c},${c} h${-(s*2.2-2*c)} a${c},${c} 0 0 1 ${-c},${-c} Z`;
+    case 'D': // 辩论 — 五边形
+      return Array.from({length:6}, (_,i) => {
+        const a = Math.PI*2/5 * i - Math.PI/2;
+        return (i===0?'M':'L') + (s*1.15*Math.cos(a)).toFixed(1) + ',' + (s*1.15*Math.sin(a)).toFixed(1);
+      }).join('') + 'Z';
+    default:
+      return d3.symbol().type(d3.symbolCircle).size(Math.PI * r * r)();
+  }
+}
+
 let allNodes, allEdges;
 
 Promise.all([
@@ -70,7 +109,8 @@ function buildLegend() {
   const el = document.getElementById('legend');
   let html = '<div style="font-weight:bold;margin-bottom:6px;color:#e8a838">节点层</div>';
   for (const [k,v] of Object.entries(layerLabels)) {
-    html += `<div class="legend-item"><div class="legend-color" style="background:${layerColors[k]}"></div>${v}</div>`;
+    const shape = SHAPE_NAMES[k] || '○';
+    html += `<div class="legend-item"><div class="legend-color" style="background:${layerColors[k]};border-radius:2px;text-align:center;line-height:12px;color:#111;font-size:9px">${shape}</div>${v}</div>`;
   }
   html += '<div style="margin-top:10px;border-top:1px solid #333;padding-top:6px;font-weight:bold;color:#999">边类型</div>';
   for (const [k,v] of Object.entries(edgeCols)) {
@@ -91,7 +131,7 @@ function buildControls() {
       el.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const l = btn.dataset.layer;
-      const fn = l ? allNodes.filter(n => n.layer === l) : allNodes;
+      const fn = l ? allNodes.filter(n => (n.layer === l || n.layer === 'Ⓦ' && l === 'W')) : allNodes;
       const fids = new Set(fn.map(n => n.id));
       const fe = allEdges.filter(e => fids.has(e.source) && fids.has(e.target));
       renderGraph(fn, fe);
@@ -134,23 +174,28 @@ function renderGraph(nodes, edges) {
     .attr('stroke-opacity', d => d.status==='confirmed'?0.5:0.25)
     .attr('stroke-width', d => d.status==='confirmed'?1.5:1);
 
-  const node = g.append('g').selectAll('circle')
-    .data(nodes).join('circle')
-    .attr('class', 'node')
-    .attr('r', d => Math.max(4, Math.sqrt((conn[d.id]||0)+1)*4.5))
-    .attr('fill', d => layerColors[d.layer] || '#555')
-    .attr('stroke', '#222').attr('stroke-width', 1.5)
+  const node = g.append('g').selectAll('g.node-group')
+    .data(nodes).join('g')
+    .attr('class', 'node-group')
     .call(d3.drag()
       .on('start', (ev,d) => { if(!ev.active) sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
       .on('drag', (ev,d) => { d.fx=ev.x; d.fy=ev.y; })
       .on('end', (ev,d) => { if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; })
-    );
+    )
+    .each(function(d) {
+      const sel = d3.select(this);
+      sel.append('path')
+        .attr('class', 'node')
+        .attr('d', nodeShapePath(d, nodeRadius(d, conn)))
+        .attr('fill', d => layerColors[d.layer === 'Ⓦ' ? 'W' : d.layer] || '#555')
+        .attr('stroke', '#222').attr('stroke-width', 1.5);
+    });
 
   const label = g.append('g').selectAll('text')
     .data(nodes).join('text')
     .attr('class', 'label')
     .text(d => d.name.length>5 ? d.name.slice(0,5)+'…' : d.name)
-    .attr('dx', d => Math.sqrt((conn[d.id]||0)+1)*4.5+3)
+    .attr('dx', d => nodeRadius(d, conn) + 4)
     .attr('dy', 3);
 
   function showInfo(d) {
@@ -168,7 +213,7 @@ function renderGraph(nodes, edges) {
   sim.on('tick', () => {
     link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
         .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
-    node.attr('cx',d=>d.x).attr('cy',d=>d.y);
+    node.attr('transform', d => 'translate(' + d.x + ',' + d.y + ')');
     label.attr('x',d=>d.x).attr('y',d=>d.y);
   });
 }

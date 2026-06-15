@@ -1150,3 +1150,42 @@ edges:
   confidence: 高
   status: confirmed
   source_file: data/nodes.yaml
+
+- source: Ⓑ-16
+  target: Ⓑ-12
+  type: topical_link
+  description: Cornils (2024) 全球接受全景与 1960s 反文化接受形成跨时空对比
+  confidence: 中
+  status: confirmed
+  source_file: vault/reviewed/cornils-2024-global-impact.md
+  note: 两条接受路径(学术建制 vs 反文化运动)的张力为 Hesse 全球化的双面
+
+# === 2026-06-15 遗留债清偿: 新增边 ===
+
+- source: Ⓑ-17
+  target: Ⓓ-002
+  type: debate_evidence
+  subtype: thesis_plus
+  description: Zhan (2026) German Quarterly — I Ching 作为叙事结构性组件="文化共通"框架的 A&HCI 顶刊级别背书
+  confidence: 高
+  status: confirmed
+  source_file: vault/reviewed/zhan-2026-ggp-iching-german-quarterly.md
+  note: 同一作者(詹春花)同时在 Cornils(2024) Ch.8 和 German Quarterly 发表 → 双重建制支撑
+
+- source: Ⓑ-17
+  target: Ⓓ-001
+  type: debate_evidence
+  subtype: thesis_plus
+  description: I Ching 的非目的论叙事结构 = 浪漫主义"开放式追寻"在 GGP 中获得了形式结构维度的证明
+  confidence: 高
+  status: confirmed
+  source_file: vault/reviewed/zhan-2026-ggp-iching-german-quarterly.md
+
+- source: Ⓑ-17
+  target: Ⓓ-005
+  type: debate_evidence
+  subtype: thesis_plus
+  description: I Ching 占卜框架为 Knecht 的决策提供非西方解释路径 — "悲壮超越" thesis 获得新维度支撑
+  confidence: 中
+  status: confirmed
+  source_file: vault/reviewed/zhan-2026-ggp-iching-german-quarterly.md
