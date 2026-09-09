@@ -1,0 +1,44 @@
+[
+  {
+    "id": "c01",
+    "name": "寻找者",
+    "de": "Suchender",
+    "desc": "Siddhartha, Sinclair, Goldmund, Knecht, Harry Haller"
+  },
+  {
+    "id": "c02",
+    "name": "精神导师",
+    "de": "Führer",
+    "desc": "Demian, Narziss, Gotama, Musikmeister, Vasudeva"
+  },
+  {
+    "id": "c03",
+    "name": "母亲形象",
+    "de": "Mutter",
+    "desc": "Eva夫人, Urmutter, Kamala, Hermine"
+  },
+  {
+    "id": "c04",
+    "name": "俗世引导者",
+    "de": "Weltführer",
+    "desc": "Kamala, Kamaswami, Pistorius, Designori"
+  },
+  {
+    "id": "c05",
+    "name": "朋友影子",
+    "de": "Freund",
+    "desc": "Govinda, Tegularius, Plinio Designori"
+  },
+  {
+    "id": "c06",
+    "name": "艺术家",
+    "de": "Künstler",
+    "desc": "Goldmund, Kuhn, Veraguth, Klingsor"
+  },
+  {
+    "id": "c07",
+    "name": "少年",
+    "de": "Jüngling",
+    "desc": "Sinclair, Siddhartha少年, Hans Giebenrath"
+  }
+]

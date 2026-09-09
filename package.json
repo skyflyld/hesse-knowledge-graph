@@ -1,0 +1,12 @@
+{
+  "name": "hesse-knowledge-graph",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "check": "node scripts/validate-data.mjs",
+    "smoke:browser": "node scripts/browser-smoke.mjs"
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "t02",
+    "features": [
+      "blue",
+      "cool",
+      "texture"
+    ],
+    "explain": "冷色、流动感和边界纹理指向河流、渡口与阈限。"
+  },
+  {
+    "id": "t10",
+    "features": [
+      "green",
+      "texture",
+      "low saturation"
+    ],
+    "explain": "绿色、自然纹理和低人工感指向山林、乡土与文明外部。"
+  },
+  {
+    "id": "t09",
+    "features": [
+      "saturation",
+      "warm",
+      "red"
+    ],
+    "explain": "高饱和与暖色张力更接近音乐、雕塑和形式化救赎。"
+  },
+  {
+    "id": "t07",
+    "features": [
+      "dark",
+      "cool",
+      "saturation"
+    ],
+    "explain": "暗部、冷色和戏剧化色彩把图像推向幻象、Maya与魔法剧场。"
+  },
+  {
+    "id": "t05",
+    "features": [
+      "light",
+      "texture",
+      "contrast"
+    ],
+    "explain": "明暗推进和纹理变化对应台阶、越界和持续转化。"
+  }
+]

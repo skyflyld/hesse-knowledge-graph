@@ -1,0 +1,88 @@
+[
+  {
+    "id": "w01",
+    "name": "Peter Camenzind",
+    "year": 1904,
+    "phase": "p01",
+    "desc": "Jugendstil，自然崇拜"
+  },
+  {
+    "id": "w02",
+    "name": "Unterm Rad",
+    "year": 1906,
+    "phase": "p01",
+    "desc": "教育批判，自传性"
+  },
+  {
+    "id": "w03",
+    "name": "Gertrud",
+    "year": 1910,
+    "phase": "p01",
+    "desc": "音乐与爱，三角关系"
+  },
+  {
+    "id": "w04",
+    "name": "Roßhalde",
+    "year": 1914,
+    "phase": "p01",
+    "desc": "婚姻破裂，艺术家困境"
+  },
+  {
+    "id": "w05",
+    "name": "Demian",
+    "year": 1919,
+    "phase": "p02",
+    "desc": "该隐符号，Gnosis，自我觉醒"
+  },
+  {
+    "id": "w06",
+    "name": "Klingsors letzter Sommer",
+    "year": 1920,
+    "phase": "p02",
+    "desc": "表现主义，色彩爆炸"
+  },
+  {
+    "id": "w07",
+    "name": "Siddhartha",
+    "year": 1922,
+    "phase": "p02",
+    "desc": "河流，Om，停止寻找"
+  },
+  {
+    "id": "w10",
+    "name": "Steppenwolf",
+    "year": 1927,
+    "phase": "p03",
+    "desc": "市民vs狼，魔法剧院"
+  },
+  {
+    "id": "w08",
+    "name": "Narziss & Goldmund",
+    "year": 1930,
+    "phase": "p03",
+    "desc": "精神vs感官，母亲原型"
+  },
+  {
+    "id": "w09",
+    "name": "Morgenlandfahrt",
+    "year": 1932,
+    "phase": "p03",
+    "desc": "联盟秘密，东西方对话"
+  },
+  {
+    "id": "w11",
+    "name": "Glasperlenspiel",
+    "year": 1943,
+    "phase": "p04",
+    "desc": "精神王国危机，Transzendieren"
+  },
+  {
+    "id": "w12",
+    "name": "External Scholarship",
+    "name_de": "Externe Forschungsliteratur",
+    "year": 2024,
+    "phase": "p04",
+    "desc": "External academic publications about Hesse, automatically ingested from bibliographic databases.",
+    "desc_de": "Automatisch erfasste externe Forschungsliteratur zu Hermann Hesse."
+  }
+]

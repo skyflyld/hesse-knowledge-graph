@@ -1,0 +1,274 @@
+[
+  {
+    "id": "r01",
+    "date": "1904",
+    "type": "publication",
+    "name": "《彼得·卡门青》出版",
+    "desc": "黑塞处女作出版并获包恩费尔德文学奖，德语圈接受的起点。",
+    "location": "德国",
+    "refs": [
+      "w01"
+    ]
+  },
+  {
+    "id": "r02",
+    "date": "1906",
+    "type": "publication",
+    "name": "《在轮下》出版",
+    "desc": "教育批判小说，20 世纪德语教育小说传统的重要回声。",
+    "location": "德国",
+    "refs": [
+      "w02"
+    ]
+  },
+  {
+    "id": "r03",
+    "date": "1919",
+    "type": "publication",
+    "name": "《德米安》出版（Emil Sinclair 笔名）",
+    "desc": "一战创伤一代的精神圣经，战后德语青年接受的核心文本。",
+    "location": "德国",
+    "refs": [
+      "w05",
+      "t01"
+    ]
+  },
+  {
+    "id": "r04",
+    "date": "1922",
+    "type": "publication",
+    "name": "《悉达多》出版",
+    "desc": "东方转向代表作，此后百年被译为 40+ 语种。",
+    "location": "德国",
+    "refs": [
+      "w07",
+      "t07"
+    ]
+  },
+  {
+    "id": "r05",
+    "date": "1927",
+    "type": "publication",
+    "name": "《荒原狼》出版",
+    "desc": "20 世纪 60 年代反文化运动中被重新发现为预言书。",
+    "location": "德国",
+    "refs": [
+      "w10",
+      "t09"
+    ]
+  },
+  {
+    "id": "r06",
+    "date": "1930",
+    "type": "publication",
+    "name": "《纳尔齐斯与歌尔德蒙》出版",
+    "desc": "艺术家与学者双极主题，造型艺术母题的文本核心。",
+    "location": "德国",
+    "refs": [
+      "w08",
+      "t09"
+    ]
+  },
+  {
+    "id": "r07",
+    "date": "1943",
+    "type": "publication",
+    "name": "《玻璃珠游戏》出版",
+    "desc": "晚期代表作，1946 年诺贝尔文学奖的直接依据。",
+    "location": "瑞士",
+    "refs": [
+      "w11",
+      "t04"
+    ]
+  },
+  {
+    "id": "r08",
+    "date": "1946",
+    "type": "academic",
+    "name": "诺贝尔文学奖",
+    "desc": "全球接受跃升的官方节点，黑塞从德语作家升格为世界文学。",
+    "location": "瑞典",
+    "refs": [
+      "w11"
+    ]
+  },
+  {
+    "id": "r09",
+    "date": "1960s",
+    "type": "popular",
+    "name": "日本黑塞热",
+    "desc": "战后日本青年一代（含三岛由纪夫等作家圈）大规模接受，《悉达多》成为精神食粮。",
+    "location": "日本",
+    "refs": [
+      "k06",
+      "p17"
+    ]
+  },
+  {
+    "id": "r10",
+    "date": "1970s",
+    "type": "popular",
+    "name": "美国反文化运动黑塞热",
+    "desc": "嬉皮士一代将《荒原狼》《悉达多》奉为反叛与灵性指南，黑塞成美国畅销书。",
+    "location": "美国",
+    "refs": [
+      "k06"
+    ]
+  },
+  {
+    "id": "r11",
+    "date": "1980s",
+    "type": "popular",
+    "name": "中国第一次黑塞热",
+    "desc": "朦胧诗一代与知识青年大规模接受黑塞，《悉达多》手抄本流传——中国接受史第一阶段高峰。",
+    "location": "中国",
+    "refs": [
+      "k07",
+      "k09",
+      "p09",
+      "p20",
+      "p21"
+    ]
+  },
+  {
+    "id": "r12",
+    "date": "1990s",
+    "type": "translation",
+    "name": "中国译本潮",
+    "desc": "张佩芬等系统翻译黑塞全集，接受从地下手抄转向正规出版，学院研究起步（Hsia 谱系延续）。",
+    "location": "中国",
+    "refs": [
+      "k07",
+      "k09",
+      "p21",
+      "p20"
+    ]
+  },
+  {
+    "id": "r13",
+    "date": "2016",
+    "type": "popular",
+    "name": "BTS WINGS 引用《德米安》",
+    "desc": "韩国偶像团体 BTS 专辑 WINGS 以《德米安》为叙事骨架，引爆东亚 Z 世代跨媒介接受。",
+    "location": "韩国",
+    "refs": [
+      "k06",
+      "w05",
+      "d10"
+    ]
+  },
+  {
+    "id": "r14",
+    "date": "2018",
+    "type": "translation",
+    "name": "姜乙《悉达多》现象级译本",
+    "desc": "姜乙译本以口语化音乐性引爆大众市场，湖南文艺出版社全版权运作——翻译即接受机制的标志性案例。",
+    "location": "中国",
+    "refs": [
+      "k07",
+      "d08",
+      "p10"
+    ]
+  },
+  {
+    "id": "r15",
+    "date": "2024",
+    "type": "academic",
+    "name": "Hermann Hesse's Global Impact 出版",
+    "desc": "Cornils & Cunningham 编，Boydell & Brewer——英语学界全球接受研究集成，含詹春花中国接受专章。",
+    "location": "英国",
+    "refs": [
+      "d15",
+      "p11"
+    ]
+  },
+  {
+    "id": "r16",
+    "date": "2025-04",
+    "type": "academic",
+    "name": "Hesse-Handbuch 出版（Metzler/Springer）",
+    "desc": "Bartl & Honold 编，'Hesse anders lesen' 范式——Queering/女性视角/身体文化/世界性，含中国接受三阶段论。",
+    "location": "德国",
+    "refs": [
+      "d09",
+      "d14",
+      "p04",
+      "p05"
+    ]
+  },
+  {
+    "id": "r17",
+    "date": "2026-03",
+    "type": "academic",
+    "name": "Hermann-Hesse-Jahrbuch Band 18 出版",
+    "desc": "Limberg 编，K&N——音乐文化批评/残疾书写/《阶梯》去浅化（Kuschel），接受研究向规范判断的文本化转向。",
+    "location": "德国",
+    "refs": [
+      "d11",
+      "d15",
+      "p04",
+      "p05"
+    ]
+  },
+  {
+    "id": "r18",
+    "date": "2026-09-10",
+    "type": "popular",
+    "name": "Siddhartha 音乐剧场世界首演",
+    "desc": "Ruhrtriennale，Lisaboa Houbrechts 导，Caroline Shaw 作曲——跨媒介接受的当代形态。",
+    "location": "德国",
+    "refs": [
+      "d10",
+      "w07"
+    ]
+  },
+  {
+    "id": "r19",
+    "date": "2027-04-10",
+    "type": "anniversary",
+    "name": "巴符州文学节开幕（双周年启动）",
+    "desc": "Calw 主办，'Feels like forest, reads like Hesse'，4/10-5/15 五周，Calw 成巴符州文学首都。",
+    "location": "德国",
+    "refs": [
+      "k08",
+      "p05"
+    ]
+  },
+  {
+    "id": "r20",
+    "date": "2027-07-02",
+    "type": "anniversary",
+    "name": "黑塞 150 诞辰 Festakt + Calw 博物馆重开",
+    "desc": "双周年高潮日：150 诞辰庆典 + 2020 闭馆后首次重开 + Festwochenende 7/2-4，联邦 35€ 纪念银币全年在发。",
+    "location": "德国",
+    "refs": [
+      "k08"
+    ]
+  },
+  {
+    "id": "r21",
+    "date": "2022-08",
+    "type": "academic",
+    "name": "王滨滨接受分期论公开表达",
+    "desc": "澎湃访谈提出中国接受三阶段（1980s 热/1990s 译/2010s 后姜乙）——接受史学术化的媒体出口。",
+    "location": "中国",
+    "refs": [
+      "k09",
+      "d09",
+      "p09"
+    ]
+  },
+  {
+    "id": "r22",
+    "date": "2025-02",
+    "type": "academic",
+    "name": "陈多智'显学'论发表",
+    "desc": "国际汉学 2025(02):81-97——中国黑塞研究'显学'定位论，接受史谱系的最新学术节点。",
+    "location": "中国",
+    "refs": [
+      "k09",
+      "d13",
+      "p12"
+    ]
+  }
+]

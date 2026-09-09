@@ -1,0 +1,129 @@
+[
+  {
+    "id": "t01",
+    "name": "朋友对子",
+    "de": "Freund-Dyade",
+    "desc": "从Demian/Sinclair到Knecht/Designori——精神引导与镜像关系的演变",
+    "quote": "\"Govinda, bist du der Wächter meines Schlafes gewesen\" — Siddhartha",
+    "works": [
+      "w05",
+      "w08",
+      "w07",
+      "w11"
+    ]
+  },
+  {
+    "id": "t02",
+    "name": "河流/阈限",
+    "de": "Fluss/Schwelle",
+    "desc": "河流作为生命之流与死亡之门——渡河→倾听→Om→冰湖溺亡",
+    "quote": "\"der Fluß hat zu dir gesprochen\" — Siddhartha",
+    "works": [
+      "w07",
+      "w08",
+      "w11"
+    ]
+  },
+  {
+    "id": "t03",
+    "name": "微笑",
+    "de": "Lächeln",
+    "desc": "圆满者的微笑——从Gotama到Siddhartha到音乐大师，同一种超越",
+    "quote": "\"dies Lächeln Siddharthas war genau dasselbe... Lächeln Gotamas\"",
+    "works": [
+      "w07",
+      "w10",
+      "w11"
+    ]
+  },
+  {
+    "id": "t04",
+    "name": "死鸟/歌声",
+    "de": "Vogel/Gesang",
+    "desc": "艺术之死的隐喻——梦中死鸟→雕塑(凝固的歌)→玻璃珠游戏",
+    "quote": "\"der kleine Vogel war tot und lag steif am Boden\" — Siddhartha",
+    "works": [
+      "w07",
+      "w08",
+      "w11"
+    ]
+  },
+  {
+    "id": "t05",
+    "name": "超越/台阶",
+    "de": "Transzendieren/Stufen",
+    "desc": "人的完满定义——永远不扎根于任一身份，从一个阶段走向下一个",
+    "quote": "\"Des Lebens Ruf an uns wird niemals enden...\" — Stufen",
+    "works": [
+      "w07",
+      "w10",
+      "w11"
+    ]
+  },
+  {
+    "id": "t06",
+    "name": "母亲原型",
+    "de": "Mutter-Archetyp",
+    "desc": "Urmutter——Eva夫人→Goldmund的原始母亲→Hermine",
+    "quote": "\"die Urmutter, die alles gebiert und alles verschlingt\"",
+    "works": [
+      "w05",
+      "w08",
+      "w10"
+    ]
+  },
+  {
+    "id": "t07",
+    "name": "Maya/幻象",
+    "de": "Maya/Täuschung",
+    "desc": "一切皆幻——Siddhartha轮回观→魔法剧院→东方投射",
+    "quote": "\"Alles war Maya, alles war Trug\" — Indischer Lebenslauf",
+    "works": [
+      "w07",
+      "w10",
+      "w11"
+    ]
+  },
+  {
+    "id": "t08",
+    "name": "孤独/个体化",
+    "de": "Einsamkeit",
+    "desc": "贯穿全部作品——从Camenzind山间小屋到Knecht独行",
+    "works": [
+      "w01",
+      "w05",
+      "w07",
+      "w10"
+    ]
+  },
+  {
+    "id": "t09",
+    "name": "艺术与救赎",
+    "de": "Kunst/Erlösung",
+    "desc": "音乐→雕塑→游戏——艺术从表达到救赎的升华",
+    "quote": "\"die Unsterblichen... Mozart\" — Steppenwolf",
+    "works": [
+      "w03",
+      "w08",
+      "w10",
+      "w11"
+    ]
+  },
+  {
+    "id": "t10",
+    "name": "自然vs文明",
+    "de": "Natur/Zivilisation",
+    "desc": "Camenzind山间→Goldmund森林→Knecht冰湖",
+    "works": [
+      "w01",
+      "w08",
+      "w11"
+    ]
+  },
+  {
+    "id": "t11",
+    "name": "不可传达/知识传递",
+    "label": "Unübertragbarkeit / Wissensvermittlung",
+    "desc": "知识/体验是否可经语言或任何媒介传达——黑塞跨 11 部作品的母题主轴：SD 正面宣言 → SW Tractat 自毁 → MF 叙事不可能 → GP 传记转传说。"
+  }
+]

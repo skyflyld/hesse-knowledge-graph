@@ -1,0 +1,102 @@
+[
+  {
+    "id": "p01",
+    "from": 1904,
+    "to": 1914,
+    "label": "早期: 自然、教育、艺术困境",
+    "claim": "早期作品把自然退隐、教育压迫与艺术家困境建立为黑塞问题域。",
+    "workIds": [
+      "w01",
+      "w02",
+      "w03",
+      "w04"
+    ],
+    "motifIds": [
+      "t08",
+      "t09",
+      "t10"
+    ],
+    "name": "早期·诗意和谐",
+    "name_de": "Frühwerk: Lyrisch-epische Harmonie",
+    "range": "1900–1914",
+    "works": [
+      "w01",
+      "w02",
+      "w03",
+      "w04"
+    ]
+  },
+  {
+    "id": "p02",
+    "from": 1919,
+    "to": 1922,
+    "label": "战后转向: 个体化与东方经验",
+    "claim": "一战后，黑塞把精神危机转译为个体化、东方经验与自我超越。",
+    "workIds": [
+      "w05",
+      "w06",
+      "w07"
+    ],
+    "motifIds": [
+      "t01",
+      "t02",
+      "t05",
+      "t07"
+    ],
+    "name": "转折·现代性碎片",
+    "name_de": "Wende: Fragmentierung der Moderne",
+    "range": "1914–1922",
+    "works": [
+      "w05",
+      "w06",
+      "w07"
+    ]
+  },
+  {
+    "id": "p03",
+    "from": 1927,
+    "to": 1932,
+    "label": "成熟期: 危机、艺术、共同体",
+    "claim": "成熟期作品集中处理人格分裂、艺术救赎、朋友对子和共同体想象。",
+    "workIds": [
+      "w10",
+      "w08",
+      "w09"
+    ],
+    "motifIds": [
+      "t01",
+      "t06",
+      "t09"
+    ],
+    "name": "成熟·综合与实验",
+    "name_de": "Reife: Synthese und Experiment",
+    "range": "1927–1932",
+    "works": [
+      "w10",
+      "w08",
+      "w09"
+    ]
+  },
+  {
+    "id": "p04",
+    "from": 1943,
+    "to": 1943,
+    "label": "晚期: 卡斯塔里亚与精神制度",
+    "claim": "晚期把个人修行放进精神制度，考验文化共同体是否还能与生命现实连接。",
+    "workIds": [
+      "w11"
+    ],
+    "motifIds": [
+      "t02",
+      "t05",
+      "t09",
+      "t10"
+    ],
+    "name": "晚期·元文本重构",
+    "name_de": "Spätwerk: Metatextuelle Rekonstruktion",
+    "range": "1932–1943",
+    "works": [
+      "w11"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "s01",
+    "name": "Bildungsroman弧线",
+    "desc": "离家→游历→回归/超越"
+  },
+  {
+    "id": "s02",
+    "name": "两极振荡",
+    "desc": "精神↔感官, 孤独↔群体"
+  },
+  {
+    "id": "s03",
+    "name": "三段式",
+    "desc": "Unschuld→Erfahrung→Erleuchtung"
+  },
+  {
+    "id": "s04",
+    "name": "框架叙事",
+    "desc": "前言/导言/框架结构"
+  },
+  {
+    "id": "s05",
+    "name": "并列论证",
+    "desc": "Parataxe=哲学韵律"
+  },
+  {
+    "id": "s06",
+    "name": "阈限时刻",
+    "desc": "渡河/梦境/死亡/觉醒"
+  }
+]

@@ -1,0 +1,54 @@
+name: 🧠 Hesse Knowledge Graph — Daily Update
+
+on:
+  schedule:
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  NODE_VERSION: '22'
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install requests
+
+      - name: Fetch & ingest new Hesse publications
+        run: python .github/scripts/ingest-hesse-news.py
+
+      - name: Build data bundle
+        run: npm run build:data
+
+      - name: Validate data integrity
+        run: npm run validate:data
+
+      - name: Commit and push
+        run: |
+          git config user.name "Ariste KG Bot"
+          git config user.email "aristebot@users.noreply.github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet ||             git commit -m "🧠 KG data update \$(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push

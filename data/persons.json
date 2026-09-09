@@ -1,0 +1,149 @@
+[
+  {
+    "id": "p01",
+    "name": "Karl-Josef Kuschel",
+    "group": "德方建制",
+    "role": "IHHG 主席 / 蒂宾根大学荣休神学家",
+    "desc": "Band 18 三篇论文（含反《阶梯》鸡汤化）；Global Impact 卷贡献者；'去浅化'战线核心，燕妮论文直接对话对象。"
+  },
+  {
+    "id": "p02",
+    "name": "Michael Limberg",
+    "group": "德方建制",
+    "role": "HHJ 主编 / Hermann-Hesse-Bibliographie 续编者",
+    "desc": "Band 19 稿件直接经手人；Bibliographie 2025 是投稿前查重清单。"
+  },
+  {
+    "id": "p03",
+    "name": "Volker Michels",
+    "group": "德方建制",
+    "role": "Hesse-Editionsarchiv Offenbach / Beirat",
+    "desc": "黑塞出版/编辑界'活档案'；编 Insel-Kalender 2026/2027、Erlebte Orte 祝寿卷；Gaienhofen 2026 演讲。"
+  },
+  {
+    "id": "p04",
+    "name": "Andrea Bartl",
+    "group": "德方建制",
+    "role": "班贝格大学教授 / Hesse-Handbuch 编者",
+    "desc": "与 Honold 合编 Handbuch 2025；Band 18 两篇（身体/边缘书写）；Gaienhofen 2026-10 演讲；德方前沿主题源。"
+  },
+  {
+    "id": "p05",
+    "name": "Alexander Honold",
+    "group": "德方建制",
+    "role": "巴塞尔大学 / Hesse-Handbuch 主编",
+    "desc": "'Hesse anders lesen'（换一种方式读黑塞）口号提出者。"
+  },
+  {
+    "id": "p06",
+    "name": "Ingo Cornils",
+    "group": "德方建制",
+    "role": "利兹大学 / Global Impact 卷主编",
+    "desc": "'精神资本'（Spiritual Capital）框架提出者；2024 Global Impact 卷主编。"
+  },
+  {
+    "id": "p07",
+    "name": "马剑",
+    "group": "中方谱系",
+    "role": "北大德语系副教授",
+    "desc": "《黑塞与中国文化》(首都师大 2010/2019 二版) 作者——中国接受研究源头专著；2025-09-26 中瑞 75 周年研讨会主旨（黑塞与鲁迅对 Masereel 平行推崇）。"
+  },
+  {
+    "id": "p08",
+    "name": "陈壮鹰",
+    "group": "中方谱系",
+    "role": "上外二级教授 / 德语系主任",
+    "desc": "1997 提出亚洲思想四阶段分期说（印度→中国→综合→超越）vs 德方建制无分期（碰撞 #008/#010）；沪上德语圈枢纽。"
+  },
+  {
+    "id": "p09",
+    "name": "王滨滨",
+    "group": "中方谱系",
+    "role": "复旦德语系退休教授 / 《荒原狼》译者",
+    "desc": "中国接受史三阶段论权威表述（澎湃 2022-08-09）；译《朋友》中文首译（湖南文艺 2025-08）。"
+  },
+  {
+    "id": "p10",
+    "name": "姜乙",
+    "group": "中方谱系",
+    "role": "《悉达多》译者（豆瓣 9.4 最高分）",
+    "desc": "音乐学背景→'音乐性翻译'；译《悉达多》《德米安》《荒原狼》《在轮下》；2025-11 浙大讲座（翻译作为跨文化创造）；中国接受大众化阶段标志人物——'姜乙现象'。"
+  },
+  {
+    "id": "p11",
+    "name": "詹春花",
+    "group": "中方谱系",
+    "role": "Global Impact 卷第 8 章作者",
+    "desc": "Hesse's Impact on Mainland China（1980s 黑塞热）；英文论文 Chinese Contemplation（Concentric 2024-2）；中国接受研究国际英文卷现有席位。"
+  },
+  {
+    "id": "p12",
+    "name": "陈多智",
+    "group": "中方谱系",
+    "role": "山西大学副教授 / 三篇 CSSCI",
+    "desc": "《国际汉学》2025(02) 明确称'黑塞与中国'为显学；新生代'德语文学×中国'交叉研究力量。"
+  },
+  {
+    "id": "p13",
+    "name": "黄雪媛",
+    "group": "中方谱系",
+    "role": "华东师大德语系副教授 / 译者",
+    "desc": "《早上苍老，傍晚年轻》(华东师大 2026-03, 豆瓣 8.9) 含黑塞章节；沪上德语文学公共写作样本。"
+  },
+  {
+    "id": "p14",
+    "name": "王婀娜",
+    "group": "中方谱系",
+    "role": "华东师大德语系教授",
+    "desc": "邀请陈壮鹰讲座——沪上德语圈连接点。"
+  },
+  {
+    "id": "p15",
+    "name": "李永平",
+    "group": "中方谱系",
+    "role": "中国社科院外文所研究员 / 中国德语文学分会会长",
+    "desc": "第 20 届年会致辞人（2026，无黑塞专题面板=研究缺口信号）。"
+  },
+  {
+    "id": "p16",
+    "name": "彤雅立 Tong Yali",
+    "group": "东亚华语",
+    "role": "台湾德语文学者",
+    "desc": "2026-01-26 台北发表 Hsia《Hermann Hesse und China》读书笔记（Monologisches Tagebuch Nr.004）——台湾学界对黑塞-中国经典的持续回访。"
+  },
+  {
+    "id": "p17",
+    "name": "大杉奈穂",
+    "group": "东亚华语",
+    "role": "神户大学 2023 博士",
+    "desc": "论文《ヘルマン・ヘッセにおける〈東方〉》（黑塞与〈东方〉）；全文 2027-03-25 解禁（150 周年节点呼应）。"
+  },
+  {
+    "id": "p18",
+    "name": "Viktoria Döberl",
+    "group": "东亚华语",
+    "role": "斯德哥尔摩/维也纳大学",
+    "desc": "2026-01-28 研讨'黑塞在韩国流行文化'（诺奖 80 周年视角；Reich-Ranicki 'Trivialliterat' 标签 vs 东亚高热接受）。"
+  },
+  {
+    "id": "p19",
+    "name": "Emily Calvo Lorenzo",
+    "group": "东亚华语",
+    "role": "韩国学中央研究院硕士",
+    "desc": "《德米安在当代韩国社会的流行》跨学科分析（2025-02，Yellow）。"
+  },
+  {
+    "id": "p20",
+    "name": "Adrian Hsia 夏瑞春 (1938-2010)",
+    "group": "历史奠基",
+    "role": "McGill 教授 / 华裔加拿大比较文学学者",
+    "desc": "《Hermann Hesse und China》(Suhrkamp 1974/1981) 德文奠基专著；《Kafka and China》(1996)；2005 IHHG 创始人之一。"
+  },
+  {
+    "id": "p21",
+    "name": "杨武能",
+    "group": "历史奠基",
+    "role": "《夏瑞春、赫尔曼·黑塞与中国》引介者",
+    "desc": "中文世界对 Hsia 的引介（《纳尔奇思与歌尔德蒙》译余漫笔）。"
+  }
+]

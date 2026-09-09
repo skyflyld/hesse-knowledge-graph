@@ -1,0 +1,27 @@
+[
+  {
+    "id": "g01",
+    "name": "Verbzweit-Stellung",
+    "desc": "Satzklammer在《悉达多》中——动词位置延迟概念闭合"
+  },
+  {
+    "id": "g02",
+    "name": "Parataxe-Häufung",
+    "desc": "并列结构主导——从句独立性高于主从关系"
+  },
+  {
+    "id": "g03",
+    "name": "Nominalstil",
+    "desc": "名词化密集——抽象概念具象化"
+  },
+  {
+    "id": "g04",
+    "name": "Partizipialkonstruktion",
+    "desc": "分词短语扩展——多层级嵌套"
+  },
+  {
+    "id": "g05",
+    "name": "Modalpartikel",
+    "desc": "语气词频率——不确定性与开放性"
+  }
+]

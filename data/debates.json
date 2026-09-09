@@ -1,0 +1,470 @@
+[
+  {
+    "id": "d01",
+    "name": "浪漫主义 vs 现代主义",
+    "pro": "黑塞是浪漫主义继承人",
+    "con": "黑塞是现代主义突破者",
+    "motif": "t01",
+    "literature": [
+      {
+        "doi": "10.1007/978-3-476-06008-2_39",
+        "title": "Musikalische Bezüge und Formtransfers II: Romantik, Lied, Musiktheater",
+        "year": 2025,
+        "journal": "Hermann Hesse-Handbuch",
+        "note": "黑塞音乐与浪漫主义传统的形式关联（标题级主题）"
+      },
+      {
+        "doi": "10.1163/9789401201124_011",
+        "title": "„Auf den Einzelnen kommt es an!\" Zur Aktualität von Hermann Hesse",
+        "year": 2005,
+        "journal": "Hermann Hesse Today",
+        "note": "黑塞个体性论与现实性——浪漫主义遗产与现代性张力"
+      },
+      {
+        "doi": "10.53458/sh.v26i3.17155",
+        "title": "A CRÍTICA DA MODERNIDADE EM KNULP",
+        "year": null,
+        "journal": "Studia Hibernica?",
+        "note": "Knulp 的现代性批判（e-ext-67，已归位 t10）"
+      },
+      {
+        "doi": "10.7312/ziol91400-001",
+        "title": "Hermann Hesse",
+        "year": 1966,
+        "journal": "Columbia UP",
+        "note": "Ziolkowski 经典研究专著"
+      }
+    ]
+  },
+  {
+    "id": "d02",
+    "name": "东方挪用 vs 融合",
+    "pro": "黑塞的东方是西方投射",
+    "con": "黑塞实现了真正的融合",
+    "motif": "t07",
+    "literature": [
+      {
+        "doi": "10.3726/978-3-653-04368-6/22",
+        "title": "Indien – geistige Quelle von Hermann Hesse",
+        "year": null,
+        "journal": "Alltags- und Fachkommunikation",
+        "note": "印度=黑塞精神之源（Chen Zhuangying，标题级=融合派立场）"
+      },
+      {
+        "doi": "10.1017/9781571137296.007",
+        "title": "Siddhartha",
+        "year": 2013,
+        "journal": "A Companion to the Works of Hermann Hesse",
+        "note": "Companion 权威 Siddhartha 章节"
+      },
+      {
+        "doi": "10.5281/zenodo.17993156",
+        "title": "Le sacré et le profane: de l'expression spirituelle dans Siddhartha d'Hermann Hesse",
+        "year": null,
+        "journal": "Zenodo",
+        "note": "Siddhartha 神圣/世俗精神表达（e-ext-49，已归位 t07）"
+      },
+      {
+        "doi": "10.5281/zenodo.17993155",
+        "title": "Le sacré et le profane: de l'expression spirituelle dans Siddhartha d'Hermann Hesse",
+        "year": null,
+        "journal": "Zenodo",
+        "note": "同上（e-ext-53，已归位 t07）"
+      }
+    ]
+  },
+  {
+    "id": "d03",
+    "name": "自杀: 逃避 vs 超越",
+    "pro": "逃避",
+    "con": "超越的阴性形式",
+    "motif": "t05",
+    "literature": [
+      {
+        "doi": "10.1163/9789401201124_006",
+        "title": "Teaching Hermann Hesse's Der Steppenwolf: Some Reflections on Readers'",
+        "year": 2005,
+        "journal": "Hermann Hesse Today",
+        "note": "SW 教学与读者反应研究"
+      },
+      {
+        "doi": "10.1007/978-3-476-06008-2_24",
+        "title": "Der Steppenwolf (1927)",
+        "year": 2025,
+        "journal": "Hermann Hesse-Handbuch",
+        "note": "Handbuch 权威 SW 条目"
+      },
+      {
+        "doi": "10.30681/rln.v18i52.13215",
+        "title": "Elementos de la parodia del concepto de Superhombre de Nietzsche [SW]",
+        "year": null,
+        "journal": "Revista de Letras",
+        "note": "SW 对尼采超人概念的戏仿（e-ext-57）"
+      }
+    ]
+  },
+  {
+    "id": "d04",
+    "name": "对立统一: 辩证 vs 调和",
+    "pro": "辩证综合",
+    "con": "诗意调和",
+    "motif": "t08",
+    "literature": [
+      {
+        "doi": "10.54613/ku.v18i.1566",
+        "title": "O apolíneo e o dionisíaco no Demian de Hermann Hesse",
+        "year": null,
+        "journal": "Kaskalot",
+        "note": "Demian 的日神/酒神对立（e-ext-39）"
+      },
+      {
+        "doi": "10.15017/7405137",
+        "title": "„Spiegelein, Spiegelein in der Hand\": die mise en abyme-Funktion des Tractats [SW]",
+        "year": null,
+        "journal": "Kyushu UP",
+        "note": "SW Tractat 的镜渊结构（e-ext-47）"
+      },
+      {
+        "doi": "10.1515/9783484605480.153",
+        "title": "Dirk Jürgens: Die Krise der bürgerlichen Subjektivität im Roman der [Moderne]",
+        "year": 2007,
+        "journal": "Hermann-Hesse-Jahrbuch 3",
+        "note": "市民主体性危机——辩证 vs 调和论域"
+      }
+    ]
+  },
+  {
+    "id": "d05",
+    "name": "Knecht溺亡: 和解 vs 失败",
+    "pro": "精神与自然最高融合",
+    "con": "Kastalien实验失败",
+    "motif": "t02",
+    "literature": [
+      {
+        "doi": "10.29162/anafora.v12i2.2",
+        "title": "Die Krise des Humanen in Hermann Hesses Roman Das Glasperlenspiel",
+        "year": null,
+        "journal": "Anafora",
+        "note": "GP 人性危机（e-ext-35，已归位 t02）"
+      },
+      {
+        "doi": "10.1163/9789401201124_017",
+        "title": "Hermann Hesses Das Glasperlenspiel: Roman oder Essay? Versuch einer li[terarischen] [Einordnung]",
+        "year": 2005,
+        "journal": "Hermann Hesse Today",
+        "note": "GP 文类之争——形式层面的和解/失败论"
+      },
+      {
+        "doi": "10.1515/9783110221404.341",
+        "title": "Hermann Hesse: Das Glasperlenspiel (1943/46)",
+        "year": 2013,
+        "journal": "Handbuch Nachkriegskultur",
+        "note": "战后文化语境中的 GP"
+      },
+      {
+        "doi": "10.1007/978-3-476-05728-0_6797-1",
+        "title": "Hesse, Hermann: Das Glasperlenspiel",
+        "year": 2020,
+        "journal": "Kindlers Literatur Lexikon",
+        "note": "KLL 权威条目"
+      }
+    ]
+  },
+  {
+    "id": "d06",
+    "name": "一战立场: 勇气 vs 不作为",
+    "pro": "道德良心",
+    "con": "缺乏组织行动",
+    "motif": "t08",
+    "literature": [
+      {
+        "doi": "10.17904/ku.opus-1032",
+        "title": "Gewissen: Studien zu einem zentralen Gegenstand in Hermann Hesses literarischer [Welt]",
+        "year": null,
+        "journal": "KU opus",
+        "note": "黑塞作品中的良心研究（e-ext-25，道德主体/个体化）"
+      },
+      {
+        "doi": "10.1515/9783110923179.2088",
+        "title": "06. Werk (II). 06.5. Letzte Wohnstätte in Montagnola bis 1962. 15 Krie[gsjahre]",
+        "year": 2007,
+        "journal": "Hermann Hesse Bibliographie",
+        "note": "黑塞书目——战争年代条目"
+      }
+    ]
+  },
+  {
+    "id": "d07",
+    "name": "诺贝尔奖: 文学 vs 政治",
+    "pro": "文学独创性认可",
+    "con": "二战德国政治补偿",
+    "motif": "t08",
+    "literature": [
+      {
+        "doi": "10.29393/at257-258-327hhra10327",
+        "title": "Hermann Hesse. Premio Nobel de Literatura de 1946",
+        "year": 1946,
+        "journal": "Atenea (Concepción)",
+        "note": "1946 年诺贝尔文学奖当代报道——一手史料"
+      },
+      {
+        "doi": "10.1163/9789401201124_013",
+        "title": "Toward the Legend of Hermann Hesse in the USA",
+        "year": 2005,
+        "journal": "Hermann Hesse Today",
+        "note": "黑塞传奇/接受史建构"
+      }
+    ]
+  },
+  {
+    "id": "d08",
+    "name": "姜乙现象: 翻译即接受机制",
+    "pro": "姜乙译本重构黑塞为中国青年精神文本, 翻译即跨文化创造",
+    "con": "音乐性翻译不可操作化为标准, 高分是译本粉丝效应而非翻译学事件",
+    "motif": "t07",
+    "literature": [
+      {
+        "doi": null,
+        "title": "《黑塞中长篇小说全集》14卷15册（含首译《朋友》）",
+        "year": 2025,
+        "journal": "湖南文艺出版社",
+        "note": "ISBN 9787572619656, 2025-08"
+      },
+      {
+        "doi": null,
+        "title": "《在轮下》姜乙新译",
+        "year": 2025,
+        "journal": "天津人民出版社/果麦",
+        "note": "ISBN 9787201211190, 2025-07"
+      },
+      {
+        "doi": null,
+        "title": "姜乙浙大讲座: 翻译作为跨文化创造",
+        "year": 2025,
+        "journal": "浙江大学",
+        "note": "2025-11, 一手活动记录"
+      }
+    ]
+  },
+  {
+    "id": "d09",
+    "name": "中国接受第四阶段论",
+    "pro": "王滨滨三阶段论之后: 2018姜乙《悉达多》爆红以来的大众化-精品化阶段",
+    "con": "三阶段论已够; 全集化是出版工业行为, 非接受质变, 需读者侧证据",
+    "motif": "t05",
+    "literature": [
+      {
+        "doi": null,
+        "title": "澎湃专访: 为什么说黑塞像个中国作家",
+        "year": 2022,
+        "journal": "澎湃新闻",
+        "note": "王滨滨, 2022-08-09, 三阶段论权威表述"
+      },
+      {
+        "doi": null,
+        "title": "百年回望, 骑士黑塞的东方与西方",
+        "year": 2026,
+        "journal": "北京日报/光明网",
+        "note": "胡春晖, 2026-08-14, 官方纪念叙事定调"
+      }
+    ]
+  },
+  {
+    "id": "d10",
+    "name": "德米安跨媒介现象",
+    "pro": "BTS/中国音乐剧/电影使《德米安》成为全球青年身份政治文本",
+    "con": "流行化可能证实Reich-Ranicki的Trivialliterat判词而非反驳: 消费的是简化鸡汤",
+    "motif": "t08",
+    "literature": [
+      {
+        "doi": null,
+        "title": "BTS《WINGS》(2016) 援引《德米安》",
+        "year": 2016,
+        "journal": "Big Hit Entertainment",
+        "note": "专辑概念直接援引德米安意象"
+      },
+      {
+        "doi": null,
+        "title": "音乐剧《德米安》",
+        "year": 2024,
+        "journal": "缪时客(上海)",
+        "note": "2024-05 首演/2025-06 二轮, 韩方导演吴世爀, '黑塞哲学宇宙'品牌"
+      }
+    ]
+  },
+  {
+    "id": "d11",
+    "name": "鸡汤化 vs 去浅化",
+    "pro": "德方Kuschel反《阶梯》鸡汤化与中国治愈系市场是同仗两战场: 学术去浅化是责任",
+    "con": "治愈系市场是接受热度的发动机, 去浅化可能杀死接受; 浅化边界是规范判断",
+    "motif": "t09",
+    "literature": [
+      {
+        "doi": null,
+        "title": "Hermann-Hesse-Jahrbuch Band 18 (Kuschel 反鸡汤化论文×3)",
+        "year": 2026,
+        "journal": "Königshausen & Neumann",
+        "note": "ISBN 978-3-8260-9588-7, 2026-03-02"
+      },
+      {
+        "doi": null,
+        "title": "《我独自一人, 却很自在》自然疗愈诗画",
+        "year": 2025,
+        "journal": "时代文艺/紫图",
+        "note": "2025-06, 治愈系产品样本"
+      }
+    ]
+  },
+  {
+    "id": "d12",
+    "name": "马剑 Masereel 平行推崇论",
+    "pro": "黑塞与鲁迅对比利时木刻家Masereel的平行推崇=东西方审美趋同的可验证案例",
+    "con": "平行推崇≠平行接受: 黑塞作序(文学圈内)与鲁迅引入(民族救亡语境)功能分殊",
+    "motif": "t07",
+    "literature": [
+      {
+        "doi": null,
+        "title": "《黑塞与中国文化》",
+        "year": 2010,
+        "journal": "首都师范大学出版社",
+        "note": "马剑, 2019-12 二版"
+      },
+      {
+        "doi": null,
+        "title": "中瑞建交75周年黑塞研讨会",
+        "year": 2025,
+        "journal": "瑞士驻华使馆/北大",
+        "note": "2025-09-26, 马剑主旨发言, 三源交叉Green"
+      }
+    ]
+  },
+  {
+    "id": "d13",
+    "name": "陈多智'显学'论",
+    "pro": "'黑塞与中国'与卡夫卡/布莱希特并列中德文学关系显学=学术制度化确认信号",
+    "con": "显学地位与专论稀缺并存(第20届德语文学分会年会无黑塞专题), 可能只是个人断言",
+    "motif": "t07",
+    "literature": [
+      {
+        "doi": null,
+        "title": "德语表现主义小说中的中国题材与中国故事",
+        "year": 2025,
+        "journal": "国际汉学",
+        "note": "陈多智, 2025(02):81-97"
+      },
+      {
+        "doi": null,
+        "title": "另一道《中国长城》",
+        "year": 2024,
+        "journal": "复旦外国语言文学论丛",
+        "note": "陈多智, 2024(02):121-131"
+      },
+      {
+        "doi": null,
+        "title": "表现主义者埃伦施泰因的中国书写",
+        "year": 2023,
+        "journal": "国外文学",
+        "note": "陈多智, 2023(03):108-119"
+      }
+    ]
+  },
+  {
+    "id": "d14",
+    "name": "分期说 vs 建制反分期",
+    "pro": "陈壮鹰(1997)亚洲思想四阶段分期(印度→中国→综合→超越)=中方学术路径的体系化贡献",
+    "con": "Handbuch 2025 按作品/主题/接受组织、Cornils 2024 按地理/区域组织——两条德方建制路径均拒绝分期，分期说缺建制背书",
+    "motif": "t05",
+    "literature": [
+      {
+        "doi": null,
+        "title": "Hermann Hesse-Handbuch (2025, Bartl/Honold, J.B. Metzler)",
+        "year": 2025,
+        "journal": "J.B. Metzler",
+        "note": "14部分按作品/主题/接受组织，明确不按时间分期"
+      },
+      {
+        "doi": null,
+        "title": "Hermann Hesse's Global Impact (Cornils & Cunningham 2024)",
+        "year": 2024,
+        "journal": "Camden House",
+        "note": "24章按地理/区域组织，不采用分期"
+      },
+      {
+        "doi": null,
+        "title": "陈壮鹰亚洲思想分期说 (1997)",
+        "year": 1997,
+        "journal": "中方学术路径",
+        "note": "四阶段分期: 印度→中国→综合→超越"
+      }
+    ]
+  },
+  {
+    "id": "d15",
+    "name": "Spiritual Capital 精神资本论",
+    "pro": "Cornils '精神资本'框架=黑塞全球化接受的总结性解释，从推测升级为可引用学术源",
+    "con": "'精神资本'是隐喻而非严格概念，未经操作化验证——解释力与可检验性存疑",
+    "motif": "t07",
+    "literature": [
+      {
+        "doi": null,
+        "title": "Hermann Hesse's Global Impact (Cornils & Cunningham)",
+        "year": 2024,
+        "journal": "Camden House",
+        "note": "Spiritual Capital 作为总结章节正式出版"
+      }
+    ]
+  },
+  {
+    "id": "d16",
+    "name": "中国接受史研究范式",
+    "pro": "中国接受史在知识图谱中作子图组织；Cornils Ch.8 (詹春花) 替代 ChatGPT 全景=真实学术源落地",
+    "con": "'双重翻译循环'模型理论支撑仍薄；ChatGPT 偏差标注的替代刚找到一处，需更多真实全景源",
+    "motif": "t07",
+    "literature": [
+      {
+        "doi": null,
+        "title": "Hermann Hesse's Global Impact Ch.8: Hesse's Impact on Mainland China (Zhan)",
+        "year": 2024,
+        "journal": "Camden House",
+        "note": "詹春花，中国接受全景的英文权威源"
+      },
+      {
+        "doi": null,
+        "title": "姜乙浙大讲座: 翻译作为跨文化创造",
+        "year": 2025,
+        "journal": "浙江大学",
+        "note": "2025-11, '双重翻译循环'模型的实证加强"
+      }
+    ]
+  },
+  {
+    "id": "d17",
+    "name": "自指悖论：作品自毁 vs 体验传达豁免",
+    "motif": "t11",
+    "phase": "debate",
+    "pro": "黑塞 11 部作品演示「传达的极限条件」——不可传达论自指悖论的逃生通道：传达体验非命题，作品=体验的符号化石（GP 游戏机制）",
+    "con": "若不可传达论为真则作品自毁；若作品有意义则命题为假——悖论无法消解，论文不能以「黑塞证明不可传达」立论",
+    "source": "碰撞议题-第一性原理-20260831.md 议题A",
+    "auto_drafted": true
+  },
+  {
+    "id": "d18",
+    "name": "艺术补偿论 vs 理念论：30 年漂移还是文体差异",
+    "motif": "t09",
+    "phase": "debate",
+    "pro": "Rosshalde 尾巴理论(1907)=艺术补缺 → SW 幽默第三王国(1927)=桥梁 → GP 理念显形(1943)：艺术本体论 30 年漂移，引号判据随之翻转",
+    "con": "三条证据分属小说人物自述/独立文体/编年史口吻——文体差异而非思想漂移，SD(1922) 河流转向才构成真实中间节点",
+    "source": "碰撞议题-第一性原理-20260831.md 议题C",
+    "auto_drafted": true
+  },
+  {
+    "id": "d19",
+    "name": "传达的极限：语言自毁 vs 本能成功",
+    "motif": "t08",
+    "phase": "debate",
+    "pro": "Papa!(Z.5563)=全书唯一成功传达，发生在死亡临界点——语言越接近本能越有效，传达的极限是语言的自毁（Om/名字写进空气同构）",
+    "con": "Papa! 是本能呼叫非语言传达——用单音节证明「传达可能」是偷换概念；但正因如此，黑塞引号=语言的边界标记函数",
+    "source": "碰撞议题-第一性原理-20260831.md 议题E",
+    "auto_drafted": true
+  }
+]
