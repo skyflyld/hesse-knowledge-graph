@@ -95,6 +95,11 @@
   .link.rel-debate { stroke:var(--red); stroke-opacity:0.45; }
   .link.rel-form { stroke:var(--cyan); stroke-opacity:0.45; }
   .link.rel-source { stroke:var(--orange); stroke-opacity:0.42; }
+  /* 叙事投影：虚线 = 编者链条，非直接证据 */
+  .link.rel-projection { stroke:var(--gold-dim); stroke-width:1; stroke-opacity:0.3; stroke-dasharray:3 3; }
+  .prov-chip { display:inline-block; margin-left:5px; padding:0 5px; border-radius:3px; font-size:0.58rem;
+    border:1px dashed rgba(190,120,90,0.6); color:#c98a6a; vertical-align:middle; }
+  .anchor-link { color:var(--text3); font-size:0.6rem; }
   .link-label { fill:var(--text3); font-size:7px; text-anchor:middle; pointer-events:none; opacity:0.65; transition:opacity .16s; }
   .node-dim { opacity:0.14; }
   .link-dim { stroke-opacity:0.05 !important; }
@@ -716,7 +721,12 @@ function updateGraphFocus() {
 	function relationHtml(d) {
 	  const rel = relatedEdges(d.id).slice(0,12);
 	  if(!rel.length) return '';
-	  return `<h3>关系证据</h3><div class="tags">${rel.map(ed=>`<span class="tag">${esc(ed.label)}: ${esc(ed.other.name)}</span>`).join('')}</div>`;
+	  return `<h3>关系证据</h3><div class="tags">${rel.map(ed=>{
+	    const proj = ed.rel==='projection';
+	    const chip = proj ? '<span class="prov-chip" title="编者叙事链条，非直接证据；已锚定到真实 claim">E · 投影</span>' : '';
+	    const anchor = proj && ed.anchorClaim ? `<div class="anchor-link">锚定 claim: ${esc(ed.anchorClaim)}</div>` : '';
+	    return `<span class="tag">${esc(ed.label)}: ${esc(ed.other.name)}${chip}</span>${anchor}`;
+	  }).join('')}</div>`;
 	}
 	function evidenceListHtml(all, sumText) {
 	  if(!all.length) return '';

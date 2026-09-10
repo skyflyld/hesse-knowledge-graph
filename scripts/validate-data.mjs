@@ -47,6 +47,9 @@ applyProvenance(data);
 const problems = [];
 const nodeIds = new Set();
 const evidenceIds = new Set();
+const evidenceById = new Map();
+// 提前建索引：关系校验要先于证据逐条校验运行（projection 需查 anchor claim）
+for (const ev of data.evidence) evidenceById.set(ev.id, ev);
 
 for (const key of nodeCollections) {
   for (const item of data[key]) {
@@ -78,6 +81,25 @@ for (const relation of data.relations) {
   if (!nodeIds.has(relation.s)) fail(problems, `relation source missing: ${relation.s}`);
   if (!nodeIds.has(relation.t)) fail(problems, `relation target missing: ${relation.t}`);
   if (!relation.rel || !relation.label) fail(problems, `relation ${relation.s}->${relation.t} missing rel or label`);
+
+  // 叙事投影（projection）必须锚定到真实 claim，且该 claim 属于同一边的另一个作品节点。
+  // 防的是「叙事冒充证据」：投影边不得无锚点存在，不得借别的作品的 claim 充数。
+  if (relation.rel === 'projection') {
+    const anchor = relation.anchorClaim;
+    if (!anchor) {
+      fail(problems, `projection ${relation.s}->${relation.t} missing anchorClaim`);
+    } else {
+      const claim = evidenceById.get(anchor);
+      if (!claim) {
+        fail(problems, `projection ${relation.s}->${relation.t} anchors missing claim ${anchor}`);
+      } else {
+        const other = relation.t === 't11' ? relation.s : relation.t;
+        if (claim.workId !== other) {
+          fail(problems, `projection ${relation.s}->${relation.t} anchor ${anchor} belongs to ${claim.workId}`);
+        }
+      }
+    }
+  }
 }
 
 for (const phase of data.timelinePhases) {
@@ -101,6 +123,7 @@ for (const ev of data.evidence) {
   if (!ev.id) fail(problems, 'evidence item missing id');
   if (evidenceIds.has(ev.id)) fail(problems, `duplicate evidence id: ${ev.id}`);
   evidenceIds.add(ev.id);
+  evidenceById.set(ev.id, ev);
   if (!nodeIds.has(ev.nodeId)) fail(problems, `evidence ${ev.id} references missing node ${ev.nodeId}`);
   if (!workIds.has(ev.workId)) fail(problems, `evidence ${ev.id} references missing work ${ev.workId}`);
   if (!ev.source || !ev.location || !ev.quote || !ev.claim) fail(problems, `evidence ${ev.id} missing source/location/quote/claim`);

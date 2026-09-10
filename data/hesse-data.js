@@ -5890,9 +5890,10 @@ window.HESSE_DATA = {
     {
       "s": "w01",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-PC1"
     },
     {
       "s": "w02",
@@ -5904,16 +5905,18 @@ window.HESSE_DATA = {
     {
       "s": "w03",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-GT1"
     },
     {
       "s": "w04",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-RS1"
     },
     {
       "s": "w05",
@@ -5932,23 +5935,26 @@ window.HESSE_DATA = {
     {
       "s": "w07",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-S1"
     },
     {
       "s": "w08",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-N3"
     },
     {
       "s": "w09",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-M1b"
     },
     {
       "s": "w10",
@@ -5960,16 +5966,10 @@ window.HESSE_DATA = {
     {
       "s": "w11",
       "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.05
-    },
-    {
-      "s": "w06",
-      "t": "t11",
-      "rel": "evidence",
-      "label": "作品证据",
-      "weight": 1.15
+      "rel": "projection",
+      "label": "叙事投影",
+      "weight": 1.05,
+      "anchorClaim": "e-G1"
     }
   ],
   "timelinePhases": [
