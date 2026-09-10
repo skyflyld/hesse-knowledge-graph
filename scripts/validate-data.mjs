@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { applyProvenance, BRIDGE_KEYS, PROVENANCE_RULE } from './lib/provenance.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 
@@ -39,6 +40,9 @@ for (const [key, file] of Object.entries(datasetFiles)) {
   data[key] = await readJson(file);
   if (!Array.isArray(data[key])) throw new Error(`data/${file} must contain an array`);
 }
+
+// 与 build-data.mjs 共用同一派生模块（单一真相源）
+applyProvenance(data);
 
 const problems = [];
 const nodeIds = new Set();
@@ -119,23 +123,26 @@ for (const ev of data.evidence) {
   if (!ref.locator || !ref.quoteLanguage || !ref.bibliographicNote) fail(problems, `evidence ${ev.id} sourceRef missing locator/language/note`);
 }
 
-const expectedBridge = `window.HESSE_DATA = ${JSON.stringify({
-  works: data.works,
-  motifs: data.motifs,
-  debates: data.debates,
-  characters: data.characters,
-  structures: data.structures,
-  grammars: data.grammars,
-  cultures: data.cultures,
-  persons: data.persons,
-  receptionEvents: data.receptionEvents,
-  evidence: data.evidence,
-  relations: data.relations,
-  timelinePhases: data.timelinePhases,
-  image2Rules: data.image2Rules
-}, null, 2)};\n`;
+const expectedBridge = `window.HESSE_DATA = ${JSON.stringify(
+  Object.fromEntries(BRIDGE_KEYS.map((k) => [k, data[k]])),
+  null,
+  2
+)};\n`;
 const bridge = await readFile(join(root, 'data', 'hesse-data.js'), 'utf8');
 if (bridge !== expectedBridge) fail(problems, 'data/hesse-data.js is stale; run npm run build:data');
+
+// Provenance 派生层健全性：T/S/E 合计必须等于证据总数，且不得出现第四层
+const provTotals = data.provenanceIndex?.totals || {};
+const provSum = (provTotals.T || 0) + (provTotals.S || 0) + (provTotals.E || 0);
+if (provSum !== data.evidence.length) {
+  fail(problems, `provenance totals ${provSum} != evidence ${data.evidence.length}`);
+}
+for (const ev of data.evidence) {
+  if (!['T', 'S', 'E'].includes(ev.provenance)) fail(problems, `evidence ${ev.id} invalid provenance ${ev.provenance}`);
+}
+if (data.meta?.provenanceRule !== PROVENANCE_RULE) {
+  fail(problems, 'meta.provenanceRule mismatch with shared module');
+}
 
 if (problems.length) {
   console.error('Data validation failed:');

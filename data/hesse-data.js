@@ -1283,7 +1283,8 @@ window.HESSE_DATA = {
         "quoteLanguage": "zh",
         "verificationStatus": "needs_page",
         "bibliographicNote": "阐释性摘要（非原文引文），无法自动定位页码。需人工核对对应作品章节后，将 verificationStatus 升级为 verified_location 方可作正式学术引用。"
-      }
+      },
+      "provenance": "E"
     },
     {
       "id": "e-t01-2",
@@ -1308,7 +1309,8 @@ window.HESSE_DATA = {
         "quoteLanguage": "zh",
         "verificationStatus": "needs_page",
         "bibliographicNote": "阐释性摘要（非原文引文），无法自动定位页码。需人工核对对应作品章节后，将 verificationStatus 升级为 verified_location 方可作正式学术引用。"
-      }
+      },
+      "provenance": "E"
     },
     {
       "id": "e-t02-1",
@@ -1336,7 +1338,8 @@ window.HESSE_DATA = {
         "lineNumber": "2762-2763",
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t02-2",
@@ -1361,7 +1364,8 @@ window.HESSE_DATA = {
         "quoteLanguage": "zh",
         "verificationStatus": "needs_page",
         "bibliographicNote": "阐释性摘要（非原文引文），无法自动定位页码。需人工核对对应作品章节后，将 verificationStatus 升级为 verified_location 方可作正式学术引用。"
-      }
+      },
+      "provenance": "E"
     },
     {
       "id": "e-t03-1",
@@ -1389,7 +1393,8 @@ window.HESSE_DATA = {
         "lineNumber": "3973",
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t04-1",
@@ -1417,7 +1422,8 @@ window.HESSE_DATA = {
         "lineNumber": "2151-2152",
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t05-1",
@@ -1445,7 +1451,8 @@ window.HESSE_DATA = {
         "lineNumber": "3778",
         "edition": "Suhrkamp 电子版 (Glasperlenspiel, 1943)",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t06-1",
@@ -1473,7 +1480,8 @@ window.HESSE_DATA = {
         "lineNumber": "389",
         "edition": "Suhrkamp 电子版 (Narziss und Goldmund, 1930)",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t07-1",
@@ -1498,7 +1506,8 @@ window.HESSE_DATA = {
         "quoteLanguage": "zh",
         "verificationStatus": "needs_page",
         "bibliographicNote": "阐释性摘要（非原文引文），无法自动定位页码。需人工核对对应作品章节后，将 verificationStatus 升级为 verified_location 方可作正式学术引用。"
-      }
+      },
+      "provenance": "E"
     },
     {
       "id": "e-t08-1",
@@ -1523,7 +1532,8 @@ window.HESSE_DATA = {
         "quoteLanguage": "zh",
         "verificationStatus": "needs_page",
         "bibliographicNote": "阐释性摘要（非原文引文），无法自动定位页码。需人工核对对应作品章节后，将 verificationStatus 升级为 verified_location 方可作正式学术引用。"
-      }
+      },
+      "provenance": "E"
     },
     {
       "id": "e-t09-1",
@@ -1551,7 +1561,8 @@ window.HESSE_DATA = {
         "lineNumber": "2030-2031",
         "edition": "Project Gutenberg #75802 (Steppenwolf, 1927)",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t10-1",
@@ -1576,7 +1587,8 @@ window.HESSE_DATA = {
         "quoteLanguage": "zh",
         "verificationStatus": "needs_page",
         "bibliographicNote": "阐释性摘要（非原文引文），无法自动定位页码。需人工核对对应作品章节后，将 verificationStatus 升级为 verified_location 方可作正式学术引用。"
-      }
+      },
+      "provenance": "E"
     },
     {
       "id": "e-ext-13",
@@ -1602,7 +1614,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-15",
@@ -1628,7 +1641,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-17",
@@ -1654,7 +1668,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-19",
@@ -1680,7 +1695,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-21",
@@ -1706,7 +1722,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-23",
@@ -1732,7 +1749,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-25",
@@ -1758,7 +1776,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-27",
@@ -1784,7 +1803,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-29",
@@ -1810,7 +1830,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-31",
@@ -1836,7 +1857,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-33",
@@ -1862,7 +1884,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-35",
@@ -1888,7 +1911,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "nodeId 归位（2026-08-11，标题级依据）：t08 → t02。GP 人性危机——归位 t02（河流/阈限·Knecht 溺亡论域）。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-37",
@@ -1914,7 +1938,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-39",
@@ -1940,7 +1965,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-41",
@@ -1966,7 +1992,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-43",
@@ -1992,7 +2019,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-45",
@@ -2018,7 +2046,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-47",
@@ -2044,7 +2073,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-49",
@@ -2070,7 +2100,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "nodeId 归位（2026-08-11，标题级依据）：t08 → t07。Siddhartha 神圣/世俗——归位 t07（Maya/幻象·东方精神论域）。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-51",
@@ -2096,7 +2127,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-53",
@@ -2122,7 +2154,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "nodeId 归位（2026-08-11，标题级依据）：t08 → t07。Siddhartha 神圣/世俗——归位 t07（Maya/幻象·东方精神论域）。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-55",
@@ -2148,7 +2181,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-57",
@@ -2174,7 +2208,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-59",
@@ -2200,7 +2235,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-61",
@@ -2226,7 +2262,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-63",
@@ -2252,7 +2289,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-65",
@@ -2278,7 +2316,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-67",
@@ -2304,7 +2343,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "nodeId 归位（2026-08-11，标题级依据）：t08 → t10。Knulp 现代性批判——归位 t10（自然vs文明·现代性论域）。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-69",
@@ -2330,7 +2370,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-ext-71",
@@ -2356,7 +2397,8 @@ window.HESSE_DATA = {
         "verificationStatus": "verified_location",
         "bibliographicNote": "DOI 已验证可解析（2026-08-11 doi.org 解析确认）。外部二手文献，引用前建议核对原文内容与 claim 匹配度。",
         "verifiedDate": "2026-08-11"
-      }
+      },
+      "provenance": "S"
     },
     {
       "id": "e-t01-3",
@@ -2384,7 +2426,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #2499 (Siddhartha, 1922) L112。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t01-4",
@@ -2412,7 +2455,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Glasperlenspiel, 1943)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Glasperlenspiel, 1943) L756。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t02-3",
@@ -2440,7 +2484,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Narziss und Goldmund, 1930)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Narziss und Goldmund, 1930) L1079。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t03-2",
@@ -2468,7 +2513,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #75802 (Steppenwolf, 1927)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #75802 (Steppenwolf, 1927) L2280。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t03-3",
@@ -2496,7 +2542,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Glasperlenspiel, 1943)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Glasperlenspiel, 1943) L545。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t04-2",
@@ -2524,7 +2571,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Narziss und Goldmund, 1930)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Narziss und Goldmund, 1930) L2097。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t04-3",
@@ -2552,7 +2600,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Glasperlenspiel, 1943)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Glasperlenspiel, 1943) L425。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t05-2",
@@ -2580,7 +2629,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #2499 (Siddhartha, 1922) L507。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t05-3",
@@ -2608,7 +2658,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #75802 (Steppenwolf, 1927)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #75802 (Steppenwolf, 1927) L2028。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t06-2",
@@ -2636,7 +2687,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #41907 (Demian, 1919)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #41907 (Demian, 1919) L4476。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t06-3",
@@ -2664,7 +2716,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #75802 (Steppenwolf, 1927)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #75802 (Steppenwolf, 1927) L1423。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t07-2",
@@ -2692,7 +2745,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #2499 (Siddhartha, 1922) L1089。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t08-2",
@@ -2720,7 +2774,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #41907 (Demian, 1919)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #41907 (Demian, 1919) L2309。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t08-3",
@@ -2748,7 +2803,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #2499 (Siddhartha, 1922) L228。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t08-4",
@@ -2776,7 +2832,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #75802 (Steppenwolf, 1927)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #75802 (Steppenwolf, 1927) L1145。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t09-2",
@@ -2804,7 +2861,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #61266 (Gertrud, 1910)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #61266 (Gertrud, 1910) L115。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t09-3",
@@ -2832,7 +2890,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Narziss und Goldmund, 1930)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Narziss und Goldmund, 1930) L1801。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t09-4",
@@ -2860,7 +2919,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Glasperlenspiel, 1943)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Glasperlenspiel, 1943) L135。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t10-2",
@@ -2888,7 +2948,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #41051 (Peter Camenzind, 1904)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Project Gutenberg #41051 (Peter Camenzind, 1904) L70。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-t10-3",
@@ -2916,7 +2977,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 电子版 (Narziss und Goldmund, 1930)",
         "verifiedDate": "2026-08-11",
         "bibliographicNote": "行号已锚定（2026-08-11 源文本 grep 逐字命中）：Suhrkamp 电子版 (Narziss und Goldmund, 1930) L23。投稿前需补 Suhrkamp 纸书页码映射（B-route 论文闸门项）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G1",
@@ -2945,7 +3007,8 @@ window.HESSE_DATA = {
         "lineNumber": "97-99",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G6",
@@ -2975,7 +3038,8 @@ window.HESSE_DATA = {
         "lineNumber": "361",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G7",
@@ -3005,7 +3069,8 @@ window.HESSE_DATA = {
         "lineNumber": "365",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G8",
@@ -3034,7 +3099,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "U-route 行号锚定（5c 台账 G8）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G11",
@@ -3064,7 +3130,8 @@ window.HESSE_DATA = {
         "lineNumber": "291-295",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-N3",
@@ -3094,7 +3161,8 @@ window.HESSE_DATA = {
         "lineNumber": "1835-1845",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-N5",
@@ -3123,7 +3191,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "U-route 行号锚定（5c 台账 N5）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-N6",
@@ -3153,7 +3222,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "U-route 行号锚定（5c 台账 N6）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1a",
@@ -3183,7 +3253,8 @@ window.HESSE_DATA = {
         "lineNumber": "60",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1c",
@@ -3212,7 +3283,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "U-route 行号锚定（5c 台账 M1c）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1d",
@@ -3241,7 +3313,8 @@ window.HESSE_DATA = {
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "U-route 行号锚定（5c 台账 M1d）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-S1",
@@ -3271,7 +3344,8 @@ window.HESSE_DATA = {
         "lineNumber": "3717",
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-S2",
@@ -3300,7 +3374,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "B-route PG #2499 行号锚定（5c 台账 S2）。投稿前需补 Suhrkamp 纸书页码映射。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-S3",
@@ -3330,7 +3405,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "B-route PG #2499 行号锚定（5c 台账 S3）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-D1",
@@ -3359,7 +3435,8 @@ window.HESSE_DATA = {
         "lineNumber": "2753-2783",
         "edition": "Project Gutenberg #41907 (Demian, 1919)",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-SW2",
@@ -3388,7 +3465,8 @@ window.HESSE_DATA = {
         "edition": "Project Gutenberg #75802 (Der Steppenwolf, 1927)",
         "verifiedDate": "2026-08-30",
         "bibliographicNote": "B-route PG #75802 行号锚定（5c 台账 SW2）。"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-SW4",
@@ -3418,7 +3496,8 @@ window.HESSE_DATA = {
         "lineNumber": "1803-1815",
         "edition": "Project Gutenberg #75802 (Der Steppenwolf, 1927)",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G2",
@@ -3447,7 +3526,8 @@ window.HESSE_DATA = {
         "lineNumber": "101",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G3",
@@ -3476,7 +3556,8 @@ window.HESSE_DATA = {
         "lineNumber": "127",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G4",
@@ -3505,7 +3586,8 @@ window.HESSE_DATA = {
         "lineNumber": "237",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G5",
@@ -3534,7 +3616,8 @@ window.HESSE_DATA = {
         "lineNumber": "279",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G9",
@@ -3562,7 +3645,8 @@ window.HESSE_DATA = {
         "lineNumber": "375",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-G10",
@@ -3591,7 +3675,8 @@ window.HESSE_DATA = {
         "lineNumber": "167",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 9",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1b",
@@ -3620,7 +3705,8 @@ window.HESSE_DATA = {
         "lineNumber": "62",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1e",
@@ -3649,7 +3735,8 @@ window.HESSE_DATA = {
         "lineNumber": "157",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1f",
@@ -3678,7 +3765,8 @@ window.HESSE_DATA = {
         "lineNumber": "163",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-M1g",
@@ -3707,7 +3795,8 @@ window.HESSE_DATA = {
         "lineNumber": "295",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 8",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-S4",
@@ -3736,7 +3825,8 @@ window.HESSE_DATA = {
         "lineNumber": "3690",
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-S5",
@@ -3765,7 +3855,8 @@ window.HESSE_DATA = {
         "lineNumber": "199",
         "edition": "Project Gutenberg #2499 (Siddhartha, 1922)",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-D2",
@@ -3794,7 +3885,8 @@ window.HESSE_DATA = {
         "lineNumber": "2840",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 5",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-D3",
@@ -3823,7 +3915,8 @@ window.HESSE_DATA = {
         "lineNumber": "826",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 5",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-D4",
@@ -3852,7 +3945,8 @@ window.HESSE_DATA = {
         "lineNumber": "2776",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 5",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-SW1",
@@ -3881,7 +3975,8 @@ window.HESSE_DATA = {
         "lineNumber": "1231",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 7",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-SW3",
@@ -3910,7 +4005,8 @@ window.HESSE_DATA = {
         "lineNumber": "1772",
         "edition": "Suhrkamp 2001 Ges. Werke Bd. 7",
         "verifiedDate": "2026-08-30"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR1",
@@ -3939,7 +4035,8 @@ window.HESSE_DATA = {
         "lineNumber": "929",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR2",
@@ -3968,7 +4065,8 @@ window.HESSE_DATA = {
         "lineNumber": "3147",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR3",
@@ -3997,7 +4095,8 @@ window.HESSE_DATA = {
         "lineNumber": "3590",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR4",
@@ -4026,7 +4125,8 @@ window.HESSE_DATA = {
         "lineNumber": "3228",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR5",
@@ -4055,7 +4155,8 @@ window.HESSE_DATA = {
         "lineNumber": "3301",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR6",
@@ -4084,7 +4185,8 @@ window.HESSE_DATA = {
         "lineNumber": "5853",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-UR7",
@@ -4113,7 +4215,8 @@ window.HESSE_DATA = {
         "lineNumber": "5874",
         "edition": "Unterm Rad (1906), 权威全文 6322 行",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-RS1",
@@ -4142,7 +4245,8 @@ window.HESSE_DATA = {
         "lineNumber": "2802-2816",
         "edition": "Project Gutenberg #64466 (Rosshalde, 1914)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-RS2",
@@ -4171,7 +4275,8 @@ window.HESSE_DATA = {
         "lineNumber": "1399",
         "edition": "Project Gutenberg #64466 (Rosshalde, 1914)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-RS3",
@@ -4200,7 +4305,8 @@ window.HESSE_DATA = {
         "lineNumber": "5753",
         "edition": "Project Gutenberg #64466 (Rosshalde, 1914)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-RS4",
@@ -4229,7 +4335,8 @@ window.HESSE_DATA = {
         "lineNumber": "5563",
         "edition": "Project Gutenberg #64466 (Rosshalde, 1914)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-RS5",
@@ -4258,7 +4365,8 @@ window.HESSE_DATA = {
         "lineNumber": "5968-5975",
         "edition": "Project Gutenberg #64466 (Rosshalde, 1914)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-KL1",
@@ -4287,7 +4395,8 @@ window.HESSE_DATA = {
         "lineNumber": "5845",
         "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-KL2",
@@ -4315,7 +4424,8 @@ window.HESSE_DATA = {
         "lineNumber": "4992",
         "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-KL3",
@@ -4344,7 +4454,8 @@ window.HESSE_DATA = {
         "lineNumber": "5156",
         "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-KL4",
@@ -4373,7 +4484,8 @@ window.HESSE_DATA = {
         "lineNumber": "3998-3999",
         "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-KL5",
@@ -4401,7 +4513,8 @@ window.HESSE_DATA = {
         "lineNumber": "5330",
         "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-GT1",
@@ -4430,7 +4543,8 @@ window.HESSE_DATA = {
         "lineNumber": "4012-4038",
         "edition": "Project Gutenberg #61266 (Gertrud, 1910)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-GT2",
@@ -4458,7 +4572,8 @@ window.HESSE_DATA = {
         "lineNumber": "6053-6054",
         "edition": "Project Gutenberg #61266 (Gertrud, 1910)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-GT3",
@@ -4486,7 +4601,8 @@ window.HESSE_DATA = {
         "lineNumber": "3268",
         "edition": "Project Gutenberg #61266 (Gertrud, 1910)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-GT4",
@@ -4514,7 +4630,8 @@ window.HESSE_DATA = {
         "lineNumber": "6173",
         "edition": "Project Gutenberg #61266 (Gertrud, 1910)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-PC1",
@@ -4543,7 +4660,8 @@ window.HESSE_DATA = {
         "lineNumber": "445",
         "edition": "Project Gutenberg #41051 (Peter Camenzind, 1904)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-PC2",
@@ -4572,7 +4690,8 @@ window.HESSE_DATA = {
         "lineNumber": "4467-4494",
         "edition": "Project Gutenberg #41051 (Peter Camenzind, 1904)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-PC3",
@@ -4600,7 +4719,8 @@ window.HESSE_DATA = {
         "lineNumber": "4853",
         "edition": "Project Gutenberg #41051 (Peter Camenzind, 1904)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
     },
     {
       "id": "e-KL6",
@@ -4629,7 +4749,101 @@ window.HESSE_DATA = {
         "lineNumber": "5410-5411",
         "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
         "verifiedDate": "2026-08-31"
-      }
+      },
+      "provenance": "T"
+    },
+    {
+      "id": "e-DEM-t11",
+      "nodeId": "t11",
+      "workId": "w05",
+      "source": "Demian",
+      "location": "Kain 印记讨论（Z.846-853）",
+      "quote": "Er hatte ein >Zeichen<. Man konnte das erklären, wie man wollte. … Also erklärte man das Zeichen nicht als das, was es war, als eine Auszeichnung, sondern als das Gegenteil.",
+      "claim": "印记（Zeichen）是非语言的认出标记，而『解释』（erklären）这一语言行为必然把它歪曲成反面。Demian 阶段 t11 的形态：语言系统性误传，但印记提供了绕过语言的传达通道——带印记者彼此认出。",
+      "confidence": "high",
+      "tags": [
+        "不可传达",
+        "印记",
+        "非语言传达",
+        "t11"
+      ],
+      "sourceRef": {
+        "author": "Hermann Hesse",
+        "title": "Demian",
+        "workId": "w05",
+        "locator": "Kain 印记讨论（Z.846-853）",
+        "locatorType": "chapter-or-scene",
+        "quoteType": "direct",
+        "quoteLanguage": "de",
+        "verificationStatus": "verified_location",
+        "bibliographicNote": "Project Gutenberg #41907 全本 grep 验证（t11 证据链补全，2026-09-10）。",
+        "lineNumber": "846-853",
+        "edition": "Project Gutenberg #41907 (Demian, 1919)",
+        "verifiedDate": "2026-09-10"
+      },
+      "provenance": "T"
+    },
+    {
+      "id": "e-UR-t11",
+      "nodeId": "t11",
+      "workId": "w02",
+      "source": "Unterm Rad",
+      "location": "神学院时期·宗教课（Z.163-170）",
+      "quote": "Damit jedoch keine geistige Überlastung eintrete und damit nicht etwa über den Verstandesübungen das Gemüt vergessen werde und verdorre, durfte Hans jeden Morgen … den Konfirmandenunterricht besuchen … Leider verkümmerte er sich diese erquickenden Stunden selbst und beraubte sich ihres Segens.",
+      "claim": "制度可以安排『防止情感枯萎』的传授渠道（宗教课），却无法保证情感真的被滋养；汉斯反而在这节为生命预备的课里夹希腊拉丁小抄继续学业——知识传递挤占了生命形成。t11 早期形态：传授的制度化形式与生命形成之间无必然通道。",
+      "confidence": "high",
+      "tags": [
+        "不可传达",
+        "知识与生命",
+        "制度",
+        "t11"
+      ],
+      "sourceRef": {
+        "author": "Hermann Hesse",
+        "title": "Unterm Rad",
+        "workId": "w02",
+        "locator": "神学院时期·宗教课（Z.163-170）",
+        "locatorType": "chapter-or-scene",
+        "quoteType": "direct",
+        "quoteLanguage": "de",
+        "verificationStatus": "verified_location",
+        "bibliographicNote": "Unterm Rad 权威全文（6322 行）全本 grep 验证；同 e-UR1..7 行号基准（t11 证据链补全，2026-09-10）。",
+        "lineNumber": "163-170",
+        "edition": "Unterm Rad (1906), 权威全文 6322 行（Project Gutenberg #49908）",
+        "verifiedDate": "2026-09-10"
+      },
+      "provenance": "T"
+    },
+    {
+      "id": "e-SW-t11",
+      "nodeId": "t11",
+      "workId": "w10",
+      "source": "Der Steppenwolf",
+      "location": "Tractat 之后·哈利自述（Z.2322-2335）",
+      "quote": "bald mit Hohn und Verachtung gegen die Nüchternheit des Traktates, der mir die spezifische Stimmung und Spannung meines Lebens gar nicht zu verstehen schien. Was da von Steppenwölfen und Selbstmördern geschrieben stand, mochte ganz gut und klug sein, es galt für die Gattung, für den Typus, war geistreiche Abstraktion; meine Person hingegen, meine eigentliche Seele, mein eigenes, einmaliges Einzelschicksal schien mir mit so grobem Netze doch nicht einzufangen.",
+      "claim": "解释只能覆盖类型（Gattung / Typus），无法捕获个体灵魂：Tractat 聪明、正确，却是『geistreiche Abstraktion』，对哈利本人的生活不发生转化。t11 中期形态——解释 ≠ 传达，理论的精确性恰是它失效的原因。",
+      "confidence": "high",
+      "tags": [
+        "不可传达",
+        "解释与转化",
+        "理论限度",
+        "t11"
+      ],
+      "sourceRef": {
+        "author": "Hermann Hesse",
+        "title": "Der Steppenwolf",
+        "workId": "w10",
+        "locator": "Tractat 之后·哈利自述（Z.2322-2335）",
+        "locatorType": "work-section",
+        "quoteType": "direct",
+        "quoteLanguage": "de",
+        "verificationStatus": "verified_location",
+        "bibliographicNote": "Project Gutenberg #75802 全本 grep 验证（t11 证据链补全，2026-09-10）。",
+        "lineNumber": "2322-2335",
+        "edition": "Project Gutenberg #75802 (Der Steppenwolf, 1927)",
+        "verifiedDate": "2026-09-10"
+      },
+      "provenance": "T"
     }
   ],
   "relations": [
@@ -5906,5 +6120,162 @@ window.HESSE_DATA = {
       ],
       "explain": "明暗推进和纹理变化对应台阶、越界和持续转化。"
     }
-  ]
+  ],
+  "provenanceIndex": {
+    "totals": {
+      "T": 88,
+      "S": 30,
+      "E": 6
+    },
+    "byNode": {
+      "t01": {
+        "T": 2,
+        "S": 0,
+        "E": 2
+      },
+      "t02": {
+        "T": 5,
+        "S": 1,
+        "E": 1
+      },
+      "t03": {
+        "T": 7,
+        "S": 0,
+        "E": 0
+      },
+      "t04": {
+        "T": 3,
+        "S": 0,
+        "E": 0
+      },
+      "t05": {
+        "T": 23,
+        "S": 0,
+        "E": 0
+      },
+      "t06": {
+        "T": 3,
+        "S": 0,
+        "E": 0
+      },
+      "t07": {
+        "T": 10,
+        "S": 2,
+        "E": 1
+      },
+      "t08": {
+        "T": 13,
+        "S": 26,
+        "E": 1
+      },
+      "t09": {
+        "T": 15,
+        "S": 0,
+        "E": 0
+      },
+      "t10": {
+        "T": 3,
+        "S": 1,
+        "E": 1
+      },
+      "t11": {
+        "T": 4,
+        "S": 0,
+        "E": 0
+      }
+    },
+    "byWork": {
+      "w05": {
+        "T": 7,
+        "S": 0,
+        "E": 1
+      },
+      "w08": {
+        "T": 8,
+        "S": 0,
+        "E": 1
+      },
+      "w07": {
+        "T": 12,
+        "S": 0,
+        "E": 0
+      },
+      "w11": {
+        "T": 16,
+        "S": 0,
+        "E": 2
+      },
+      "w10": {
+        "T": 10,
+        "S": 0,
+        "E": 1
+      },
+      "w01": {
+        "T": 4,
+        "S": 0,
+        "E": 1
+      },
+      "w12": {
+        "T": 0,
+        "S": 30,
+        "E": 0
+      },
+      "w03": {
+        "T": 5,
+        "S": 0,
+        "E": 0
+      },
+      "w09": {
+        "T": 7,
+        "S": 0,
+        "E": 0
+      },
+      "w02": {
+        "T": 8,
+        "S": 0,
+        "E": 0
+      },
+      "w04": {
+        "T": 5,
+        "S": 0,
+        "E": 0
+      },
+      "w06": {
+        "T": 6,
+        "S": 0,
+        "E": 0
+      }
+    }
+  },
+  "claimCountByNode": {
+    "t01": 4,
+    "t02": 7,
+    "t03": 7,
+    "t04": 3,
+    "t05": 23,
+    "t06": 3,
+    "t07": 13,
+    "t08": 40,
+    "t09": 15,
+    "t10": 5,
+    "t11": 4
+  },
+  "claimCountByWork": {
+    "w05": 8,
+    "w08": 9,
+    "w07": 12,
+    "w11": 18,
+    "w10": 11,
+    "w01": 5,
+    "w12": 30,
+    "w03": 5,
+    "w09": 7,
+    "w02": 8,
+    "w04": 5,
+    "w06": 6
+  },
+  "meta": {
+    "evidenceTotal": 124,
+    "provenanceRule": "E=quoteType:interpretive ; S=workId:w12|quoteType:metadata|locatorType:doi ; T=其余（文学部次 textual）"
+  }
 };

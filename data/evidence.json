@@ -3369,5 +3369,95 @@
       "edition": "Project Gutenberg #42338 (Klingsors letzter Sommer, 1920)",
       "verifiedDate": "2026-08-31"
     }
+  },
+  {
+    "id": "e-DEM-t11",
+    "nodeId": "t11",
+    "workId": "w05",
+    "source": "Demian",
+    "location": "Kain 印记讨论（Z.846-853）",
+    "quote": "Er hatte ein >Zeichen<. Man konnte das erklären, wie man wollte. … Also erklärte man das Zeichen nicht als das, was es war, als eine Auszeichnung, sondern als das Gegenteil.",
+    "claim": "印记（Zeichen）是非语言的认出标记，而『解释』（erklären）这一语言行为必然把它歪曲成反面。Demian 阶段 t11 的形态：语言系统性误传，但印记提供了绕过语言的传达通道——带印记者彼此认出。",
+    "confidence": "high",
+    "tags": [
+      "不可传达",
+      "印记",
+      "非语言传达",
+      "t11"
+    ],
+    "sourceRef": {
+      "author": "Hermann Hesse",
+      "title": "Demian",
+      "workId": "w05",
+      "locator": "Kain 印记讨论（Z.846-853）",
+      "locatorType": "chapter-or-scene",
+      "quoteType": "direct",
+      "quoteLanguage": "de",
+      "verificationStatus": "verified_location",
+      "bibliographicNote": "Project Gutenberg #41907 全本 grep 验证（t11 证据链补全，2026-09-10）。",
+      "lineNumber": "846-853",
+      "edition": "Project Gutenberg #41907 (Demian, 1919)",
+      "verifiedDate": "2026-09-10"
+    }
+  },
+  {
+    "id": "e-UR-t11",
+    "nodeId": "t11",
+    "workId": "w02",
+    "source": "Unterm Rad",
+    "location": "神学院时期·宗教课（Z.163-170）",
+    "quote": "Damit jedoch keine geistige Überlastung eintrete und damit nicht etwa über den Verstandesübungen das Gemüt vergessen werde und verdorre, durfte Hans jeden Morgen … den Konfirmandenunterricht besuchen … Leider verkümmerte er sich diese erquickenden Stunden selbst und beraubte sich ihres Segens.",
+    "claim": "制度可以安排『防止情感枯萎』的传授渠道（宗教课），却无法保证情感真的被滋养；汉斯反而在这节为生命预备的课里夹希腊拉丁小抄继续学业——知识传递挤占了生命形成。t11 早期形态：传授的制度化形式与生命形成之间无必然通道。",
+    "confidence": "high",
+    "tags": [
+      "不可传达",
+      "知识与生命",
+      "制度",
+      "t11"
+    ],
+    "sourceRef": {
+      "author": "Hermann Hesse",
+      "title": "Unterm Rad",
+      "workId": "w02",
+      "locator": "神学院时期·宗教课（Z.163-170）",
+      "locatorType": "chapter-or-scene",
+      "quoteType": "direct",
+      "quoteLanguage": "de",
+      "verificationStatus": "verified_location",
+      "bibliographicNote": "Unterm Rad 权威全文（6322 行）全本 grep 验证；同 e-UR1..7 行号基准（t11 证据链补全，2026-09-10）。",
+      "lineNumber": "163-170",
+      "edition": "Unterm Rad (1906), 权威全文 6322 行（Project Gutenberg #49908）",
+      "verifiedDate": "2026-09-10"
+    }
+  },
+  {
+    "id": "e-SW-t11",
+    "nodeId": "t11",
+    "workId": "w10",
+    "source": "Der Steppenwolf",
+    "location": "Tractat 之后·哈利自述（Z.2322-2335）",
+    "quote": "bald mit Hohn und Verachtung gegen die Nüchternheit des Traktates, der mir die spezifische Stimmung und Spannung meines Lebens gar nicht zu verstehen schien. Was da von Steppenwölfen und Selbstmördern geschrieben stand, mochte ganz gut und klug sein, es galt für die Gattung, für den Typus, war geistreiche Abstraktion; meine Person hingegen, meine eigentliche Seele, mein eigenes, einmaliges Einzelschicksal schien mir mit so grobem Netze doch nicht einzufangen.",
+    "claim": "解释只能覆盖类型（Gattung / Typus），无法捕获个体灵魂：Tractat 聪明、正确，却是『geistreiche Abstraktion』，对哈利本人的生活不发生转化。t11 中期形态——解释 ≠ 传达，理论的精确性恰是它失效的原因。",
+    "confidence": "high",
+    "tags": [
+      "不可传达",
+      "解释与转化",
+      "理论限度",
+      "t11"
+    ],
+    "sourceRef": {
+      "author": "Hermann Hesse",
+      "title": "Der Steppenwolf",
+      "workId": "w10",
+      "locator": "Tractat 之后·哈利自述（Z.2322-2335）",
+      "locatorType": "work-section",
+      "quoteType": "direct",
+      "quoteLanguage": "de",
+      "verificationStatus": "verified_location",
+      "bibliographicNote": "Project Gutenberg #75802 全本 grep 验证（t11 证据链补全，2026-09-10）。",
+      "lineNumber": "2322-2335",
+      "edition": "Project Gutenberg #75802 (Der Steppenwolf, 1927)",
+      "verifiedDate": "2026-09-10"
+    }
   }
 ]
