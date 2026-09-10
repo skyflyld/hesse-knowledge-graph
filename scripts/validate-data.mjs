@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { applyProvenance, BRIDGE_KEYS, PROVENANCE_RULE } from './lib/provenance.mjs';
+import { applyNarrative, movementStructure } from './lib/narrative.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 
@@ -18,7 +19,8 @@ const datasetFiles = {
   evidence: 'evidence.json',
   relations: 'relations.json',
   timelinePhases: 'timeline-phases.json',
-  image2Rules: 'image2-rules.json'
+  image2Rules: 'image2-rules.json',
+  narrative: 'narrative.json'
 };
 
 const nodeCollections = ['works', 'motifs', 'debates', 'characters', 'structures', 'grammars', 'cultures', 'persons', 'receptionEvents'];
@@ -38,11 +40,15 @@ async function readJson(file) {
 const data = {};
 for (const [key, file] of Object.entries(datasetFiles)) {
   data[key] = await readJson(file);
-  if (!Array.isArray(data[key])) throw new Error(`data/${file} must contain an array`);
+  // narrative.json 是对象（叙事层），其余数据集均为数组
+  if (key !== 'narrative' && !Array.isArray(data[key])) {
+    throw new Error(`data/${file} must contain an array`);
+  }
 }
 
 // 与 build-data.mjs 共用同一派生模块（单一真相源）
 applyProvenance(data);
+applyNarrative(data);
 
 const problems = [];
 const nodeIds = new Set();
@@ -153,6 +159,72 @@ const expectedBridge = `window.HESSE_DATA = ${JSON.stringify(
 )};\n`;
 const bridge = await readFile(join(root, 'data', 'hesse-data.js'), 'utf8');
 if (bridge !== expectedBridge) fail(problems, 'data/hesse-data.js is stale; run npm run build:data');
+
+// 叙事层（E）强制约束：防「叙事冒充事实」
+{
+  const nar = data.narrative;
+  const claimIds = new Set(data.evidence.map((e) => e.id));
+  const motifIds = new Set(data.motifs.map((m) => m.id));
+
+  if (!nar) {
+    fail(problems, 'narrative.json missing');
+  } else {
+    const checkClaims = (ids, where) => {
+      for (const id of ids || []) {
+        if (!claimIds.has(id)) fail(problems, `${where} references missing claim ${id}`);
+      }
+    };
+
+    // 1. 编者结论必须锚定到真实 claim
+    checkClaims(nar.thesis?.supportingClaims, 'thesis');
+    if (nar.thesis && nar.thesis.type !== 'editorial') {
+      fail(problems, `thesis.type must be editorial, got ${nar.thesis.type}`);
+    }
+    for (const m of nar.movements || []) {
+      if (!(m.coreConclusions || []).length) fail(problems, `${m.id} has no coreConclusions`);
+      for (const c of m.coreConclusions || []) checkClaims(c.supportingClaims, `${m.id}/${c.id}`);
+    }
+    for (const q of nar.fourQuestions || []) checkClaims(q.supportingClaims, q.id);
+
+    // 2. 证伪测试 2（Evidence Concentration）：核心结论锚定率 <50% → 不得作为一级结构
+    for (const [mid, idx] of Object.entries(data.narrativeIndex?.movements || {})) {
+      if (idx.concentrationPass === false) {
+        fail(problems, `${mid} core-conclusion concentration <50% (${idx.coresWithEvidence}/${idx.coreCount})`);
+      }
+      if (!idx.coreCount) fail(problems, `${mid} has zero coreConclusions`);
+    }
+
+    // 3. 十一个叙事作品必须恰好各归一个 Movement（不重不漏）
+    const { byWork, ranges } = movementStructure(nar);
+    const literary = data.works.filter((w) => w.id !== 'w12').map((w) => w.id);
+    for (const w of literary) {
+      const ms = byWork[w] || [];
+      if (ms.length !== 1) fail(problems, `work ${w} must belong to exactly one movement, got ${ms.length}`);
+    }
+    for (const [w, ms] of Object.entries(byWork)) {
+      if (!literary.includes(w)) fail(problems, `movement references non-literary work ${w}`);
+      if (ms.length > 1) fail(problems, `work ${w} appears in multiple movements: ${ms.join(',')}`);
+    }
+
+    // 4. 证伪测试 3（Scale Confusion）：Movement 年份区间必须单调递增不重叠
+    const sorted = [...ranges].sort((a, b) => a.from - b.from);
+    for (let i = 1; i < sorted.length; i += 1) {
+      if (sorted[i].from <= sorted[i - 1].to) {
+        fail(problems, `movements ${sorted[i - 1].id}/${sorted[i].id} overlap in years (scale confusion risk)`);
+      }
+    }
+
+    // 5. 镜像对子：作品存在 + 母题合法 + 必须有 claim 交集（否则 UI 必须写成“无 claim 交集”，此处先旗标）
+    for (const p of nar.mirrorPairs || []) {
+      for (const w of [p.a, p.b]) {
+        if (!literary.includes(w)) fail(problems, `mirrorPair ${p.id} references invalid work ${w}`);
+      }
+      for (const mt of p.sharedMotifs || []) {
+        if (!motifIds.has(mt)) fail(problems, `mirrorPair ${p.id} references missing motif ${mt}`);
+      }
+    }
+  }
+}
 
 // Provenance 派生层健全性：T/S/E 合计必须等于证据总数，且不得出现第四层
 const provTotals = data.provenanceIndex?.totals || {};

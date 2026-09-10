@@ -159,6 +159,86 @@
   .panel .db-box .side.pro { border-left:3px solid var(--red); color:var(--text2); }
   .panel .db-box .side.con { border-left:3px solid var(--blue); color:var(--text2); }
 
+  /* ── Journey View ── */
+  .journey-view { position:absolute; inset:0; display:none; flex-direction:column; min-height:0; overflow:hidden; }
+  .journey-view.active { display:flex; }
+  .jy-scroll { flex:1; overflow:auto; padding:32px 30px 96px; }
+  .jy-inner { max-width:1010px; margin:0 auto; }
+  .jy-sec { margin-bottom:54px; }
+  .jy-sec h2 { font-size:1.02rem; color:var(--text); font-weight:600; margin:0 0 3px; letter-spacing:0.02em; }
+  .jy-kicker { font-size:0.61rem; letter-spacing:0.17em; text-transform:uppercase; color:var(--gold); margin-bottom:11px; }
+  .jy-note { font-size:0.68rem; color:var(--text3); margin-bottom:15px; line-height:1.65; max-width:58em; }
+  .jy-tag { font-size:0.6rem; padding:1px 6px; border:1px dashed var(--gold-dim); border-radius:4px;
+    color:var(--gold); margin-left:7px; vertical-align:middle; font-weight:400; white-space:nowrap; }
+  .jy-thesis-text { font-size:1.14rem; line-height:1.9; color:var(--text); margin:8px 0 12px; max-width:44em; }
+  .jy-counts { font-size:0.65rem; color:var(--text3); letter-spacing:0.03em; }
+  .jy-link { color:var(--gold); cursor:pointer; border-bottom:1px dotted var(--gold-dim); }
+
+  /* 七次运动：编号是信息（时间序），不是装饰 */
+  .jy-movements { display:flex; gap:8px; overflow-x:auto; padding:2px 0 12px; }
+  .jy-mv { flex:0 0 auto; min-width:132px; padding:11px 13px 12px; border:1px solid var(--border); border-radius:7px;
+    background:rgba(255,255,255,0.015); cursor:pointer; transition:border-color .18s, background .18s; }
+  .jy-mv:hover { border-color:var(--gold-dim); }
+  .jy-mv.active { border-color:var(--gold); background:rgba(200,168,90,0.07); }
+  .jy-mv .n { font-size:0.6rem; color:var(--gold); letter-spacing:0.12em; }
+  .jy-mv .t { font-size:0.85rem; color:var(--text); margin:3px 0 2px; }
+  .jy-mv .d { font-size:0.6rem; color:var(--text3); font-style:italic; }
+  .jy-mv .y { font-size:0.6rem; color:var(--text3); margin-top:5px; letter-spacing:0.03em; }
+  .jy-mv .s { font-size:0.58rem; color:var(--text3); margin-top:5px; }
+  .jy-detail { border-left:2px solid var(--gold-dim); padding:2px 0 2px 15px; margin-top:10px; }
+  .jy-detail .lead { font-size:0.83rem; color:var(--text2); line-height:1.7; margin:0 0 12px; }
+  .jy-core { margin:0 0 11px; }
+  .jy-core .ct { font-size:0.79rem; color:var(--text); line-height:1.6; }
+  .jy-core .cl { margin-top:3px; display:flex; flex-wrap:wrap; gap:3px; }
+  .jy-claim { font-size:0.6rem; padding:1px 6px; border:1px solid var(--border); border-radius:3px;
+    color:var(--text2); cursor:pointer; }
+  .jy-claim:hover { border-color:var(--gold-dim); color:var(--gold); }
+
+  /* 作品时间轴 */
+  .jy-rail { display:flex; gap:7px; overflow-x:auto; padding:14px 0 10px; align-items:flex-start; }
+  .jy-work { flex:0 0 auto; width:148px; padding:10px 11px; border:1px solid var(--border); border-radius:7px;
+    background:rgba(255,255,255,0.015); cursor:pointer; }
+  .jy-work:hover { border-color:var(--gold-dim); }
+  .jy-work.open { border-color:var(--gold); }
+  .jy-work .yr { font-size:0.66rem; color:var(--gold); letter-spacing:0.06em; }
+  .jy-work .nm { font-size:0.8rem; color:var(--text); margin:4px 0 3px; line-height:1.35; }
+  .jy-work .gn { font-size:0.58rem; color:var(--text3); line-height:1.4; }
+  .jy-work .cnt { font-size:0.58rem; color:var(--text3); margin-top:6px; letter-spacing:0.03em; }
+  .jy-work .mv { font-size:0.58rem; color:var(--text2); margin-top:4px; }
+
+  /* 母题演化 */
+  .jy-motifs { display:flex; flex-wrap:wrap; gap:6px; }
+  .jy-motif { padding:7px 11px; border:1px solid var(--border); border-radius:6px; cursor:pointer;
+    background:rgba(255,255,255,0.015); }
+  .jy-motif:hover { border-color:var(--gold-dim); }
+  .jy-motif.active { border-color:var(--gold); background:rgba(200,168,90,0.07); }
+  .jy-motif .nm { font-size:0.76rem; color:var(--text); }
+  .jy-motif .cnt { font-size:0.58rem; color:var(--text3); margin-top:3px; letter-spacing:0.03em; }
+
+  /* 镜像剧场 */
+  .jy-mirror { display:grid; grid-template-columns:1fr auto 1fr; gap:12px; align-items:center;
+    padding:12px 0; border-bottom:1px solid var(--border); }
+  .jy-mirror:last-child { border-bottom:0; }
+  .jy-mirror .side { font-size:0.82rem; color:var(--text); }
+  .jy-mirror .side .sm { display:block; font-size:0.6rem; color:var(--text3); margin-top:3px; }
+  .jy-mirror .mid { color:var(--gold); font-size:0.75rem; }
+  .jy-mirror .rgt { text-align:right; }
+  .jy-mirror .note { grid-column:1 / -1; font-size:0.68rem; color:var(--text3); line-height:1.6; margin-top:4px; }
+  .jy-warn { color:#c98a6a; }
+
+  /* 四个大问题 */
+  .jy-question { padding:16px 0; border-top:1px solid var(--border); }
+  .jy-question .q { font-size:1.05rem; color:var(--text); margin-bottom:6px; }
+  .jy-question .sq { font-size:0.7rem; color:var(--text3); margin-bottom:9px; }
+
+  @media (max-width:820px) {
+    .jy-scroll { padding:20px 15px 70px; }
+    .jy-thesis-text { font-size:1.02rem; }
+    .jy-mirror { grid-template-columns:1fr; gap:4px; }
+    .jy-mirror .rgt { text-align:left; }
+    .jy-mirror .mid { display:none; }
+  }
+
   /* ── Timeline View ── */
   .timeline-view { position:absolute; inset:0; display:none; flex-direction:column; min-height:0; overflow:hidden; }
   .timeline-view.active { display:flex; }
@@ -321,6 +401,7 @@
 	  <div class="nav-wrap">
 	    <button class="nav-btn active" data-view="graph" aria-pressed="true">网络</button>
 	    <button class="nav-btn" data-view="timeline" aria-pressed="false">时间线</button>
+	    <button class="nav-btn" data-view="journey" aria-pressed="false">旅程</button>
 	    <button class="nav-btn" data-view="image" aria-pressed="false">Image2</button>
 	  </div>
 	</div>
@@ -328,7 +409,7 @@
 <div class="app">
   <!-- Sidebar -->
 	  <div class="sidebar">
-	    <div class="status-bar">已显示 <strong id="layerCount">7</strong>/7 层</div>
+	    <div class="status-bar">已显示 <strong id="layerCount">9</strong>/<span id="layerTotal">9</span> 层</div>
 	    <div class="toolbox">
 	      <input class="search-box" id="searchBox" type="search" placeholder="检索作品、母题、证据">
 	      <div class="quick-actions">
@@ -355,6 +436,50 @@
         <div class="panel" id="detailPanel"><div class="panel-in" id="panelInner"></div></div>
       </div>
     </div>
+
+    <!-- Journey -->
+	    <div class="journey-view" id="journeyView">
+	      <div class="jy-scroll"><div class="jy-inner">
+	        <div class="jy-sec">
+	          <div class="jy-kicker">E · Editorial Model</div>
+	          <h2>主命题</h2>
+	          <p class="jy-thesis-text" id="jyThesisText"></p>
+	          <div class="jy-counts" id="jyThesisCounts"></div>
+	          <div id="jyThesisEvidence"></div>
+	        </div>
+	        <div class="jy-sec">
+	          <h2>七次运动<span class="jy-tag">E · Editorial Model</span></h2>
+	          <p class="jy-note">编者模型，不是客观分期史。点击任一次运动查看它的核心结论与锚定证据；各次运动的年份区间互不重叠。</p>
+	          <div class="jy-movements" id="jyMovements"></div>
+	          <div class="jy-detail" id="jyMovementDetail"></div>
+	        </div>
+	        <div class="jy-sec">
+	          <h2>十一部作品</h2>
+	          <p class="jy-note">按首版年份排列。点击作品展开它的全部可追溯证据；体裁标注取自德文维基百科 Einzelausgaben 首版标注。</p>
+	          <div class="jy-rail" id="jyWorks"></div>
+	        </div>
+	        <div class="jy-sec">
+	          <h2>十一母题演化<span class="jy-tag">Narrative Projection</span></h2>
+	          <p class="jy-note">母题底座是真实证据层（evidence.json）。旅程只做叙事投影：每个母题下的数字全部动态取自真实 claim 计数，不人工写入。</p>
+	          <div class="jy-motifs" id="jyMotifs"></div>
+	          <div class="jy-detail" id="jyMotifDetail"></div>
+	        </div>
+	        <div class="jy-sec">
+	          <h2>镜像剧场</h2>
+	          <p class="jy-note">区分“证据关系”与“编者配对”。两侧在同一母题下都各有真实 claim 才叫有交集；否则显式标为“叙事对子，无 claim 交集”。</p>
+	          <div id="jyMirrors"></div>
+	        </div>
+	        <div class="jy-sec">
+	          <h2>四个大问题<span class="jy-tag">E · Editorial Synthesis</span></h2>
+	          <p class="jy-note">这四个问题的归拢方式属于编者归纳，不是黑塞本人给出的问题结构。每一个问题下面列出支撑它的真实 claim。</p>
+	          <div id="jyQuestions"></div>
+	        </div>
+	        <div class="jy-sec">
+	          <h2>语料口径</h2>
+	          <p class="jy-note" id="jyCorpus"></p>
+	        </div>
+	      </div></div>
+	    </div>
 
     <!-- Timeline -->
 	    <div class="timeline-view" id="timelineView">
@@ -535,6 +660,7 @@ const filterGroup = document.getElementById('filterGroup');
 	document.getElementById('legend').innerHTML = layers.map(l=>`<span><span class="d" style="background:${l.color}"></span>${esc(l.label)}</span>`).join('');
 	function showLayerCount() {
 	  document.getElementById('layerCount').textContent = layers.filter(l=>l.show).length;
+	  document.getElementById('layerTotal').textContent = layers.length;
 	}
 	document.getElementById('searchBox').addEventListener('input', e=>{
 	  activeQuery = e.target.value;
@@ -1006,6 +1132,229 @@ function renderTimelineList(sel) {
 }
 
 // ═══════════════════════════════════════════
+// JOURNEY VIEW（E 层叙事 + T 层证据，一击下钻）
+// ═══════════════════════════════════════════
+const narrativeData = data.narrative;
+const narrativeIdx = data.narrativeIndex;
+
+function claimById(id) { return evidence.find(e => e.id === id); }
+function workById(id) { return works.find(w => w.id === id); }
+function movementOfWork(wid) {
+  return (narrativeData.movements || []).find(m => (m.works || []).includes(wid));
+}
+
+/** Journey 用证据卡（复用同一套 T/S/E 彽章与透镜规则） */
+function jyEvidenceCards(items) {
+  const shown = items.filter(ev => lensAllows(ev.provenance));
+  const hidden = items.length - shown.length;
+  if (!items.length) return '<div class="evidence"><span class="trace">无 claim</span></div>';
+  const body = shown.map(ev => `<div class="evidence${ev.provenance === 'E' ? ' is-E' : ''}">
+    <strong>${provBadge(ev.provenance)}${esc(ev.claim)}</strong>
+    <span>${esc(ev.quote)}</span>
+    <span class="trace">来源: ${esc(ev.sourceRef?.title || ev.source)}${ev.sourceRef?.locator ? ` · ${esc(ev.sourceRef.locator)}` : ''}</span>
+  </div>`).join('');
+  const tail = hidden ? `<div class="evidence"><span class="trace">另有 ${hidden} 条被当前证据透镜隐藏。</span></div>` : '';
+  return body + tail;
+}
+
+function jyChips(ids) {
+  return (ids || []).map(id => {
+    const c = claimById(id);
+    if (!c) return `<span class="jy-claim jy-warn" title="缺失">${esc(id)}</span>`;
+    return `<span class="jy-claim" data-jyclaim="${esc(id)}" title="点击查看原文与出处">${esc(id)}</span>`;
+  }).join('');
+}
+
+/** 一击抵达证据：chip → 就地展开 claim 卡片 */
+function jyBindClaimChips(root) {
+  if (!root) return;
+  root.querySelectorAll('[data-jyclaim]').forEach(chip => {
+    if (chip._bound) return;
+    chip._bound = true;
+    chip.addEventListener('click', () => {
+      const id = chip.dataset.jyclaim;
+      const holder = chip.closest('.jy-core, .jy-question, .jy-detail, .jy-sec') || root;
+      const exist = holder.querySelector(`[data-jycard="${id}"]`);
+      if (exist) { exist.remove(); return; }
+      const c = claimById(id);
+      const box = document.createElement('div');
+      box.setAttribute('data-jycard', id);
+      box.innerHTML = jyEvidenceCards([c]);
+      (chip.closest('.jy-core') || holder).appendChild(box);
+    });
+  });
+}
+
+function renderJourneyThesis() {
+  const th = narrativeData.thesis;
+  document.getElementById('jyThesisText').textContent = th.text;
+  const idx = narrativeIdx.thesis;
+  document.getElementById('jyThesisCounts').innerHTML =
+    `编者归纳（E）· 锚定真实 claim <strong>${idx.claimCount}</strong> 条：${jyChips(idx.claims)}`;
+  jyBindClaimChips(document.getElementById('jyThesisCounts'));
+}
+
+function renderJourneyMovements() {
+  const box = document.getElementById('jyMovements');
+  box.innerHTML = narrativeData.movements.map((m, i) => {
+    const idx = narrativeIdx.movements[m.id] || {};
+    return `<div class="jy-mv" data-mv="${m.id}" role="button" tabindex="0" aria-label="${esc(m.name)}">
+      <div class="n">0${i + 1}</div>
+      <div class="t">${esc(m.name)}</div>
+      <div class="d">${esc(m.nameDe || '')}</div>
+      <div class="y">${esc(m.years)}</div>
+      <div class="s">可用 claim ${idx.claimsAvailable ?? '-'}</div>
+    </div>`;
+  }).join('');
+  box.querySelectorAll('[data-mv]').forEach(el => {
+    const open = () => {
+      box.querySelectorAll('.jy-mv').forEach(x => x.classList.remove('active'));
+      el.classList.add('active');
+      renderJourneyMovementDetail(el.dataset.mv);
+    };
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', onActivate(open));
+  });
+  renderJourneyMovementDetail(narrativeData.movements[0].id);
+  box.querySelector('.jy-mv')?.classList.add('active');
+}
+
+function renderJourneyMovementDetail(mid) {
+  const m = narrativeData.movements.find(x => x.id === mid);
+  const idx = narrativeIdx.movements[mid] || {};
+  const box = document.getElementById('jyMovementDetail');
+  const wnames = (m.works || []).map(w => workById(w)?.name || w).join(' · ');
+  box.innerHTML = `<p class="lead">${esc(m.summary)}</p>
+    <div class="jy-counts">作品 ${idx.workCount} 部（${esc(wnames)}）· 该段可用 claim ${idx.claimsAvailable} 条 · 本段核心结论 ${idx.coreCount} 条，其中 ${idx.coresWithEvidence} 条已锚定真实 claim · 锚定 claim 共 ${idx.anchoredClaimCount} 条</div>
+    <div style="margin-top:12px">${(m.coreConclusions || []).map(c => `<div class="jy-core">
+      <div class="ct">${esc(c.text)}</div>
+      <div class="cl">${jyChips(c.supportingClaims)}</div>
+    </div>`).join('')}</div>`;
+  jyBindClaimChips(box);
+}
+
+function renderJourneyWorks() {
+  const box = document.getElementById('jyWorks');
+  const list = works.filter(w => w.id !== 'w12').sort((a, b) => (a.year || 0) - (b.year || 0));
+  box.innerHTML = list.map(w => {
+    const c = data.claimCountByWork[w.id] || 0;
+    const p = data.provenanceIndex.byWork[w.id] || { T: 0, S: 0, E: 0 };
+    const mv = movementOfWork(w.id);
+    return `<div class="jy-work" data-wk="${w.id}" role="button" tabindex="0" aria-label="${esc(w.name)}">
+      <div class="yr">${esc(String(w.year))}</div>
+      <div class="nm">${esc(w.name)}</div>
+      <div class="gn">${esc(w.genre || '')}</div>
+      <div class="mv">${mv ? esc(mv.name) : ''}</div>
+      <div class="cnt">claim ${c} · T${p.T} S${p.S} E${p.E}</div>
+    </div>`;
+  }).join('');
+
+  const host = document.createElement('div');
+  host.id = 'jyWorkEvidence';
+  box.parentElement.insertBefore(host, box.nextSibling);
+
+  box.querySelectorAll('[data-wk]').forEach(el => {
+    const toggle = () => {
+      const id = el.dataset.wk;
+      const already = el.classList.contains('open');
+      box.querySelectorAll('.jy-work').forEach(x => x.classList.remove('open'));
+      host.innerHTML = '';
+      if (already) return;
+      el.classList.add('open');
+      const w = workById(id);
+      const items = evidence.filter(e => e.workId === id);
+      host.innerHTML = `<div class="jy-counts" style="margin:12px 0 8px">${esc(w.name)} · 可追溯证据${provSummaryByWork(id)}</div>` + jyEvidenceCards(items);
+    };
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', onActivate(toggle));
+  });
+}
+
+function renderJourneyMotifs() {
+  const box = document.getElementById('jyMotifs');
+  box.innerHTML = motifs.map(m => {
+    const c = data.claimCountByNode[m.id] || 0;
+    return `<div class="jy-motif" data-mt="${m.id}" role="button" tabindex="0" aria-label="${esc(m.name)}">
+      <div class="nm">${esc(m.name)}</div>
+      <div class="cnt">claim ${c}</div>
+    </div>`;
+  }).join('');
+  box.querySelectorAll('[data-mt]').forEach(el => {
+    const open = () => {
+      box.querySelectorAll('.jy-motif').forEach(x => x.classList.remove('active'));
+      el.classList.add('active');
+      renderJourneyMotifDetail(el.dataset.mt);
+    };
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', onActivate(open));
+  });
+}
+
+function renderJourneyMotifDetail(mid) {
+  const m = motifs.find(x => x.id === mid);
+  const box = document.getElementById('jyMotifDetail');
+  const items = evidence.filter(e => e.nodeId === mid);
+  // 投影边：诚实展示「多少作品是直接证据，多少是编者投影」
+  const edges = relations.filter(r => r.t === mid || r.s === mid);
+  const evEdges = edges.filter(r => r.rel === 'evidence').length;
+  const projEdges = edges.filter(r => r.rel === 'projection');
+  box.innerHTML = `<p class="lead">${esc(m.name)}${m.de ? ` / ${esc(m.de)}` : ''}　${esc(m.desc)}</p>
+    <div class="jy-counts">原生 claim ${items.length} 条 · 作品证据边 ${evEdges} 条${projEdges.length ? ` · 叙事投影边 ${projEdges.length} 条（各带 claim 锚定）` : ''}</div>
+    ${projEdges.length ? `<div class="jy-counts" style="margin-top:5px">投影链：${projEdges.map(r => `${esc(workById(r.s)?.name || r.s)}→${esc(r.anchorClaim || '')}`).join(' · ')}</div>` : ''}
+    <div style="margin-top:12px">${jyEvidenceCards(items)}</div>`;
+}
+
+function renderJourneyMirrors() {
+  const box = document.getElementById('jyMirrors');
+  box.innerHTML = narrativeData.mirrorPairs.map(p => {
+    const idx = narrativeIdx.mirrorPairs[p.id] || {};
+    const a = workById(p.a), b = workById(p.b);
+    const overlap = idx.hasOverlap
+      ? `<span class="jy-counts">两侧在同一母题（${(p.sharedMotifs || []).join(' / ')}）下均各有真 claim：A ${idx.aClaims.length} 条 · B ${idx.bClaims.length} 条</span>`
+      : '<span class="jy-counts jy-warn">叙事对子，无 claim 交集</span>';
+    return `<div class="jy-mirror">
+      <div class="side">${esc(a?.name || p.a)}<span class="sm">${esc(String(a?.year || ''))}</span></div>
+      <div class="mid">↔</div>
+      <div class="side rgt">${esc(b?.name || p.b)}<span class="sm">${esc(String(b?.year || ''))}</span></div>
+      <div class="note"><strong>${esc(p.label)}</strong>　${esc(p.note)}<br>${overlap}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderJourneyQuestions() {
+  const box = document.getElementById('jyQuestions');
+  box.innerHTML = narrativeData.fourQuestions.map(q => {
+    const idx = narrativeIdx.fourQuestions[q.id] || { claimCount: 0, claims: [] };
+    return `<div class="jy-question">
+      <div class="q">${esc(q.question)}<span class="jy-tag">E · Editorial Synthesis</span></div>
+      <div class="sq">${esc(q.note)}　锚定 claim ${idx.claimCount} 条 · 涉及 ${idx.works.length} 部作品</div>
+      <div class="cl">${jyChips(idx.claims)}</div>
+    </div>`;
+  }).join('');
+  jyBindClaimChips(box);
+}
+
+function renderJourneyCorpus() {
+  document.getElementById('jyCorpus').textContent =
+    '本项目语料 = 11 部叙事作品（10 部长篇小说 + 1 部中篇集《克莱因与瓦格纳／克林索尔的最后夏天》）。' +
+    '《克努尔普》(Knulp, 1915) 未纳入语料：无全文、无深读笔记、无证据边，仅可作年表背景提及。' +
+    'w12 为外部学术文献层（External Scholarship），不是文学作品。';
+}
+
+let journeyRendered = false;
+function renderJourney() {
+  if (journeyRendered) return;
+  renderJourneyThesis();
+  renderJourneyMovements();
+  renderJourneyWorks();
+  renderJourneyMotifs();
+  renderJourneyMirrors();
+  renderJourneyQuestions();
+  renderJourneyCorpus();
+  journeyRendered = true;
+}
+
+// ═══════════════════════════════════════════
 // VIEW SWITCH
 // ═══════════════════════════════════════════
 	document.querySelectorAll('.nav-btn').forEach(btn=>{
@@ -1022,6 +1371,8 @@ function renderTimelineList(sel) {
 	  document.getElementById('graphView').classList.toggle('hidden', v!=='graph');
 	  document.getElementById('timelineView').classList.toggle('active', v==='timeline');
 	  document.getElementById('imageView').classList.toggle('active', v==='image');
+	  document.getElementById('journeyView').classList.toggle('active', v==='journey');
+	  if(v==='journey') renderJourney();
 	  if(pushHash) history.replaceState(null, '', v==='graph' ? location.pathname : `#${v}`);
 	  if(v==='timeline') {
 	    const chart = document.getElementById('tlChart');
@@ -1056,6 +1407,7 @@ function renderTimelineList(sel) {
 	  document.getElementById('graphView').classList.remove('hidden');
 	  document.getElementById('timelineView').classList.remove('active');
 	  document.getElementById('imageView').classList.remove('active');
+	  document.getElementById('journeyView').classList.remove('active');
 	  const d = nodeIndex.get(id);
 	  if(!d) return;
 	  activeQuery = d.name;
@@ -1213,7 +1565,7 @@ requestAnimationFrame(()=>{
   rebuildGraph();
   buildTimeline(document.getElementById('tlChart'));
   const startView = location.hash.replace('#','');
-  if(['timeline','image'].includes(startView)) setView(startView);
+  if(['timeline','image','journey'].includes(startView)) setView(startView);
 });
 </script>
 </body>

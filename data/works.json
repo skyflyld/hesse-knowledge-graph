@@ -4,77 +4,99 @@
     "name": "Peter Camenzind",
     "year": 1904,
     "phase": "p01",
-    "desc": "Jugendstil，自然崇拜"
+    "desc": "Jugendstil，自然崇拜",
+    "genre": "Roman",
+    "genreSource": "de.wikipedia Einzelausgaben: Peter Camenzind 1904 标注 Roman"
   },
   {
     "id": "w02",
     "name": "Unterm Rad",
     "year": 1906,
     "phase": "p01",
-    "desc": "教育批判，自传性"
+    "desc": "教育批判，自传性",
+    "genre": "Roman",
+    "genreSource": "de.wikipedia Einzelausgaben: Unterm Rad 1906 标注 Roman"
   },
   {
     "id": "w03",
     "name": "Gertrud",
     "year": 1910,
     "phase": "p01",
-    "desc": "音乐与爱，三角关系"
+    "desc": "音乐与爱，三角关系",
+    "genre": "Roman",
+    "genreSource": "de.wikipedia Einzelausgaben: Gertrud 1910 标注 Roman"
   },
   {
     "id": "w04",
     "name": "Roßhalde",
     "year": 1914,
     "phase": "p01",
-    "desc": "婚姻破裂，艺术家困境"
+    "desc": "婚姻破裂，艺术家困境",
+    "genre": "Roman",
+    "genreSource": "de.wikipedia Einzelausgaben: Roßhalde 1914 标注 Roman"
   },
   {
     "id": "w05",
     "name": "Demian",
     "year": 1919,
     "phase": "p02",
-    "desc": "该隐符号，Gnosis，自我觉醒"
+    "desc": "该隐符号，Gnosis，自我觉醒",
+    "genre": "（首版未标；学界通行为长篇小说）",
+    "genreSource": "de.wikipedia Einzelausgaben: Demian 1919 未标注体裁"
   },
   {
     "id": "w06",
     "name": "Klingsors letzter Sommer",
     "year": 1920,
     "phase": "p02",
-    "desc": "表现主义，色彩爆炸"
+    "desc": "表现主义，色彩爆炸",
+    "genre": "Erzählungen（中篇集：Kinderseele / Klein und Wagner / Klingsors letzter Sommer）",
+    "genreSource": "de.wikipedia Einzelausgaben: Klingsors letzter Sommer 1920 标注 Erzählungen"
   },
   {
     "id": "w07",
     "name": "Siddhartha",
     "year": 1922,
     "phase": "p02",
-    "desc": "河流，Om，停止寻找"
+    "desc": "河流，Om，停止寻找",
+    "genre": "Dichtung（Eine indische Dichtung）",
+    "genreSource": "de.wikipedia Einzelausgaben: Siddhartha 1922 标注 Dichtung"
   },
   {
     "id": "w10",
     "name": "Steppenwolf",
     "year": 1927,
     "phase": "p03",
-    "desc": "市民vs狼，魔法剧院"
+    "desc": "市民vs狼，魔法剧院",
+    "genre": "Roman",
+    "genreSource": "de.wikipedia Einzelausgaben: Der Steppenwolf 1927 标注 Roman"
   },
   {
     "id": "w08",
     "name": "Narziss & Goldmund",
     "year": 1930,
     "phase": "p03",
-    "desc": "精神vs感官，母亲原型"
+    "desc": "精神vs感官，母亲原型",
+    "genre": "Erzählung",
+    "genreSource": "de.wikipedia Einzelausgaben: Narziß und Goldmund 1930 标注 Erzählung"
   },
   {
     "id": "w09",
     "name": "Morgenlandfahrt",
     "year": 1932,
     "phase": "p03",
-    "desc": "联盟秘密，东西方对话"
+    "desc": "联盟秘密，东西方对话",
+    "genre": "Erzählung",
+    "genreSource": "de.wikipedia Einzelausgaben: Die Morgenlandfahrt 1932 标注 Erzählung"
   },
   {
     "id": "w11",
     "name": "Glasperlenspiel",
     "year": 1943,
     "phase": "p04",
-    "desc": "精神王国危机，Transzendieren"
+    "desc": "精神王国危机，Transzendieren",
+    "genre": "Roman",
+    "genreSource": "de.wikipedia Einzelausgaben: Das Glasperlenspiel 1943 标注 Roman"
   },
   {
     "id": "w12",
@@ -83,6 +105,8 @@
     "year": 2024,
     "phase": "p04",
     "desc": "External academic publications about Hesse, automatically ingested from bibliographic databases.",
-    "desc_de": "Automatisch erfasste externe Forschungsliteratur zu Hermann Hesse."
+    "desc_de": "Automatisch erfasste externe Forschungsliteratur zu Hermann Hesse.",
+    "genre": "非文学作品（外部学术文献层）",
+    "genreSource": "本项目定义：w12 = External Scholarship"
   }
 ]

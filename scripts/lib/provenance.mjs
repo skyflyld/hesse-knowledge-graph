@@ -77,5 +77,7 @@ export const BRIDGE_KEYS = [
   'provenanceIndex',
   'claimCountByNode',
   'claimCountByWork',
+  'narrative',
+  'narrativeIndex',
   'meta'
 ];

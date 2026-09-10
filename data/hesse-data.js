@@ -5,77 +5,99 @@ window.HESSE_DATA = {
       "name": "Peter Camenzind",
       "year": 1904,
       "phase": "p01",
-      "desc": "Jugendstil，自然崇拜"
+      "desc": "Jugendstil，自然崇拜",
+      "genre": "Roman",
+      "genreSource": "de.wikipedia Einzelausgaben: Peter Camenzind 1904 标注 Roman"
     },
     {
       "id": "w02",
       "name": "Unterm Rad",
       "year": 1906,
       "phase": "p01",
-      "desc": "教育批判，自传性"
+      "desc": "教育批判，自传性",
+      "genre": "Roman",
+      "genreSource": "de.wikipedia Einzelausgaben: Unterm Rad 1906 标注 Roman"
     },
     {
       "id": "w03",
       "name": "Gertrud",
       "year": 1910,
       "phase": "p01",
-      "desc": "音乐与爱，三角关系"
+      "desc": "音乐与爱，三角关系",
+      "genre": "Roman",
+      "genreSource": "de.wikipedia Einzelausgaben: Gertrud 1910 标注 Roman"
     },
     {
       "id": "w04",
       "name": "Roßhalde",
       "year": 1914,
       "phase": "p01",
-      "desc": "婚姻破裂，艺术家困境"
+      "desc": "婚姻破裂，艺术家困境",
+      "genre": "Roman",
+      "genreSource": "de.wikipedia Einzelausgaben: Roßhalde 1914 标注 Roman"
     },
     {
       "id": "w05",
       "name": "Demian",
       "year": 1919,
       "phase": "p02",
-      "desc": "该隐符号，Gnosis，自我觉醒"
+      "desc": "该隐符号，Gnosis，自我觉醒",
+      "genre": "（首版未标；学界通行为长篇小说）",
+      "genreSource": "de.wikipedia Einzelausgaben: Demian 1919 未标注体裁"
     },
     {
       "id": "w06",
       "name": "Klingsors letzter Sommer",
       "year": 1920,
       "phase": "p02",
-      "desc": "表现主义，色彩爆炸"
+      "desc": "表现主义，色彩爆炸",
+      "genre": "Erzählungen（中篇集：Kinderseele / Klein und Wagner / Klingsors letzter Sommer）",
+      "genreSource": "de.wikipedia Einzelausgaben: Klingsors letzter Sommer 1920 标注 Erzählungen"
     },
     {
       "id": "w07",
       "name": "Siddhartha",
       "year": 1922,
       "phase": "p02",
-      "desc": "河流，Om，停止寻找"
+      "desc": "河流，Om，停止寻找",
+      "genre": "Dichtung（Eine indische Dichtung）",
+      "genreSource": "de.wikipedia Einzelausgaben: Siddhartha 1922 标注 Dichtung"
     },
     {
       "id": "w10",
       "name": "Steppenwolf",
       "year": 1927,
       "phase": "p03",
-      "desc": "市民vs狼，魔法剧院"
+      "desc": "市民vs狼，魔法剧院",
+      "genre": "Roman",
+      "genreSource": "de.wikipedia Einzelausgaben: Der Steppenwolf 1927 标注 Roman"
     },
     {
       "id": "w08",
       "name": "Narziss & Goldmund",
       "year": 1930,
       "phase": "p03",
-      "desc": "精神vs感官，母亲原型"
+      "desc": "精神vs感官，母亲原型",
+      "genre": "Erzählung",
+      "genreSource": "de.wikipedia Einzelausgaben: Narziß und Goldmund 1930 标注 Erzählung"
     },
     {
       "id": "w09",
       "name": "Morgenlandfahrt",
       "year": 1932,
       "phase": "p03",
-      "desc": "联盟秘密，东西方对话"
+      "desc": "联盟秘密，东西方对话",
+      "genre": "Erzählung",
+      "genreSource": "de.wikipedia Einzelausgaben: Die Morgenlandfahrt 1932 标注 Erzählung"
     },
     {
       "id": "w11",
       "name": "Glasperlenspiel",
       "year": 1943,
       "phase": "p04",
-      "desc": "精神王国危机，Transzendieren"
+      "desc": "精神王国危机，Transzendieren",
+      "genre": "Roman",
+      "genreSource": "de.wikipedia Einzelausgaben: Das Glasperlenspiel 1943 标注 Roman"
     },
     {
       "id": "w12",
@@ -84,7 +106,9 @@ window.HESSE_DATA = {
       "year": 2024,
       "phase": "p04",
       "desc": "External academic publications about Hesse, automatically ingested from bibliographic databases.",
-      "desc_de": "Automatisch erfasste externe Forschungsliteratur zu Hermann Hesse."
+      "desc_de": "Automatisch erfasste externe Forschungsliteratur zu Hermann Hesse.",
+      "genre": "非文学作品（外部学术文献层）",
+      "genreSource": "本项目定义：w12 = External Scholarship"
     }
   ],
   "motifs": [
@@ -6273,6 +6297,595 @@ window.HESSE_DATA = {
     "w02": 8,
     "w04": 5,
     "w06": 6
+  },
+  "narrative": {
+    "meta": {
+      "layer": "editorial",
+      "label": "E · Editorial Model",
+      "note": "本文件全部内容为本项目的编者归纳（E 层），不是黑塞原话。每一条结论都必须锚定到 evidence.json 中真实存在的 claim；validate-data.mjs 对此做机械强制。",
+      "namingRule": "Seven Movements 是编者模型，不使用『七阶段』这类暗示客观历史的说法。",
+      "knulpNote": "《克努尔普》(Knulp, 1915) 未纳入本项目语料：无全文、无深读笔记、无证据边，仅可作年表背景提及。"
+    },
+    "thesis": {
+      "id": "n-thesis",
+      "type": "editorial",
+      "text": "从《彼得·卡门青》到《玻璃珠游戏》，黑塞的十部叙事作品构成一条从离开到返回的连续运动；每一站都以不同方式检验同一个问题：真正重要的东西能否被传达。",
+      "supportingClaims": [
+        "e-t08-1",
+        "e-S1",
+        "e-G1"
+      ]
+    },
+    "movements": [
+      {
+        "id": "m01",
+        "name": "离开",
+        "nameDe": "Aufbruch",
+        "years": "1904",
+        "works": [
+          "w01"
+        ],
+        "summary": "主人公从故乡与共同体出走。孤独在这里不是病症，而是自我形成的前提条件。",
+        "coreConclusions": [
+          {
+            "id": "m01-c1",
+            "text": "孤独被设定为自我形成的条件，而非需要治疗的状态。",
+            "supportingClaims": [
+              "e-t08-1"
+            ]
+          },
+          {
+            "id": "m01-c2",
+            "text": "自然先于文明对灵魂完成铭写。",
+            "supportingClaims": [
+              "e-t10-2"
+            ]
+          },
+          {
+            "id": "m01-c3",
+            "text": "对美的表达注定无词，呼喊被群山吞没。",
+            "supportingClaims": [
+              "e-PC1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m02",
+        "name": "被塑造与被碾压",
+        "nameDe": "Formung und Zermalmung",
+        "years": "1906",
+        "works": [
+          "w02"
+        ],
+        "summary": "制度以培养为名运转，却系统性地消耗它所培养的人。传授的制度化形式与生命形成之间没有必然通道。",
+        "coreConclusions": [
+          {
+            "id": "m02-c1",
+            "text": "国家与学校被指认为系统性扼杀深层心灵的机制。",
+            "supportingClaims": [
+              "e-UR2"
+            ]
+          },
+          {
+            "id": "m02-c2",
+            "text": "竞争名次被内化为自我价值标准。",
+            "supportingClaims": [
+              "e-UR1",
+              "e-UR4"
+            ]
+          },
+          {
+            "id": "m02-c3",
+            "text": "制度能安排滋养生命的渠道，却无法保证生命真被滋养。",
+            "supportingClaims": [
+              "e-UR-t11"
+            ]
+          },
+          {
+            "id": "m02-c4",
+            "text": "知识制度退场后，认知功能本身随之崩解。",
+            "supportingClaims": [
+              "e-UR3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m03",
+        "name": "艺术与生活的冲突",
+        "nameDe": "Kunst versus Leben",
+        "years": "1910–1914",
+        "works": [
+          "w03",
+          "w04"
+        ],
+        "summary": "艺术先是唯一的救赎通道，随后降级为旁观者的补偿机制。语言传达在此遭遇它的第一次终审。",
+        "coreConclusions": [
+          {
+            "id": "m03-c1",
+            "text": "音乐成为叙述者唯一找得到的救赎形式。",
+            "supportingClaims": [
+              "e-t09-2"
+            ]
+          },
+          {
+            "id": "m03-c2",
+            "text": "作品既携带创作者的印记，又已不属于他。",
+            "supportingClaims": [
+              "e-GT3"
+            ]
+          },
+          {
+            "id": "m03-c3",
+            "text": "艺术被重述为失去身体传达器官之后的替代物。",
+            "supportingClaims": [
+              "e-RS1"
+            ]
+          },
+          {
+            "id": "m03-c4",
+            "text": "唯一成功的语言传达发生在弥留之际。",
+            "supportingClaims": [
+              "e-RS4"
+            ]
+          },
+          {
+            "id": "m03-c5",
+            "text": "艺术从超越通道降级为补偿机制。",
+            "supportingClaims": [
+              "e-RS5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m04",
+        "name": "精神出生",
+        "nameDe": "Geistige Geburt",
+        "years": "1919",
+        "works": [
+          "w05"
+        ],
+        "summary": "孤独被改写为天启。可引用的文字只是入口，真正的理解发生在入口之后。",
+        "coreConclusions": [
+          {
+            "id": "m04-c1",
+            "text": "神使人孤独，是为了把人领回自身。",
+            "supportingClaims": [
+              "e-t08-2"
+            ]
+          },
+          {
+            "id": "m04-c2",
+            "text": "可引用文字仅构成入口，理解发生在入口之后。",
+            "supportingClaims": [
+              "e-D1"
+            ]
+          },
+          {
+            "id": "m04-c3",
+            "text": "印记是非语言的认出通道，而解释必然将其歪曲。",
+            "supportingClaims": [
+              "e-DEM-t11"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m05",
+        "name": "进入身体与经验",
+        "nameDe": "Eintritt in Leib und Erfahrung",
+        "years": "1920–1922",
+        "works": [
+          "w06",
+          "w07"
+        ],
+        "summary": "认识的重心从命题转向肉身与听觉。表达即僵死，而河流提供了一种非命题的知识形态。",
+        "coreConclusions": [
+          {
+            "id": "m05-c1",
+            "text": "知识寄存于可朽之物，认知经由身体完成。",
+            "supportingClaims": [
+              "e-KL5"
+            ]
+          },
+          {
+            "id": "m05-c2",
+            "text": "思想一旦表达即僵死。",
+            "supportingClaims": [
+              "e-KL2"
+            ]
+          },
+          {
+            "id": "m05-c3",
+            "text": "知识可以传授，智慧不能。",
+            "supportingClaims": [
+              "e-S1"
+            ]
+          },
+          {
+            "id": "m05-c4",
+            "text": "每一条真理的反面同样为真。",
+            "supportingClaims": [
+              "e-S2"
+            ]
+          },
+          {
+            "id": "m05-c5",
+            "text": "河流是被听见的整体性，而非背景。",
+            "supportingClaims": [
+              "e-t02-1",
+              "e-S3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m06",
+        "name": "多重化与整合",
+        "nameDe": "Multiplizierung und Integration",
+        "years": "1927–1930",
+        "works": [
+          "w10",
+          "w08"
+        ],
+        "summary": "统一人格的假设被拆解。理论在最高表现形态中自我否定，精神与感官的分裂则被写成朋友之间的结构性对立。",
+        "coreConclusions": [
+          {
+            "id": "m06-c1",
+            "text": "人格被拆解为可进入的幻象剧场。",
+            "supportingClaims": [
+              "e-t07-1"
+            ]
+          },
+          {
+            "id": "m06-c2",
+            "text": "完满被重新定义为持续蜕变的能力。",
+            "supportingClaims": [
+              "e-t05-3"
+            ]
+          },
+          {
+            "id": "m06-c3",
+            "text": "可引用的理论在最高形态中自我否定。",
+            "supportingClaims": [
+              "e-SW4"
+            ]
+          },
+          {
+            "id": "m06-c4",
+            "text": "解释只能覆盖类型，无法捕获个体灵魂。",
+            "supportingClaims": [
+              "e-SW-t11"
+            ]
+          },
+          {
+            "id": "m06-c5",
+            "text": "精神与感官的分裂被结构化为朋友之间的对立。",
+            "supportingClaims": [
+              "e-t01-2",
+              "e-N6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m07",
+        "name": "返回共同体与服务",
+        "nameDe": "Rückkehr in die Gemeinschaft",
+        "years": "1932–1943",
+        "works": [
+          "w09",
+          "w11"
+        ],
+        "summary": "个体修行被放进精神共同体。知识一旦系统化就获得力量，也同时暴露它的边界。",
+        "coreConclusions": [
+          {
+            "id": "m07-c1",
+            "text": "制度性沉默划定了能说与不能说的边界。",
+            "supportingClaims": [
+              "e-M1a"
+            ]
+          },
+          {
+            "id": "m07-c2",
+            "text": "知识不寄居于个人头脑，而寄居于存在关系之中。",
+            "supportingClaims": [
+              "e-M1e"
+            ]
+          },
+          {
+            "id": "m07-c3",
+            "text": "档案与契书的遗失构成不可传达的制度形态。",
+            "supportingClaims": [
+              "e-M1f"
+            ]
+          },
+          {
+            "id": "m07-c4",
+            "text": "最需要被呈现的事物最不可言语表达。",
+            "supportingClaims": [
+              "e-G1"
+            ]
+          },
+          {
+            "id": "m07-c5",
+            "text": "系统语言对系统之外不可翻译。",
+            "supportingClaims": [
+              "e-G3"
+            ]
+          },
+          {
+            "id": "m07-c6",
+            "text": "成长不是抵达身份，而是持续越过身份。",
+            "supportingClaims": [
+              "e-t05-1"
+            ]
+          }
+        ]
+      }
+    ],
+    "mirrorPairs": [
+      {
+        "id": "mp01",
+        "a": "w05",
+        "b": "w07",
+        "label": "引导者与同行者",
+        "note": "Demian 对 Sinclair 是唤醒者，Govinda 对 Siddhartha 是追随者。同一组朋友对子，两种方向。",
+        "sharedMotifs": [
+          "t01"
+        ]
+      },
+      {
+        "id": "mp02",
+        "a": "w07",
+        "b": "w08",
+        "label": "追随与分裂",
+        "note": "Govinda 甘作影子，Goldmund 与 Narziß 却是精神与感官的结构化分裂。",
+        "sharedMotifs": [
+          "t01"
+        ]
+      },
+      {
+        "id": "mp03",
+        "a": "w08",
+        "b": "w11",
+        "label": "兄弟式对子",
+        "note": "天职使两人成为兄弟，其余一切对立。朋友对子在此达到最高形态。",
+        "sharedMotifs": [
+          "t01"
+        ]
+      },
+      {
+        "id": "mp04",
+        "a": "w07",
+        "b": "w11",
+        "label": "微笑链",
+        "note": "Gotama 的微笑与玻璃珠游戏大师的微笑同源而异相，跨作品构成一条非语言理解的标记链。",
+        "sharedMotifs": [
+          "t03"
+        ]
+      }
+    ],
+    "fourQuestions": [
+      {
+        "id": "q01",
+        "question": "我是谁",
+        "note": "编者框架，非黑塞自述的问题结构。",
+        "supportingClaims": [
+          "e-t08-3",
+          "e-t07-1",
+          "e-D4"
+        ]
+      },
+      {
+        "id": "q02",
+        "question": "怎样活",
+        "note": "编者框架。",
+        "supportingClaims": [
+          "e-t05-3",
+          "e-S4",
+          "e-SW2"
+        ]
+      },
+      {
+        "id": "q03",
+        "question": "精神与生命是什么关系",
+        "note": "编者框架。",
+        "supportingClaims": [
+          "e-N6",
+          "e-t10-3",
+          "e-t10-1"
+        ]
+      },
+      {
+        "id": "q04",
+        "question": "成为自己之后呢",
+        "note": "编者框架。",
+        "supportingClaims": [
+          "e-t05-1",
+          "e-G2",
+          "e-M1e"
+        ]
+      }
+    ]
+  },
+  "narrativeIndex": {
+    "movements": {
+      "m01": {
+        "workCount": 1,
+        "claimsAvailable": 5,
+        "coreCount": 3,
+        "coresWithEvidence": 3,
+        "anchoredClaimCount": 3,
+        "evidenceDensity": 0.6,
+        "concentrationPass": true
+      },
+      "m02": {
+        "workCount": 1,
+        "claimsAvailable": 8,
+        "coreCount": 4,
+        "coresWithEvidence": 4,
+        "anchoredClaimCount": 5,
+        "evidenceDensity": 0.625,
+        "concentrationPass": true
+      },
+      "m03": {
+        "workCount": 2,
+        "claimsAvailable": 10,
+        "coreCount": 5,
+        "coresWithEvidence": 5,
+        "anchoredClaimCount": 5,
+        "evidenceDensity": 0.5,
+        "concentrationPass": true
+      },
+      "m04": {
+        "workCount": 1,
+        "claimsAvailable": 8,
+        "coreCount": 3,
+        "coresWithEvidence": 3,
+        "anchoredClaimCount": 3,
+        "evidenceDensity": 0.375,
+        "concentrationPass": true
+      },
+      "m05": {
+        "workCount": 2,
+        "claimsAvailable": 18,
+        "coreCount": 5,
+        "coresWithEvidence": 5,
+        "anchoredClaimCount": 6,
+        "evidenceDensity": 0.333,
+        "concentrationPass": true
+      },
+      "m06": {
+        "workCount": 2,
+        "claimsAvailable": 20,
+        "coreCount": 5,
+        "coresWithEvidence": 5,
+        "anchoredClaimCount": 6,
+        "evidenceDensity": 0.3,
+        "concentrationPass": true
+      },
+      "m07": {
+        "workCount": 2,
+        "claimsAvailable": 25,
+        "coreCount": 6,
+        "coresWithEvidence": 6,
+        "anchoredClaimCount": 6,
+        "evidenceDensity": 0.24,
+        "concentrationPass": true
+      }
+    },
+    "mirrorPairs": {
+      "mp01": {
+        "sharedMotifs": [
+          "t01"
+        ],
+        "aClaims": [
+          "e-t01-1"
+        ],
+        "bClaims": [
+          "e-t01-3"
+        ],
+        "hasOverlap": true
+      },
+      "mp02": {
+        "sharedMotifs": [
+          "t01"
+        ],
+        "aClaims": [
+          "e-t01-3"
+        ],
+        "bClaims": [
+          "e-t01-2"
+        ],
+        "hasOverlap": true
+      },
+      "mp03": {
+        "sharedMotifs": [
+          "t01"
+        ],
+        "aClaims": [
+          "e-t01-2"
+        ],
+        "bClaims": [
+          "e-t01-4"
+        ],
+        "hasOverlap": true
+      },
+      "mp04": {
+        "sharedMotifs": [
+          "t03"
+        ],
+        "aClaims": [
+          "e-t03-1"
+        ],
+        "bClaims": [
+          "e-t03-3"
+        ],
+        "hasOverlap": true
+      }
+    },
+    "fourQuestions": {
+      "q01": {
+        "claimCount": 3,
+        "claims": [
+          "e-t08-3",
+          "e-t07-1",
+          "e-D4"
+        ],
+        "works": [
+          "w07",
+          "w10",
+          "w05"
+        ]
+      },
+      "q02": {
+        "claimCount": 3,
+        "claims": [
+          "e-t05-3",
+          "e-S4",
+          "e-SW2"
+        ],
+        "works": [
+          "w10",
+          "w07"
+        ]
+      },
+      "q03": {
+        "claimCount": 3,
+        "claims": [
+          "e-N6",
+          "e-t10-3",
+          "e-t10-1"
+        ],
+        "works": [
+          "w08",
+          "w11"
+        ]
+      },
+      "q04": {
+        "claimCount": 3,
+        "claims": [
+          "e-t05-1",
+          "e-G2",
+          "e-M1e"
+        ],
+        "works": [
+          "w11",
+          "w09"
+        ]
+      }
+    },
+    "thesis": {
+      "claimCount": 3,
+      "claims": [
+        "e-t08-1",
+        "e-S1",
+        "e-G1"
+      ]
+    }
   },
   "meta": {
     "evidenceTotal": 124,

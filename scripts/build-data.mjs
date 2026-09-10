@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { applyProvenance, BRIDGE_KEYS } from './lib/provenance.mjs';
+import { applyNarrative } from './lib/narrative.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 
@@ -18,7 +19,8 @@ const datasets = [
   ['evidence', 'evidence.json'],
   ['relations', 'relations.json'],
   ['timelinePhases', 'timeline-phases.json'],
-  ['image2Rules', 'image2-rules.json']
+  ['image2Rules', 'image2-rules.json'],
+  ['narrative', 'narrative.json']
 ];
 
 async function readJson(file) {
@@ -33,6 +35,8 @@ for (const [key, file] of datasets) {
 
 // 派生层：T / S / E provenance + 动态计数（规则与 validate 共用同一模块）
 applyProvenance(data);
+// 叙事层派生：编者结论与真实 claim 的对接（同样与 validate 共用）
+applyNarrative(data);
 
 await writeFile(
   join(root, 'data', 'hesse-data.js'),
