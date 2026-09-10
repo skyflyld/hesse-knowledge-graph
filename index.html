@@ -35,6 +35,12 @@
   .topnav .logo { display:inline-block; min-width:0; font-family:var(--serif); font-size:0.9rem; color:var(--gold); letter-spacing:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .topnav .subtitle { font-size:0.7rem; color:var(--text3); margin-left:12px; }
   .topnav .nav-wrap { display:flex; gap:0; flex:0 0 auto; margin-left:auto; }
+  /* 可信度条：首屏就把证据分层摆出来，数字全部现场算 */
+  .corpus-bar { font-size:0.66rem; color:var(--text3); letter-spacing:.3px;
+    padding:6px max(18px, env(safe-area-inset-right)) 6px max(18px, env(safe-area-inset-left));
+    background:var(--bg2); border-bottom:1px solid var(--border); flex-shrink:0; }
+  .corpus-bar strong { color:var(--gold); font-weight:500; }
+  @media (max-width: 700px) { .corpus-bar { padding-left:10px; padding-right:10px; font-size:0.62rem; } .corpus-bar .hide-sm { display:none; } }
   .topnav .nav-btn { padding:0 clamp(10px, 1.4vw, 18px); height:var(--nav-h); line-height:var(--nav-h);
     font-size:0.8rem; color:var(--text3); cursor:pointer; border-bottom:2px solid transparent;
     transition:all .15s; background:transparent; border-top:0; border-left:0; border-right:0; font-family:var(--font); }
@@ -409,7 +415,7 @@
 <body>
 
 <div class="topnav">
-	  <div><span class="logo">黑塞文学·知识图谱</span><span class="subtitle">十一部小说 · 母题证据 · Image2</span></div>
+	  <div><span class="logo">黑塞文学·知识图谱</span><span class="subtitle">11 部叙事作品 · 母题证据 · 外部学术文献</span></div>
 	  <div class="nav-wrap">
 	    <button class="nav-btn active" data-view="graph" aria-pressed="true">网络</button>
 	    <button class="nav-btn" data-view="timeline" aria-pressed="false">时间线</button>
@@ -417,6 +423,8 @@
 	    <button class="nav-btn" data-view="image" aria-pressed="false">Image2</button>
 	  </div>
 	</div>
+
+<div class="corpus-bar" id="corpusBar">…</div>
 
 <div class="app">
   <!-- Sidebar -->
@@ -488,6 +496,11 @@
 	          <div id="jyQuestions"></div>
 	        </div>
 	        <div class="jy-sec">
+	          <h2>回到这张图本身<span class="jy-tag" id="jyCodaTag">E · Editorial Synthesis</span></h2>
+	          <p class="jy-note" id="jyCodaText"></p>
+	          <div class="jy-core" id="jyCodaClaims"></div>
+	        </div>
+	        <div class="jy-sec">
 	          <h2>语料口径</h2>
 	          <p class="jy-note" id="jyCorpus"></p>
 	        </div>
@@ -499,7 +512,7 @@
 	      <div class="tl-chart" id="tlChart"></div>
 	      <div class="tl-info" id="tlInfo">
 	        <div class="tl-title">点击作品查看</div>
-	        <div class="tl-desc">1904–1943 · 十一部主要小说</div>
+	        <div class="tl-desc">1904–1943 · 十一部叙事作品</div>
 	      </div>
 	    </div>
 
@@ -591,6 +604,18 @@ function provSummary(id) {
 function provSummaryByWork(id) {
   const c = (provenanceIndex && provenanceIndex.byWork && provenanceIndex.byWork[id]) || {T:0,S:0,E:0};
   return `<span class="prov-sum">T ${c.T} · S ${c.S} · E ${c.E}</span>`;
+}
+
+// ===== 口径条：首屏就把「证据分层」摆出来（数字全部现场算，不写死） =====
+function renderCorpusBar() {
+  const el = document.getElementById('corpusBar');
+  if (!el) return;
+  const tot = (provenanceIndex && provenanceIndex.totals) || { T: 0, S: 0, E: 0 };
+  const total = tot.T + tot.S + tot.E;
+  const literary = works.filter(w => w.id !== 'w12').length;
+  el.innerHTML = `<strong>${literary}</strong> 部叙事作品 · <strong>${total}</strong> 条证据` +
+    `<span class="hide-sm">（文本 ${tot.T} · 学术 ${tot.S} · 编者 ${tot.E}）</span>` +
+    ` · <strong>${relations.length}</strong> 条关系`;
 }
 function updateLensUi() {
   document.querySelectorAll('.lens-btn').forEach(b => {
@@ -1437,6 +1462,19 @@ function renderJourneyQuestions() {
   jyBindGraphLinks(box);
 }
 
+function renderJourneyCoda() {
+  const c = narrativeData.coda;
+  if (!c) return;
+  document.getElementById('jyCodaTag').textContent = c.label || 'E · Editorial Synthesis';
+  document.getElementById('jyCodaText').textContent = c.text;
+  const claims = (c.supportingClaims || []).map(claimById).filter(Boolean);
+  const box = document.getElementById('jyCodaClaims');
+  box.innerHTML = `<div class="cl">${jyChips(claims.map(x => x.id))}</div>
+    <div style="margin-top:8px">${jyEvidenceCards(claims)}</div>`;
+  jyBindClaimChips(box);
+  jyBindGraphLinks(box);
+}
+
 function renderJourneyCorpus() {
   document.getElementById('jyCorpus').textContent =
     '本项目语料 = 11 部叙事作品（10 部长篇小说 + 1 部中篇集《克莱因与瓦格纳／克林索尔的最后夏天》）。' +
@@ -1453,6 +1491,7 @@ function renderJourney() {
   renderJourneyMotifs();
   renderJourneyMirrors();
   renderJourneyQuestions();
+  renderJourneyCoda();
   renderJourneyCorpus();
   journeyRendered = true;
 }
@@ -1663,6 +1702,7 @@ ro.observe(document.getElementById('graphArea'));
 // INIT
 // ═══════════════════════════════════════════
 showLayerCount();
+renderCorpusBar();
 // Use rAF to ensure DOM is laid out
 requestAnimationFrame(()=>{
   rebuildGraph();

@@ -6441,9 +6441,22 @@ window.HESSE_DATA = {
     "thesis": {
       "id": "n-thesis",
       "type": "editorial",
-      "text": "从《彼得·卡门青》到《玻璃珠游戏》，黑塞的十部叙事作品构成一条从离开到返回的连续运动；每一站都以不同方式检验同一个问题：真正重要的东西能否被传达。",
+      "text": "从《彼得·卡门青》到《玻璃珠游戏》，黑塞的十一部叙事作品构成一条从离开到返回的连续运动；每一站都以不同方式检验同一个问题：真正重要的东西能否被传达。",
       "supportingClaims": [
         "e-t08-1",
+        "e-S1",
+        "e-G1"
+      ]
+    },
+    "coda": {
+      "id": "n-coda",
+      "type": "editorial",
+      "label": "E · Editorial Synthesis",
+      "title": "回到这张图本身",
+      "text": "我们正在用一张知识图谱去解释黑塞。而黑塞的作品反复提醒的是同一件事：最重要的东西，也许恰恰无法被完全传达。",
+      "supportingClaims": [
+        "e-SW-t11",
+        "e-N3",
         "e-S1",
         "e-G1"
       ]

@@ -180,6 +180,18 @@ if (bridge !== expectedBridge) fail(problems, 'data/hesse-data.js is stale; run 
     if (nar.thesis && nar.thesis.type !== 'editorial') {
       fail(problems, `thesis.type must be editorial, got ${nar.thesis.type}`);
     }
+
+    // 1b. 结尾自反（coda）：同为编者综合，且必须锚在「不可传达」(t11) 主轴上
+    if (!nar.coda) {
+      fail(problems, 'narrative.json missing coda (结尾自反)');
+    } else {
+      if (nar.coda.type !== 'editorial') fail(problems, `coda.type must be editorial, got ${nar.coda.type}`);
+      const cc = nar.coda.supportingClaims || [];
+      if (!cc.length) fail(problems, 'coda has no supportingClaims');
+      checkClaims(cc, 'coda');
+      const codaT11 = cc.some((id) => (data.evidence.find((e) => e.id === id) || {}).nodeId === 't11');
+      if (!codaT11) fail(problems, 'coda must anchor at least one claim on t11 (不可传达主轴)');
+    }
     for (const m of nar.movements || []) {
       if (!(m.coreConclusions || []).length) fail(problems, `${m.id} has no coreConclusions`);
       for (const c of m.coreConclusions || []) checkClaims(c.supportingClaims, `${m.id}/${c.id}`);
