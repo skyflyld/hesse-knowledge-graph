@@ -4868,6 +4868,110 @@ window.HESSE_DATA = {
         "verifiedDate": "2026-09-10"
       },
       "provenance": "T"
+    },
+    {
+      "id": "e-ext-125",
+      "nodeId": "t08",
+      "workId": "w12",
+      "source": "Hermann Hesse",
+      "location": "10.23636/sfb8-2p85",
+      "quote": "External scholarship: Hermann Hesse",
+      "claim": "Hermann Hesse",
+      "confidence": "medium",
+      "tags": [
+        "external_scholarship",
+        "automated_ingest"
+      ],
+      "sourceRef": {
+        "author": "British Library",
+        "title": "Hermann Hesse",
+        "workId": "w12",
+        "locator": "10.23636/sfb8-2p85",
+        "locatorType": "doi",
+        "quoteType": "metadata",
+        "quoteLanguage": "en",
+        "verificationStatus": "needs_verification",
+        "bibliographicNote": "Automatically ingested from OpenAlex. Journal: British Library Research Repository. Date: 2026-07-13. DOI: 10.23636/sfb8-2p85."
+      },
+      "provenance": "S"
+    },
+    {
+      "id": "e-ext-127",
+      "nodeId": "t08",
+      "workId": "w12",
+      "source": "Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+      "location": "10.31926/kbzgf.2026.26.06",
+      "quote": "External scholarship: Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+      "claim": "Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+      "confidence": "medium",
+      "tags": [
+        "external_scholarship",
+        "automated_ingest"
+      ],
+      "sourceRef": {
+        "author": "Universitatea János-Selye Komorn, László V. Szabó",
+        "title": "Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+        "workId": "w12",
+        "locator": "10.31926/kbzgf.2026.26.06",
+        "locatorType": "doi",
+        "quoteType": "metadata",
+        "quoteLanguage": "en",
+        "verificationStatus": "needs_verification",
+        "bibliographicNote": "Automatically ingested from OpenAlex. Journal: Kronstädter Beiträge zur germanistischen Forschung. Date: 2026-06-30. DOI: 10.31926/kbzgf.2026.26.06."
+      },
+      "provenance": "S"
+    },
+    {
+      "id": "e-ext-129",
+      "nodeId": "t08",
+      "workId": "w12",
+      "source": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO",
+      "location": "10.5281/zenodo.21741365",
+      "quote": "External scholarship: XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\"",
+      "claim": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+      "confidence": "medium",
+      "tags": [
+        "external_scholarship",
+        "automated_ingest"
+      ],
+      "sourceRef": {
+        "author": "Judinova Dildora",
+        "title": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+        "workId": "w12",
+        "locator": "10.5281/zenodo.21741365",
+        "locatorType": "doi",
+        "quoteType": "metadata",
+        "quoteLanguage": "en",
+        "verificationStatus": "needs_verification",
+        "bibliographicNote": "Automatically ingested from OpenAlex. Journal: Zenodo (CERN European Organization for Nuclear Research). Date: 2026-06-27. DOI: 10.5281/zenodo.21741365."
+      },
+      "provenance": "S"
+    },
+    {
+      "id": "e-ext-131",
+      "nodeId": "t08",
+      "workId": "w12",
+      "source": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO",
+      "location": "10.5281/zenodo.21741364",
+      "quote": "External scholarship: XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\"",
+      "claim": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+      "confidence": "medium",
+      "tags": [
+        "external_scholarship",
+        "automated_ingest"
+      ],
+      "sourceRef": {
+        "author": "Judinova Dildora",
+        "title": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+        "workId": "w12",
+        "locator": "10.5281/zenodo.21741364",
+        "locatorType": "doi",
+        "quoteType": "metadata",
+        "quoteLanguage": "en",
+        "verificationStatus": "needs_verification",
+        "bibliographicNote": "Automatically ingested from OpenAlex. Journal: Zenodo (CERN European Organization for Nuclear Research). Date: 2026-06-27. DOI: 10.5281/zenodo.21741364."
+      },
+      "provenance": "S"
     }
   ],
   "relations": [
@@ -5994,6 +6098,34 @@ window.HESSE_DATA = {
       "label": "叙事投影",
       "weight": 1.05,
       "anchorClaim": "e-G1"
+    },
+    {
+      "s": "w12",
+      "t": "t08",
+      "rel": "external_evidence",
+      "label": "外部学术来源: Hermann Hesse",
+      "weight": 0.8
+    },
+    {
+      "s": "w12",
+      "t": "t08",
+      "rel": "external_evidence",
+      "label": "外部学术来源: Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+      "weight": 0.8
+    },
+    {
+      "s": "w12",
+      "t": "t08",
+      "rel": "external_evidence",
+      "label": "外部学术来源: XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN",
+      "weight": 0.8
+    },
+    {
+      "s": "w12",
+      "t": "t08",
+      "rel": "external_evidence",
+      "label": "外部学术来源: XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN",
+      "weight": 0.8
     }
   ],
   "timelinePhases": [
@@ -6148,7 +6280,7 @@ window.HESSE_DATA = {
   "provenanceIndex": {
     "totals": {
       "T": 88,
-      "S": 30,
+      "S": 34,
       "E": 6
     },
     "byNode": {
@@ -6189,7 +6321,7 @@ window.HESSE_DATA = {
       },
       "t08": {
         "T": 13,
-        "S": 26,
+        "S": 30,
         "E": 1
       },
       "t09": {
@@ -6241,7 +6373,7 @@ window.HESSE_DATA = {
       },
       "w12": {
         "T": 0,
-        "S": 30,
+        "S": 34,
         "E": 0
       },
       "w03": {
@@ -6279,7 +6411,7 @@ window.HESSE_DATA = {
     "t05": 23,
     "t06": 3,
     "t07": 13,
-    "t08": 40,
+    "t08": 44,
     "t09": 15,
     "t10": 5,
     "t11": 4
@@ -6291,7 +6423,7 @@ window.HESSE_DATA = {
     "w11": 18,
     "w10": 11,
     "w01": 5,
-    "w12": 30,
+    "w12": 34,
     "w03": 5,
     "w09": 7,
     "w02": 8,
@@ -6888,7 +7020,7 @@ window.HESSE_DATA = {
     }
   },
   "meta": {
-    "evidenceTotal": 124,
+    "evidenceTotal": 128,
     "provenanceRule": "E=quoteType:interpretive ; S=workId:w12|quoteType:metadata|locatorType:doi ; T=其余（文学部次 textual）"
   }
 };

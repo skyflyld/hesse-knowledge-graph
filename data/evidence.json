@@ -3459,5 +3459,105 @@
       "edition": "Project Gutenberg #75802 (Der Steppenwolf, 1927)",
       "verifiedDate": "2026-09-10"
     }
+  },
+  {
+    "id": "e-ext-125",
+    "nodeId": "t08",
+    "workId": "w12",
+    "source": "Hermann Hesse",
+    "location": "10.23636/sfb8-2p85",
+    "quote": "External scholarship: Hermann Hesse",
+    "claim": "Hermann Hesse",
+    "confidence": "medium",
+    "tags": [
+      "external_scholarship",
+      "automated_ingest"
+    ],
+    "sourceRef": {
+      "author": "British Library",
+      "title": "Hermann Hesse",
+      "workId": "w12",
+      "locator": "10.23636/sfb8-2p85",
+      "locatorType": "doi",
+      "quoteType": "metadata",
+      "quoteLanguage": "en",
+      "verificationStatus": "needs_verification",
+      "bibliographicNote": "Automatically ingested from OpenAlex. Journal: British Library Research Repository. Date: 2026-07-13. DOI: 10.23636/sfb8-2p85."
+    }
+  },
+  {
+    "id": "e-ext-127",
+    "nodeId": "t08",
+    "workId": "w12",
+    "source": "Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+    "location": "10.31926/kbzgf.2026.26.06",
+    "quote": "External scholarship: Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+    "claim": "Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+    "confidence": "medium",
+    "tags": [
+      "external_scholarship",
+      "automated_ingest"
+    ],
+    "sourceRef": {
+      "author": "Universitatea János-Selye Komorn, László V. Szabó",
+      "title": "Autofiction and Cultural Tradition in Hermann Hesse’s Works",
+      "workId": "w12",
+      "locator": "10.31926/kbzgf.2026.26.06",
+      "locatorType": "doi",
+      "quoteType": "metadata",
+      "quoteLanguage": "en",
+      "verificationStatus": "needs_verification",
+      "bibliographicNote": "Automatically ingested from OpenAlex. Journal: Kronstädter Beiträge zur germanistischen Forschung. Date: 2026-06-30. DOI: 10.31926/kbzgf.2026.26.06."
+    }
+  },
+  {
+    "id": "e-ext-129",
+    "nodeId": "t08",
+    "workId": "w12",
+    "source": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO",
+    "location": "10.5281/zenodo.21741365",
+    "quote": "External scholarship: XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\"",
+    "claim": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+    "confidence": "medium",
+    "tags": [
+      "external_scholarship",
+      "automated_ingest"
+    ],
+    "sourceRef": {
+      "author": "Judinova Dildora",
+      "title": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+      "workId": "w12",
+      "locator": "10.5281/zenodo.21741365",
+      "locatorType": "doi",
+      "quoteType": "metadata",
+      "quoteLanguage": "en",
+      "verificationStatus": "needs_verification",
+      "bibliographicNote": "Automatically ingested from OpenAlex. Journal: Zenodo (CERN European Organization for Nuclear Research). Date: 2026-06-27. DOI: 10.5281/zenodo.21741365."
+    }
+  },
+  {
+    "id": "e-ext-131",
+    "nodeId": "t08",
+    "workId": "w12",
+    "source": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO",
+    "location": "10.5281/zenodo.21741364",
+    "quote": "External scholarship: XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\"",
+    "claim": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+    "confidence": "medium",
+    "tags": [
+      "external_scholarship",
+      "automated_ingest"
+    ],
+    "sourceRef": {
+      "author": "Judinova Dildora",
+      "title": "XX ASR G'ARB VA SHARQ ADABIYOTIDA INSON KONSEPSIYASI (HERMAN HESSENING \"CHO'L BO'RISI\" VA CHINGIZ AYTMATOVNING \"QIYOMAT\" ROMANLARI MISOLIDA)",
+      "workId": "w12",
+      "locator": "10.5281/zenodo.21741364",
+      "locatorType": "doi",
+      "quoteType": "metadata",
+      "quoteLanguage": "en",
+      "verificationStatus": "needs_verification",
+      "bibliographicNote": "Automatically ingested from OpenAlex. Journal: Zenodo (CERN European Organization for Nuclear Research). Date: 2026-06-27. DOI: 10.5281/zenodo.21741364."
+    }
   }
 ]
